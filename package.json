@@ -1,0 +1,10 @@
+{
+  "name": "travel-phrases",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/enrich-phrases.js && node build-phrases.js && node build-bundle.js",
+    "enrich": "node scripts/enrich-phrases.js",
+    "phrases": "node build-phrases.js",
+    "bundle": "node build-bundle.js"
+  }
+}
