@@ -5806,7 +5806,7 @@ function stopSpeech() {
  * 4. enabled: true
  */
 const SYNC_CONFIG = {
-  enabled: false,
+  enabled: true,
   supabaseUrl: 'https://dxdlffcwsbwqmwgeciew.supabase.co',
   supabaseAnonKey: 'sb_publishable_t_TanndVU5NZKAWmMoicKg_H02oWLuX'
 };
