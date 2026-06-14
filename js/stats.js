@@ -1,17 +1,30 @@
 function renderStats() {
-  const hardCount = Object.values(Storage.phraseWeights).filter(w => w > 1).length;
+  const counts = Storage.countByMasteryType();
+  const errorCount = Storage.getErrorPhraseIndices().length;
   const accuracy = Storage.quizStats.total
     ? Math.round(Storage.quizStats.correct / Storage.quizStats.total * 100)
     : 0;
 
   document.getElementById('stats-grid').innerHTML = `
     <div class="stat-card"><div class="stat-num">${TOTAL}</div><div class="stat-label">Всього фраз</div></div>
-    <div class="stat-card"><div class="stat-num" style="color:var(--green)">${Storage.learned.size}</div><div class="stat-label">Вивчено</div></div>
-    <div class="stat-card"><div class="stat-num" style="color:var(--red)">${hardCount}</div><div class="stat-label">У зоні ризику</div></div>
+    <div class="stat-card"><div class="stat-num" style="color:var(--green)">${Storage.learned.size}</div><div class="stat-label">✅ Вивчено (3× без підказок)</div></div>
+    <div class="stat-card"><div class="stat-num" style="color:var(--yellow)">${counts.type2}</div><div class="stat-label">💡 З підказкою</div></div>
+    <div class="stat-card"><div class="stat-num" style="color:var(--red)">${counts.type3}</div><div class="stat-label">❌ З помилками</div></div>
     <div class="stat-card"><div class="stat-num">${Math.round(Storage.learned.size / TOTAL * 100)}%</div><div class="stat-label">Прогрес</div></div>
     <div class="stat-card"><div class="stat-num" style="color:var(--yellow)">${accuracy}%</div><div class="stat-label">Точність відповідей</div></div>
-    <div class="stat-card"><div class="stat-num">${Storage.quizStats.total}</div><div class="stat-label">Всього вправ</div></div>
   `;
+
+  const masteryLegend = document.getElementById('mastery-legend');
+  if (masteryLegend) {
+    masteryLegend.innerHTML = `
+      <p style="font-size:.82rem;color:var(--muted);line-height:1.6;margin-bottom:12px;">
+        <strong style="color:var(--green)">Рівень 1</strong> — правильно без підказок.
+        3 рази підряд → «вивчено».<br>
+        <strong style="color:var(--yellow)">Рівень 2</strong> — правильно, але була підказка (серія скидається).<br>
+        <strong style="color:var(--red)">Рівень 3</strong> — помилка (фраза потрапляє в повторення).
+        Зараз з помилками: <strong>${errorCount}</strong>.
+      </p>`;
+  }
 
   document.getElementById('cat-stats').innerHTML = Object.entries(CATEGORIES).map(([key, label]) => {
     const tc = PHRASES.filter(p => p.cat === key).length;
@@ -23,12 +36,30 @@ function renderStats() {
       <span style="font-size:.8rem;color:var(--muted);min-width:60px;text-align:right">${lc}/${tc}</span>
     </div>`;
   }).join('');
+
+  renderSyncPanel();
 }
 
-function resetProgress() {
-  if (!confirm('Скинути весь прогрес?')) return;
-  Storage.reset();
-  updateProgress();
-  renderCards();
-  if (currentTab === 'stats') renderStats();
+function renderSyncPanel() {
+  const panel = document.getElementById('sync-panel');
+  if (!panel) return;
+  const configured = typeof Sync !== 'undefined' && Sync.isConfigured();
+  const hasCode = typeof Sync !== 'undefined' && Sync.hasSyncCode();
+  panel.innerHTML = `
+    <h3 style="font-size:.9rem;color:var(--muted);margin-bottom:10px;font-weight:500;">☁️ Синхронізація між пристроями</h3>
+    <div class="sync-panel-inner">
+      <p class="sync-help">Один <strong>код синхронізації</strong> на телефоні та комп'ютері — прогрес спільний.
+        ${configured ? '' : ' Потрібно один раз налаштувати Supabase (файл <code>supabase/schema.sql</code>).'}</p>
+      <div class="sync-row">
+        <input type="password" id="sync-code-input" class="sync-input" placeholder="Твій код (напр. my-travel-2026)" autocomplete="off" ${hasCode ? 'disabled' : ''}>
+        <button class="btn btn-primary" onclick="saveSyncCode()" ${hasCode ? 'disabled' : ''}>Зберегти код</button>
+      </div>
+      <div class="sync-actions">
+        <button class="btn btn-ghost" onclick="Sync.pull().then(() => { updateProgress(); renderCards(); renderStats(); })" ${!hasCode ? 'disabled' : ''}>⬇️ Завантажити</button>
+        <button class="btn btn-ghost" onclick="syncNow()" ${!hasCode ? 'disabled' : ''}>⬆️ Відправити</button>
+        ${hasCode ? '<button class="btn btn-ghost" onclick="disableCloudSync()" style="color:var(--red)">Вимкнути</button>' : ''}
+      </div>
+      <div id="sync-status" class="sync-status sync-idle"></div>
+    </div>`;
+  if (typeof Sync !== 'undefined') Sync.updateSyncUI();
 }

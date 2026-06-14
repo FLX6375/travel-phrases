@@ -30,14 +30,17 @@ function renderCards() {
   }
 
   grid.innerHTML = filtered.map(({ p, i }) => {
-    const isHard = Storage.phraseWeights[i] && Storage.phraseWeights[i] > 1;
+    const isHard = Storage.hasErrors(i);
+    const prog = Storage.getProgress(i);
+    const streakBadge = !Storage.learned.has(i) && prog.streak > 0
+      ? `<span class="card-streak">${prog.streak}/${STREAK_TO_LEARN}</span>` : '';
     const txtHTML = highlightAnchors(p.en, p.anchors);
     const situation = p.situation ? `<div class="card-situation">📍 ${escapeHtml(p.situation)}</div>` : '';
     const examples = getPhraseExamples(p);
     const exPreview = examples[0] || '';
     const exExtra = examples.length > 1 ? `<div class="card-example-more">+${examples.length - 1} ще</div>` : '';
     return `<div class="phrase-card${Storage.learned.has(i) ? ' learned' : ''}${isHard ? ' hard-mode' : ''}" onclick="openModal(${i})">
-      <div class="card-num">#${String(i + 1).padStart(3, '0')} ${isHard ? '⚠️ СКЛАДНА' : ''}</div>
+      <div class="card-num">#${String(i + 1).padStart(3, '0')} ${isHard ? '⚠️' : ''}${streakBadge}</div>
       <div class="card-en-row">
         <div class="card-en">${txtHTML}</div>
         <button type="button" class="btn-speak" onclick="speakPhrase(${i}, 'en', event)" title="Озвучити">🔊</button>

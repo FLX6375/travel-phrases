@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const root = __dirname;
-const BUNDLE_VERSION = 18;
+const BUNDLE_VERSION = 20;
 const BUNDLE_FILE = `app.v${BUNDLE_VERSION}.js`;
 const MIN_BUNDLE_SIZE = 50000;
 
@@ -32,7 +32,10 @@ const scripts = [
   'js/data/grammar-rules.js',
   'js/utils.js',
   'js/speech.js',
+  'js/sync-config.js',
   'js/storage.js',
+  'js/sync.js',
+  'js/quiz-errors.js',
   'js/browse.js',
   'js/rules.js',
   'js/quiz.js',
@@ -100,6 +103,11 @@ const bodyHtml = `
         <button class="quiz-type-btn" id="qt-pattern" onclick="setQuizType('pattern')">🔗 Патерн</button>
         <button class="quiz-type-btn" id="qt-marathon" onclick="setQuizType('marathon')">🏃 Марафон</button>
       </div>
+      <div class="quiz-options-bar">
+        <button type="button" class="quiz-errors-toggle" id="quiz-errors-toggle" onclick="toggleQuizErrorsOnly()" title="Тренуватись лише на фразах з помилками">
+          <span id="quiz-errors-label">⚠️ Тільки помилки</span>
+        </button>
+      </div>
       <div class="quiz-card" id="quiz-card">
         <div class="quiz-progress" id="quiz-prog"></div>
         <div class="quiz-q" id="quiz-q"></div>
@@ -115,6 +123,8 @@ const bodyHtml = `
   </div>
   <div id="tab-stats" style="display:none">
     <div class="stats-grid" id="stats-grid"></div>
+    <div id="mastery-legend"></div>
+    <div id="sync-panel" style="margin-bottom:24px"></div>
     <h3 style="font-size:.9rem;color:var(--muted);margin-bottom:12px;font-weight:500;">По категоріях</h3>
     <div id="cat-stats"></div>
     <div style="margin-top:24px;"><button class="btn btn-ghost" onclick="resetProgress()">🗑️ Скинути прогрес</button></div>
@@ -173,8 +183,14 @@ ${bodyHtml}
   fs.writeFileSync(path.join(root, name), html, 'utf8');
 });
 
-// Remove old bundle files to avoid confusion
-['bundle.js', 'app.v6.js', 'app.v7.js', 'app.v8.js', 'app.v9.js', 'app.v10.js', 'app.v16.js', 'app.v17.js'].forEach(f => {
+// Remove old bundle files (keep only current version)
+fs.readdirSync(root)
+  .filter(f => /^app\.v\d+\.js$/.test(f) && f !== BUNDLE_FILE)
+  .forEach(f => {
+    fs.unlinkSync(path.join(root, f));
+    console.log('Removed old bundle:', f);
+  });
+['bundle.js'].forEach(f => {
   const p = path.join(root, f);
   if (fs.existsSync(p)) fs.unlinkSync(p);
 });

@@ -6,15 +6,15 @@ function updateProgress() {
   document.getElementById('total-count').textContent = TOTAL;
   document.getElementById('prog-bar').style.width = (n / TOTAL * 100) + '%';
 
-  const hardCount = Object.keys(Storage.phraseWeights).filter(k => Storage.phraseWeights[k] > 1).length;
+  const errorCount = Storage.getErrorPhraseIndices().length;
   const unseen = PHRASES.filter((_, i) =>
-    !Object.prototype.hasOwnProperty.call(Storage.phraseWeights, i) && !Storage.learned.has(i)
+    !Object.prototype.hasOwnProperty.call(Storage.phraseProgress, i) && !Storage.learned.has(i)
   ).length;
-  document.getElementById('prog-label').textContent = hardCount > 0
-    ? `⚠️ ${hardCount} складних фраз — тест фокусується на них!`
+  document.getElementById('prog-label').textContent = errorCount > 0
+    ? `⚠️ ${errorCount} фраз з помилками · 3 правильні підряд без підказок = вивчено`
     : unseen > 0
-      ? `Вивчено: ${n} з ${TOTAL}. У тестах пріоритет: помилки → нові (${unseen}) → вивчені.`
-      : `Вивчено: ${n} з ${TOTAL}. Повторюються фрази з помилками.`;
+      ? `Вивчено: ${n} з ${TOTAL}. Нових: ${unseen}. Серія: 3× без підказок.`
+      : `Вивчено: ${n} з ${TOTAL}. Продовжуй повторювати!`;
 }
 
 function setTab(tab) {
@@ -35,8 +35,10 @@ function setTab(tab) {
   if (tab === 'rules') renderRules();
 }
 
-function bootApp() {
+async function bootApp() {
   Speech.init();
+  syncErrorsOnlyToggle();
+  if (typeof Sync !== 'undefined') await Sync.initOnBoot();
   renderCards();
   updateProgress();
 

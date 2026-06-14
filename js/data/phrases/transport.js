@@ -1,4 +1,4 @@
-// 🚌 Транспорт — 14 phrases
+// 🚌 Транспорт — 19 phrases
 const PHRASES_TRANSPORT = [
   {
     "en": "Which bus goes to…?",
@@ -241,6 +241,86 @@ const PHRASES_TRANSPORT = [
     "examples": [
       "Could you drop me off here? I'll walk the rest of the way.",
       "— Could you drop me off here, please? — Yes, it stops there. You need a single ticket."
+    ]
+  },
+  {
+    "en": "Where is the check-in desk?",
+    "ua": "Де стійка реєстрації?",
+    "ex": "— Where is the check-in desk? — Terminal 2, departures level.",
+    "tip": "Check-in desk = реєстрація на рейс.",
+    "cat": "transport",
+    "tag": "🚌 Транспорт",
+    "anchors": [
+      "check-in desk"
+    ],
+    "situation": "В аеропорту",
+    "examples": [
+      "— Where is the check-in desk? — Terminal 2, departures level.",
+      "— Where is the check-in desk? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Which gate is my flight?",
+    "ua": "Який гейт мого рейсу?",
+    "ex": "— Which gate is my flight? — Gate B12, boarding starts at 6:30.",
+    "tip": "Gate = вихід на посадку.",
+    "cat": "transport",
+    "tag": "🚌 Транспорт",
+    "anchors": [
+      "Which gate"
+    ],
+    "situation": "В аеропорту",
+    "examples": [
+      "— Which gate is my flight? — Gate B12, boarding starts at 6:30.",
+      "— Which gate is my flight? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Is my flight on time?",
+    "ua": "Мій рейс вчасно?",
+    "ex": "— Is my flight on time? — There's a 40-minute delay, sorry.",
+    "tip": "On time = без затримки. Delay = затримка.",
+    "cat": "transport",
+    "tag": "🚌 Транспорт",
+    "anchors": [
+      "on time"
+    ],
+    "situation": "В аеропорту біля табло",
+    "examples": [
+      "— Is my flight on time? — There's a 40-minute delay, sorry.",
+      "— Is my flight on time? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Where can I collect my baggage?",
+    "ua": "Де забрати багаж?",
+    "ex": "— Where can I collect my baggage? — Carousel 3, just follow the signs.",
+    "tip": "Baggage / luggage carousel = стрічка видачі багажу.",
+    "cat": "transport",
+    "tag": "🚌 Транспорт",
+    "anchors": [
+      "collect my baggage"
+    ],
+    "situation": "В аеропорту після прильоту",
+    "examples": [
+      "— Where can I collect my baggage? — Carousel 3, just follow the signs.",
+      "— Where can I collect my baggage? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Do I need to take my laptop out at security?",
+    "ua": "Чи треба діставати ноутбук на перевірці?",
+    "ex": "— Do I need to take my laptop out? — Yes, and liquids go in a clear bag.",
+    "tip": "Security = перевірка безпеки.",
+    "cat": "transport",
+    "tag": "🚌 Транспорт",
+    "anchors": [
+      "take my laptop out"
+    ],
+    "situation": "В аеропорту на security",
+    "examples": [
+      "— Do I need to take my laptop out? — Yes, and liquids go in a clear bag.",
+      "— Do I need to take my laptop out at security? — Sure, no problem."
     ]
   }
 ];

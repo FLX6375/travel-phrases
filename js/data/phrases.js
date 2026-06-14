@@ -10,7 +10,7 @@ const CATEGORIES = {
   plans: '📅 Плани'
 };
 
-// 🏨 Готель — 11 phrases
+// 🏨 Готель — 16 phrases
 const PHRASES_HOTEL = [
   {
     "en": "Could you tell me where the nearest hotel is?",
@@ -204,6 +204,86 @@ const PHRASES_HOTEL = [
     "examples": [
       "Could you recommend a good pharmacy / museum / supermarket nearby?",
       "— Could you recommend a good restaurant nearby? — Certainly — one moment, please."
+    ]
+  },
+  {
+    "en": "Do you have a bed in a dorm room?",
+    "ua": "Чи є ліжко в загальному номері?",
+    "ex": "— Do you have a bed in a dorm room? — Yes, we have one left in the 6-bed dorm.",
+    "tip": "Dorm room = кімната з кількома ліжками в хостелі.",
+    "cat": "hotel",
+    "tag": "🏨 Готель",
+    "anchors": [
+      "dorm room"
+    ],
+    "situation": "В хостелі на рецепції",
+    "examples": [
+      "— Do you have a bed in a dorm room? — Yes, we have one left in the 6-bed dorm.",
+      "— Do you have a bed in a dorm room? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Is there a kitchen I can use?",
+    "ua": "Чи є кухня, якою я можу користуватися?",
+    "ex": "— Is there a kitchen I can use? — Yes, it's on the second floor.",
+    "tip": "Kitchen I can use — типова фраза в хостелах.",
+    "cat": "hotel",
+    "tag": "🏨 Готель",
+    "anchors": [
+      "kitchen I can use"
+    ],
+    "situation": "В хостелі",
+    "examples": [
+      "— Is there a kitchen I can use? — Yes, it's on the second floor.",
+      "— Is there a kitchen I can use? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Could I leave my bag here after check-out?",
+    "ua": "Чи можна залишити сумку після виїзду?",
+    "ex": "— Could I leave my bag here after check-out? — Of course, we have a storage room.",
+    "tip": "Leave my bag = залишити багаж.",
+    "cat": "hotel",
+    "tag": "🏨 Готель",
+    "anchors": [
+      "leave my bag"
+    ],
+    "situation": "В хостелі після check-out",
+    "examples": [
+      "— Could I leave my bag here after check-out? — Of course, we have a storage room.",
+      "— Could I leave my bag here after check-out? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "What time are the quiet hours?",
+    "ua": "О котрій годині тиха година?",
+    "ex": "— What time are the quiet hours? — From 11 PM to 8 AM, please.",
+    "tip": "Quiet hours = коли не можна шуміти.",
+    "cat": "hotel",
+    "tag": "🏨 Готель",
+    "anchors": [
+      "quiet hours"
+    ],
+    "situation": "В хостелі",
+    "examples": [
+      "— What time are the quiet hours? — From 11 PM to 8 AM, please.",
+      "— What time are the quiet hours? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Is breakfast included or do I pay extra?",
+    "ua": "Сніданок включений чи платно окремо?",
+    "ex": "— Is breakfast included? — It's five euros extra.",
+    "tip": "Included or pay extra — уточнення в хостелі.",
+    "cat": "hotel",
+    "tag": "🏨 Готель",
+    "anchors": [
+      "breakfast included"
+    ],
+    "situation": "В хостелі на рецепції",
+    "examples": [
+      "— Is breakfast included? — It's five euros extra.",
+      "— Is breakfast included or do I pay extra? — Sure, no problem."
     ]
   }
 ];
@@ -462,7 +542,7 @@ const PHRASES_STREET = [
     ]
   }
 ];
-// 🚌 Транспорт — 14 phrases
+// 🚌 Транспорт — 19 phrases
 const PHRASES_TRANSPORT = [
   {
     "en": "Which bus goes to…?",
@@ -706,9 +786,89 @@ const PHRASES_TRANSPORT = [
       "Could you drop me off here? I'll walk the rest of the way.",
       "— Could you drop me off here, please? — Yes, it stops there. You need a single ticket."
     ]
+  },
+  {
+    "en": "Where is the check-in desk?",
+    "ua": "Де стійка реєстрації?",
+    "ex": "— Where is the check-in desk? — Terminal 2, departures level.",
+    "tip": "Check-in desk = реєстрація на рейс.",
+    "cat": "transport",
+    "tag": "🚌 Транспорт",
+    "anchors": [
+      "check-in desk"
+    ],
+    "situation": "В аеропорту",
+    "examples": [
+      "— Where is the check-in desk? — Terminal 2, departures level.",
+      "— Where is the check-in desk? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Which gate is my flight?",
+    "ua": "Який гейт мого рейсу?",
+    "ex": "— Which gate is my flight? — Gate B12, boarding starts at 6:30.",
+    "tip": "Gate = вихід на посадку.",
+    "cat": "transport",
+    "tag": "🚌 Транспорт",
+    "anchors": [
+      "Which gate"
+    ],
+    "situation": "В аеропорту",
+    "examples": [
+      "— Which gate is my flight? — Gate B12, boarding starts at 6:30.",
+      "— Which gate is my flight? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Is my flight on time?",
+    "ua": "Мій рейс вчасно?",
+    "ex": "— Is my flight on time? — There's a 40-minute delay, sorry.",
+    "tip": "On time = без затримки. Delay = затримка.",
+    "cat": "transport",
+    "tag": "🚌 Транспорт",
+    "anchors": [
+      "on time"
+    ],
+    "situation": "В аеропорту біля табло",
+    "examples": [
+      "— Is my flight on time? — There's a 40-minute delay, sorry.",
+      "— Is my flight on time? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Where can I collect my baggage?",
+    "ua": "Де забрати багаж?",
+    "ex": "— Where can I collect my baggage? — Carousel 3, just follow the signs.",
+    "tip": "Baggage / luggage carousel = стрічка видачі багажу.",
+    "cat": "transport",
+    "tag": "🚌 Транспорт",
+    "anchors": [
+      "collect my baggage"
+    ],
+    "situation": "В аеропорту після прильоту",
+    "examples": [
+      "— Where can I collect my baggage? — Carousel 3, just follow the signs.",
+      "— Where can I collect my baggage? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Do I need to take my laptop out at security?",
+    "ua": "Чи треба діставати ноутбук на перевірці?",
+    "ex": "— Do I need to take my laptop out? — Yes, and liquids go in a clear bag.",
+    "tip": "Security = перевірка безпеки.",
+    "cat": "transport",
+    "tag": "🚌 Транспорт",
+    "anchors": [
+      "take my laptop out"
+    ],
+    "situation": "В аеропорту на security",
+    "examples": [
+      "— Do I need to take my laptop out? — Yes, and liquids go in a clear bag.",
+      "— Do I need to take my laptop out at security? — Sure, no problem."
+    ]
   }
 ];
-// ☕ Кафе — 11 phrases
+// ☕ Кафе — 16 phrases
 const PHRASES_CAFE = [
   {
     "en": "A table for two, please.",
@@ -889,6 +1049,86 @@ const PHRASES_CAFE = [
     "examples": [
       "— Is a tip expected here? — It's customary to leave about 10–15%.",
       "— Is a tip expected here? — Right away. Would you like anything else?"
+    ]
+  },
+  {
+    "en": "Could we get a table by the window?",
+    "ua": "Чи можна столик біля вікна?",
+    "ex": "— Could we get a table by the window? — Sure, follow me.",
+    "tip": "By the window = біля вікна.",
+    "cat": "cafe",
+    "tag": "☕ Кафе",
+    "anchors": [
+      "table by the window"
+    ],
+    "situation": "У кафе",
+    "examples": [
+      "— Could we get a table by the window? — Sure, follow me.",
+      "— Could we get a table by the window? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Is there free Wi-Fi here?",
+    "ua": "Тут є безкоштовний Wi-Fi?",
+    "ex": "— Is there free Wi-Fi here? — Yes, the password is on the menu.",
+    "tip": "Free Wi-Fi — майже в кожному кафе.",
+    "cat": "cafe",
+    "tag": "☕ Кафе",
+    "anchors": [
+      "free Wi-Fi"
+    ],
+    "situation": "У кафе",
+    "examples": [
+      "— Is there free Wi-Fi here? — Yes, the password is on the menu.",
+      "— Is there free Wi-Fi here? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Could we split the bill?",
+    "ua": "Можемо розділити рахунок?",
+    "ex": "— Could we split the bill? — Of course, together or separately?",
+    "tip": "Split the bill = розділити оплату.",
+    "cat": "cafe",
+    "tag": "☕ Кафе",
+    "anchors": [
+      "split the bill"
+    ],
+    "situation": "У кафе після їжі",
+    "examples": [
+      "— Could we split the bill? — Of course, together or separately?",
+      "— Could we split the bill? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Could I have a refill, please?",
+    "ua": "Чи можна долити ще?",
+    "ex": "— Could I have a refill, please? — Sure, coffee or tea?",
+    "tip": "Refill = повторне наповнення (кава/чай).",
+    "cat": "cafe",
+    "tag": "☕ Кафе",
+    "anchors": [
+      "refill"
+    ],
+    "situation": "У кафе",
+    "examples": [
+      "— Could I have a refill, please? — Sure, coffee or tea?",
+      "— Could I have a refill, please? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Is this table reserved?",
+    "ua": "Цей столик зарезервований?",
+    "ex": "— Is this table reserved? — No, please sit wherever you like.",
+    "tip": "Reserved = зарезервований.",
+    "cat": "cafe",
+    "tag": "☕ Кафе",
+    "anchors": [
+      "table reserved"
+    ],
+    "situation": "У кафе",
+    "examples": [
+      "— Is this table reserved? — No, please sit wherever you like.",
+      "— Is this table reserved? — Sure, no problem."
     ]
   }
 ];
@@ -4179,7 +4419,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 2,
-    "phraseIndex": 228,
+    "phraseIndex": 243,
     "options": [
       "Nice to meet you!",
       "Something came up.",
@@ -4205,7 +4445,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 1,
-    "phraseIndex": 43,
+    "phraseIndex": 53,
     "options": [
       "I'll have the grilled salmon, please.",
       "Is this on sale?",
@@ -4231,7 +4471,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 1,
-    "phraseIndex": 76,
+    "phraseIndex": 91,
     "options": [
       "That sounds great!",
       "I'm afraid I have to disagree.",
@@ -4257,7 +4497,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 1,
-    "phraseIndex": 14,
+    "phraseIndex": 19,
     "options": [
       "I think I'm lost. Could you help me?",
       "No worries!",
@@ -4309,7 +4549,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 2,
-    "phraseIndex": 23,
+    "phraseIndex": 28,
     "options": [
       "I'm sorry, I didn't catch that.",
       "That makes sense.",
@@ -4335,7 +4575,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 1,
-    "phraseIndex": 124,
+    "phraseIndex": 139,
     "options": [
       "Sounds good to me.",
       "I'd rather not.",
@@ -4361,7 +4601,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 2,
-    "phraseIndex": 235,
+    "phraseIndex": 250,
     "options": [
       "Thanks for your help — I really appreciate it.",
       "This isn't what I ordered.",
@@ -4413,7 +4653,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 2,
-    "phraseIndex": 90,
+    "phraseIndex": 105,
     "options": [
       "That works for me.",
       "I totally agree with you.",
@@ -4435,7 +4675,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 0,
-    "phraseIndex": 84,
+    "phraseIndex": 99,
     "options": [
       "I'm running a bit late.",
       "How's it going?",
@@ -4461,7 +4701,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 1,
-    "phraseIndex": 100,
+    "phraseIndex": 115,
     "options": [
       "That's a shame.",
       "Absolutely!",
@@ -4470,57 +4710,338 @@ const DIALOGUES = [
     ],
     "answer": "That's a shame.",
     "correctIndex": 0
+  },
+  {
+    "scene": "🛏️ Хостел",
+    "lines": [
+      {
+        "speaker": "Reception",
+        "text": "Hi! Welcome to the hostel. How can I help?"
+      },
+      {
+        "speaker": "You",
+        "text": "___"
+      },
+      {
+        "speaker": "Reception",
+        "text": "Yes, we have one bed left in the 6-bed dorm — 18 euros."
+      }
+    ],
+    "blankIndex": 1,
+    "phraseIndex": 11,
+    "options": [
+      "Do you have a bed in a dorm room?",
+      "Which gate is my flight?",
+      "Could we split the bill?",
+      "Where is the check-in desk?"
+    ],
+    "answer": "Do you have a bed in a dorm room?",
+    "correctIndex": 0
+  },
+  {
+    "scene": "🛏️ Хостел",
+    "lines": [
+      {
+        "speaker": "You",
+        "text": "___"
+      },
+      {
+        "speaker": "Staff",
+        "text": "Sure, the kitchen is on the second floor — help yourself."
+      }
+    ],
+    "blankIndex": 0,
+    "phraseIndex": 12,
+    "options": [
+      "Is there a kitchen I can use?",
+      "Is my flight on time?",
+      "Could I have a refill, please?",
+      "Is this table reserved?"
+    ],
+    "answer": "Is there a kitchen I can use?",
+    "correctIndex": 0
+  },
+  {
+    "scene": "🛏️ Хостел",
+    "lines": [
+      {
+        "speaker": "You",
+        "text": "I'm checking out now, but my train is at night."
+      },
+      {
+        "speaker": "You",
+        "text": "___"
+      },
+      {
+        "speaker": "Reception",
+        "text": "No problem — we have a storage room behind the desk."
+      }
+    ],
+    "blankIndex": 1,
+    "phraseIndex": 13,
+    "options": [
+      "Could I leave my bag here after check-out?",
+      "Where can I collect my baggage?",
+      "Could we get a table by the window?",
+      "Do I need to take my laptop out at security?"
+    ],
+    "answer": "Could I leave my bag here after check-out?",
+    "correctIndex": 0
+  },
+  {
+    "scene": "✈️ Аеропорт",
+    "lines": [
+      {
+        "speaker": "You",
+        "text": "Excuse me, I'm flying to Berlin."
+      },
+      {
+        "speaker": "You",
+        "text": "___"
+      },
+      {
+        "speaker": "Staff",
+        "text": "Terminal 2, departures — just follow the blue signs."
+      }
+    ],
+    "blankIndex": 1,
+    "phraseIndex": 45,
+    "options": [
+      "Where is the check-in desk?",
+      "Is there a kitchen I can use?",
+      "Could I have the bill, please?",
+      "What time are the quiet hours?"
+    ],
+    "answer": "Where is the check-in desk?",
+    "correctIndex": 0
+  },
+  {
+    "scene": "✈️ Аеропорт",
+    "lines": [
+      {
+        "speaker": "You",
+        "text": "My boarding pass says flight LH456."
+      },
+      {
+        "speaker": "You",
+        "text": "___"
+      },
+      {
+        "speaker": "Agent",
+        "text": "Gate B12 — boarding starts in twenty minutes."
+      }
+    ],
+    "blankIndex": 1,
+    "phraseIndex": 46,
+    "options": [
+      "Which gate is my flight?",
+      "Which bus goes to…?",
+      "Is this the right way to…?",
+      "Could we split the bill?"
+    ],
+    "answer": "Which gate is my flight?",
+    "correctIndex": 0
+  },
+  {
+    "scene": "✈️ Аеропорт",
+    "lines": [
+      {
+        "speaker": "You",
+        "text": "Excuse me — ___"
+      },
+      {
+        "speaker": "Agent",
+        "text": "Flight LH456? I'm afraid there's a 45-minute delay."
+      }
+    ],
+    "blankIndex": 0,
+    "phraseIndex": 47,
+    "options": [
+      "Is my flight on time?",
+      "Is the train / bus running on time?",
+      "What time is check-in / check-out?",
+      "Is breakfast included or do I pay extra?"
+    ],
+    "answer": "Is my flight on time?",
+    "correctIndex": 0
+  },
+  {
+    "scene": "✈️ Аеропорт",
+    "lines": [
+      {
+        "speaker": "You",
+        "text": "I just landed. ___"
+      },
+      {
+        "speaker": "Staff",
+        "text": "Baggage claim is carousel 3 — just follow the signs."
+      }
+    ],
+    "blankIndex": 0,
+    "phraseIndex": 48,
+    "options": [
+      "Where can I collect my baggage?",
+      "Where is the nearest bus stop / metro station?",
+      "Where do I pay for this?",
+      "Where can I find…?"
+    ],
+    "answer": "Where can I collect my baggage?",
+    "correctIndex": 0
+  },
+  {
+    "scene": "☕ Кафе",
+    "lines": [
+      {
+        "speaker": "Host",
+        "text": "Good afternoon! Table for how many?"
+      },
+      {
+        "speaker": "You",
+        "text": "Two, please. ___"
+      },
+      {
+        "speaker": "Host",
+        "text": "Of course — this way, by the window."
+      }
+    ],
+    "blankIndex": 1,
+    "phraseIndex": 61,
+    "options": [
+      "Could we get a table by the window?",
+      "A table for two, please.",
+      "Is this seat taken?",
+      "Could I leave my bag here after check-out?"
+    ],
+    "answer": "Could we get a table by the window?",
+    "correctIndex": 0
+  },
+  {
+    "scene": "☕ Кафе",
+    "lines": [
+      {
+        "speaker": "You",
+        "text": "I need to send an email. ___"
+      },
+      {
+        "speaker": "Waiter",
+        "text": "Yes — password is \"guest123\", on the blackboard."
+      }
+    ],
+    "blankIndex": 0,
+    "phraseIndex": 62,
+    "options": [
+      "Is there free Wi-Fi here?",
+      "What's the Wi-Fi password?",
+      "Where is the check-in desk?",
+      "Is there a pharmacy nearby?"
+    ],
+    "answer": "Is there free Wi-Fi here?",
+    "correctIndex": 0
+  },
+  {
+    "scene": "☕ Кафе",
+    "lines": [
+      {
+        "speaker": "Waiter",
+        "text": "Here's your bill — together or separate?"
+      },
+      {
+        "speaker": "You",
+        "text": "___"
+      },
+      {
+        "speaker": "Waiter",
+        "text": "Sure, I'll split it for you."
+      }
+    ],
+    "blankIndex": 1,
+    "phraseIndex": 63,
+    "options": [
+      "Could we split the bill?",
+      "Could I have the bill, please?",
+      "Keep the change.",
+      "I'll get this one."
+    ],
+    "answer": "Could we split the bill?",
+    "correctIndex": 0
+  },
+  {
+    "scene": "☕ Кафе",
+    "lines": [
+      {
+        "speaker": "Waiter",
+        "text": "Would you like anything else?"
+      },
+      {
+        "speaker": "You",
+        "text": "___"
+      },
+      {
+        "speaker": "Waiter",
+        "text": "Of course — more coffee coming up."
+      }
+    ],
+    "blankIndex": 1,
+    "phraseIndex": 64,
+    "options": [
+      "Could I have a refill, please?",
+      "Could I get this to go?",
+      "I'll have the…, please.",
+      "Could I also get a croissant, please?"
+    ],
+    "answer": "Could I have a refill, please?",
+    "correctIndex": 0
   }
 ];
 
 const SITUATIONS = [
   {
     "situation": "Ти в кафе і хочеш попросити рахунок.",
-    "phraseIndex": 45,
+    "phraseIndex": 55,
     "options": [
-      "Could I see the menu, please?",
       "What do you recommend?",
+      "Could I have the bill, please?",
       "Is this dish spicy?",
-      "Could I have the bill, please?"
+      "Could I see the menu, please?"
     ],
-    "correctIndex": 3
+    "correctIndex": 1
   },
   {
     "situation": "Ти загубився на вулиці.",
-    "phraseIndex": 14,
+    "phraseIndex": 19,
     "options": [
-      "Nice to meet you!",
       "A table for two, please.",
-      "Is this on sale?",
-      "I think I'm lost. Could you help me?"
+      "Nice to meet you!",
+      "I think I'm lost. Could you help me?",
+      "Is this on sale?"
     ],
-    "correctIndex": 3
+    "correctIndex": 2
   },
   {
     "situation": "Хочеш ввічливо попросити людину говорити повільніше.",
-    "phraseIndex": 22,
+    "phraseIndex": 27,
     "options": [
-      "Same here!",
-      "Go ahead.",
       "What do you mean by that?",
-      "Could you speak more slowly, please?"
+      "Same here!",
+      "Could you speak more slowly, please?",
+      "Go ahead."
     ],
-    "correctIndex": 3
+    "correctIndex": 2
   },
   {
     "situation": "У поїзді хочеш дізнатися, чи зупиняється він на твоїй станції.",
-    "phraseIndex": 29,
+    "phraseIndex": 34,
     "options": [
-      "Long time no see!",
+      "Does this train stop at…?",
       "How much does this cost?",
-      "Is breakfast included in the price?",
-      "Does this train stop at…?"
+      "Long time no see!",
+      "Is breakfast included in the price?"
     ],
-    "correctIndex": 3
+    "correctIndex": 0
   },
   {
     "situation": "Хтось запропонував піти на каву, і тобі подобається ідея.",
-    "phraseIndex": 76,
+    "phraseIndex": 91,
     "options": [
       "I'm afraid I have to disagree.",
       "I'd rather not.",
@@ -4531,22 +5052,22 @@ const SITUATIONS = [
   },
   {
     "situation": "Ти запізнюєшся на зустріч і хочеш попередити.",
-    "phraseIndex": 84,
+    "phraseIndex": 99,
     "options": [
       "Take your time.",
       "Never mind.",
-      "I'll be right back.",
-      "I'm running a bit late."
+      "I'm running a bit late.",
+      "I'll be right back."
     ],
-    "correctIndex": 3
+    "correctIndex": 2
   },
   {
     "situation": "У магазині ти не хочеш, щоб продавець тебе турбував.",
-    "phraseIndex": 54,
+    "phraseIndex": 69,
     "options": [
+      "How much does this cost?",
       "I'd like to return this",
       "Do you accept credit cards?",
-      "How much does this cost?",
       "I'm just looking, thank you."
     ],
     "correctIndex": 3
@@ -4555,86 +5076,86 @@ const SITUATIONS = [
     "situation": "Ти хочеш дізнатися, чи включений сніданок у ціну номера.",
     "phraseIndex": 3,
     "options": [
-      "What's the Wi-Fi password?",
-      "What time does breakfast start?",
       "Is breakfast included in the price?",
-      "Is there a safe"
+      "What time does breakfast start?",
+      "Is there a safe",
+      "What's the Wi-Fi password?"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "situation": "У таксі хочеш, щоб водій висадив тебе зараз.",
+    "phraseIndex": 44,
+    "options": [
+      "Where can I get a taxi?",
+      "Please take me to this address.",
+      "Could you drop me off here, please?",
+      "I need to get off at the next stop."
     ],
     "correctIndex": 2
   },
   {
-    "situation": "У таксі хочеш, щоб водій висадив тебе зараз.",
-    "phraseIndex": 39,
+    "situation": "Ти не зрозумів, що сказали — просиш повторити.",
+    "phraseIndex": 102,
     "options": [
-      "Please take me to this address.",
-      "Could you drop me off here, please?",
-      "Where can I get a taxi?",
-      "I need to get off at the next stop."
+      "I totally agree with you.",
+      "Could you say that again?",
+      "Absolutely!",
+      "That makes sense."
     ],
     "correctIndex": 1
   },
   {
-    "situation": "Ти не зрозумів, що сказали — просиш повторити.",
-    "phraseIndex": 87,
-    "options": [
-      "That makes sense.",
-      "I totally agree with you.",
-      "Could you say that again?",
-      "Absolutely!"
-    ],
-    "correctIndex": 2
-  },
-  {
     "situation": "Домовляєшся про час зустрічі — питаєш, коли зручно.",
-    "phraseIndex": 247,
+    "phraseIndex": 262,
     "options": [
-      "Which way is the town centre?",
+      "What are the opening hours?",
       "How far is it from here?",
       "What time works for you?",
-      "What are the opening hours?"
+      "Which way is the town centre?"
     ],
     "correctIndex": 2
   },
   {
     "situation": "Ти вперше зустрічаєш людину після представлення.",
-    "phraseIndex": 228,
+    "phraseIndex": 243,
     "options": [
+      "Nice to meet you!",
       "Long time no see!",
-      "How's it going?",
       "What brings you here?",
-      "Nice to meet you!"
+      "How's it going?"
     ],
-    "correctIndex": 3
+    "correctIndex": 0
   },
   {
     "situation": "Хтось вибачається, і ти хочеш сказати, що все гаразд.",
-    "phraseIndex": 236,
+    "phraseIndex": 251,
     "options": [
-      "I'm afraid I have to disagree.",
-      "Sorry about that.",
       "No worries!",
+      "Sorry about that.",
+      "I'm afraid I have to disagree.",
       "My bad."
+    ],
+    "correctIndex": 0
+  },
+  {
+    "situation": "У ресторані страва не та, що ти замовляв.",
+    "phraseIndex": 59,
+    "options": [
+      "Could I get this to go?",
+      "Is this dish spicy?",
+      "This isn't what I ordered.",
+      "What do you recommend?"
     ],
     "correctIndex": 2
   },
   {
-    "situation": "У ресторані страва не та, що ти замовляв.",
-    "phraseIndex": 49,
-    "options": [
-      "What do you recommend?",
-      "This isn't what I ordered.",
-      "Is this dish spicy?",
-      "Could I get this to go?"
-    ],
-    "correctIndex": 1
-  },
-  {
     "situation": "Друг питає, як справи — відповідаєш, що все добре.",
-    "phraseIndex": 129,
+    "phraseIndex": 144,
     "options": [
       "I overslept.",
-      "Something came up.",
       "Not much.",
+      "Something came up.",
       "I'm doing well, thanks."
     ],
     "correctIndex": 3
@@ -4643,12 +5164,56 @@ const SITUATIONS = [
     "situation": "Хочеш ввічливо сказати, що йдеш — прощаєшся.",
     "phraseIndex": 0,
     "options": [
-      "Come on in.",
-      "Help yourself.",
       "Have a seat.",
+      "Help yourself.",
+      "Come on in.",
       "Could you tell me where the nearest hotel is?"
     ],
     "correctIndex": 3
+  },
+  {
+    "situation": "На рецепції хостелу питаєш про ліжко в dorm.",
+    "phraseIndex": 11,
+    "options": [
+      "Is breakfast included in the price?",
+      "Could I have a late check-out",
+      "Do you have a bed in a dorm room?",
+      "I have a reservation under the name…"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "situation": "В аеропорту шукаєш стійку реєстрації.",
+    "phraseIndex": 45,
+    "options": [
+      "Which gate is my flight?",
+      "Where is the nearest bus stop / metro station?",
+      "Where can I get a taxi?",
+      "Where is the check-in desk?"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "situation": "У кафе хочеш сісти біля вікна.",
+    "phraseIndex": 61,
+    "options": [
+      "Could I see the menu, please?",
+      "A table for two, please.",
+      "Could we get a table by the window?",
+      "Is this seat taken?"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "situation": "У кафе просиш розділити рахунок.",
+    "phraseIndex": 63,
+    "options": [
+      "Is a tip expected here?",
+      "Could I have the bill, please?",
+      "Could we split the bill?",
+      "Can I pay by card?"
+    ],
+    "correctIndex": 2
   }
 ];
 

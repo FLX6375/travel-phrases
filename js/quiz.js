@@ -4,6 +4,7 @@ let quizCurrent = 0;
 let quizScore = 0;
 let quizAnswered = false;
 let hintRevealed = 0;
+let questionUsedHint = false;
 let scrambleUserWords = [];
 
 function setQuizType(t) {
@@ -16,8 +17,9 @@ function setQuizType(t) {
 }
 
 function buildQuizPool(size) {
-  const indices = PHRASES.map((_, i) => i);
-  return pickWeighted(indices, size, i => Storage.getPhrasePriority(i));
+  const indices = filterIndicesForQuiz(PHRASES.map((_, i) => i));
+  if (!indices.length) return [];
+  return pickWeighted(indices, Math.min(size, indices.length), i => Storage.getPhrasePriority(i));
 }
 
 function buildPracticePool(items, size, getPhraseIdx) {
@@ -27,13 +29,18 @@ function buildPracticePool(items, size, getPhraseIdx) {
 function startQuiz() {
   if (typeof clearFlashTimer === 'function') clearFlashTimer();
   Speech.stop();
-  if (quizType === 'dialogue') { quizType = 'dialogue'; startDialogueQuiz(); return; }
-  if (quizType === 'situation') { quizType = 'situation'; startSituationQuiz(); return; }
-  if (quizType === 'flash') { quizType = 'flash'; startFlashQuiz(); return; }
-  if (quizType === 'pattern') { quizType = 'pattern'; startPatternQuiz(); return; }
-  if (quizType === 'marathon') { quizType = 'marathon'; startMarathonQuiz(); return; }
+  syncErrorsOnlyToggle();
+  if (quizType === 'dialogue') { startDialogueQuiz(); return; }
+  if (quizType === 'situation') { startSituationQuiz(); return; }
+  if (quizType === 'flash') { startFlashQuiz(); return; }
+  if (quizType === 'pattern') { startPatternQuiz(); return; }
+  if (quizType === 'marathon') { startMarathonQuiz(); return; }
 
   quizQueue = buildQuizPool(15);
+  if (!quizQueue.length && quizErrorsOnly) {
+    showErrorsOnlyEmpty();
+    return;
+  }
   quizCurrent = 0;
   quizScore = 0;
   document.getElementById('quiz-next').style.display = 'none';
@@ -48,9 +55,15 @@ function renderQuestion() {
   const p = PHRASES[idx];
   quizAnswered = false;
   hintRevealed = 0;
+  questionUsedHint = false;
   scrambleUserWords = [];
 
-  const statusText = (Storage.phraseWeights[idx] > 1) ? ' ⚠️ ПОВТОРЕННЯ' : '';
+  const prog = Storage.getProgress(idx);
+  const streakLeft = Math.max(0, STREAK_TO_LEARN - prog.streak);
+  const statusParts = [];
+  if (Storage.hasErrors(idx)) statusParts.push('⚠️ ПОМИЛКА');
+  else if (prog.streak > 0 && !Storage.learned.has(idx)) statusParts.push(`🔥 ${prog.streak}/${STREAK_TO_LEARN}`);
+  const statusText = statusParts.length ? ' · ' + statusParts.join(' ') : '';
   document.getElementById('quiz-prog').textContent = `Запитання ${quizCurrent + 1} / ${quizQueue.length}${statusText}`;
   document.getElementById('quiz-fb').textContent = '';
   document.getElementById('quiz-fb').className = 'quiz-feedback';
@@ -155,7 +168,7 @@ function checkScramble(idx) {
   const userStr = scrambleUserWords.map(w => w.txt).join(' ');
   const isCorrect = normalizePhrase(userStr) === normalizePhrase(PHRASES[idx].en);
   handleScoreUpdate(idx, isCorrect);
-  triggerFeedback(isCorrect, PHRASES[idx].en, PHRASES[idx].rule, PHRASES[idx].anchors);
+  triggerFeedback(isCorrect, PHRASES[idx].en, PHRASES[idx].rule, PHRASES[idx].anchors, idx);
 }
 
 function liveCheck(idx) {
@@ -168,6 +181,7 @@ function liveCheck(idx) {
 }
 
 function revealHint(idx) {
+  questionUsedHint = true;
   const words = PHRASES[idx].en.split(' ');
   hintRevealed = Math.min(hintRevealed + 1, Math.ceil(words.length / 2));
   const shown = words.slice(0, hintRevealed).join(' ');
@@ -183,7 +197,7 @@ function checkTyped(idx) {
   input.disabled = true;
   const isCorrect = normalizePhrase(input.value) === normalizePhrase(PHRASES[idx].en);
   handleScoreUpdate(idx, isCorrect);
-  triggerFeedback(isCorrect, PHRASES[idx].en, PHRASES[idx].rule, PHRASES[idx].anchors);
+  triggerFeedback(isCorrect, PHRASES[idx].en, PHRASES[idx].rule, PHRASES[idx].anchors, idx);
 }
 
 function checkAnswer(el, chosen, correct, idx) {
@@ -198,28 +212,40 @@ function checkAnswer(el, chosen, correct, idx) {
       if (o.textContent.trim() === correct) o.classList.add('correct');
     });
   }
-  triggerFeedback(isCorrect, PHRASES[idx].en, PHRASES[idx].rule, PHRASES[idx].anchors);
+  triggerFeedback(isCorrect, PHRASES[idx].en, PHRASES[idx].rule, PHRASES[idx].anchors, idx);
 }
 
 function handleScoreUpdate(idx, isCorrect) {
+  const usedHint = questionUsedHint || hintRevealed > 0;
+  const answerType = Storage.recordPhraseAnswer(idx, isCorrect, usedHint);
   const practiceModes = ['dialogue', 'situation', 'flash', 'pattern', 'marathon'];
   if (practiceModes.includes(quizType)) {
-    if (isCorrect) practiceScore++;
-  } else if (isCorrect) {
+    if (isCorrect && !usedHint) practiceScore++;
+  } else if (isCorrect && !usedHint) {
     quizScore++;
   }
-  Storage.updateWeight(idx, isCorrect);
   Storage.recordAnswer(isCorrect);
   updateProgress();
+  return answerType;
 }
 
-function triggerFeedback(isCorrect, correctPhrase, rule, anchors) {
+function triggerFeedback(isCorrect, correctPhrase, rule, anchors, idx) {
   const fb = document.getElementById('quiz-fb');
   const nextBtn = document.getElementById('quiz-next');
+  const usedHint = questionUsedHint || hintRevealed > 0;
 
-  if (isCorrect) {
-    fb.innerHTML = `<strong>✅ Чудово!</strong> Порядок слів правильний.`;
+  if (isCorrect && !usedHint) {
+    const p = Storage.getProgress(idx);
+    const learnedNote = Storage.learned.has(idx) && p.streak >= STREAK_TO_LEARN
+      ? ' <strong>🎉 Фраза вивчена!</strong>' : '';
+    fb.innerHTML = `<strong>✅ Рівень 1:</strong> Без помилок і без підказок!${learnedNote}`;
     fb.className = 'quiz-feedback ok';
+    nextBtn.style.display = 'inline-block';
+    nextBtn.disabled = false;
+    nextBtn.textContent = 'Далі →';
+  } else if (isCorrect && usedHint) {
+    fb.innerHTML = `<strong>💡 Рівень 2:</strong> Правильно, але з підказкою — серія до «вивчено» обнулилась.`;
+    fb.className = 'quiz-feedback hint-ok';
     nextBtn.style.display = 'inline-block';
     nextBtn.disabled = false;
     nextBtn.textContent = 'Далі →';
@@ -232,8 +258,7 @@ function triggerFeedback(isCorrect, correctPhrase, rule, anchors) {
     const updateTimerText = () => {
       nextBtn.textContent = `Почекай (${secLeft}с), вчимо фразу...`;
       fb.innerHTML =
-        '❌ <strong>Помилка! Ехо-память.</strong><br>' +
-        'Прочитай речення вголос 3 рази:<br>' +
+        '❌ <strong>Рівень 3 — помилка.</strong> Прочитай речення вголос 3 рази:<br>' +
         '<span style="font-size:1.2rem;display:block;margin:8px 0;font-weight:700;color:var(--text);">' + highlighted + '</span>' +
         '<small style="color:var(--muted);font-style:italic;">' + (rule ? escapeHtml(rule) : '') + '</small>';
     };

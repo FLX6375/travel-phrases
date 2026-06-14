@@ -153,6 +153,123 @@ function buildDialoguesAndSituations(PHRASES) {
       blankIndex: 1,
       phraseIndex: findIdx(p => p.en === "That's a shame."),
       options: ["That's a shame.", 'Absolutely!', 'Go ahead.', "I'm easy — either way is fine."]
+    },
+    {
+      scene: '🛏️ Хостел',
+      lines: [
+        { speaker: 'Reception', text: 'Hi! Welcome to the hostel. How can I help?' },
+        { speaker: 'You', text: '___' },
+        { speaker: 'Reception', text: 'Yes, we have one bed left in the 6-bed dorm — 18 euros.' }
+      ],
+      blankIndex: 1,
+      phraseIndex: findIdx(p => p.en === 'Do you have a bed in a dorm room?'),
+      options: ['Do you have a bed in a dorm room?', 'Which gate is my flight?', 'Could we split the bill?', 'Where is the check-in desk?']
+    },
+    {
+      scene: '🛏️ Хостел',
+      lines: [
+        { speaker: 'You', text: '___' },
+        { speaker: 'Staff', text: 'Sure, the kitchen is on the second floor — help yourself.' }
+      ],
+      blankIndex: 0,
+      phraseIndex: findIdx(p => p.en === 'Is there a kitchen I can use?'),
+      options: ['Is there a kitchen I can use?', 'Is my flight on time?', 'Could I have a refill, please?', 'Is this table reserved?']
+    },
+    {
+      scene: '🛏️ Хостел',
+      lines: [
+        { speaker: 'You', text: 'I\'m checking out now, but my train is at night.' },
+        { speaker: 'You', text: '___' },
+        { speaker: 'Reception', text: 'No problem — we have a storage room behind the desk.' }
+      ],
+      blankIndex: 1,
+      phraseIndex: findIdx(p => p.en.startsWith('Could I leave my bag')),
+      options: ['Could I leave my bag here after check-out?', 'Where can I collect my baggage?', 'Could we get a table by the window?', 'Do I need to take my laptop out at security?']
+    },
+    {
+      scene: '✈️ Аеропорт',
+      lines: [
+        { speaker: 'You', text: 'Excuse me, I\'m flying to Berlin.' },
+        { speaker: 'You', text: '___' },
+        { speaker: 'Staff', text: 'Terminal 2, departures — just follow the blue signs.' }
+      ],
+      blankIndex: 1,
+      phraseIndex: findIdx(p => p.en === 'Where is the check-in desk?'),
+      options: ['Where is the check-in desk?', 'Is there a kitchen I can use?', 'Could I have the bill, please?', 'What time are the quiet hours?']
+    },
+    {
+      scene: '✈️ Аеропорт',
+      lines: [
+        { speaker: 'You', text: 'My boarding pass says flight LH456.' },
+        { speaker: 'You', text: '___' },
+        { speaker: 'Agent', text: 'Gate B12 — boarding starts in twenty minutes.' }
+      ],
+      blankIndex: 1,
+      phraseIndex: findIdx(p => p.en === 'Which gate is my flight?'),
+      options: ['Which gate is my flight?', 'Which bus goes to…?', 'Is this the right way to…?', 'Could we split the bill?']
+    },
+    {
+      scene: '✈️ Аеропорт',
+      lines: [
+        { speaker: 'You', text: 'Excuse me — ___' },
+        { speaker: 'Agent', text: 'Flight LH456? I\'m afraid there\'s a 45-minute delay.' }
+      ],
+      blankIndex: 0,
+      phraseIndex: findIdx(p => p.en === 'Is my flight on time?'),
+      options: ['Is my flight on time?', 'Is the train / bus running on time?', 'What time is check-in / check-out?', 'Is breakfast included or do I pay extra?']
+    },
+    {
+      scene: '✈️ Аеропорт',
+      lines: [
+        { speaker: 'You', text: 'I just landed. ___' },
+        { speaker: 'Staff', text: 'Baggage claim is carousel 3 — just follow the signs.' }
+      ],
+      blankIndex: 0,
+      phraseIndex: findIdx(p => p.en === 'Where can I collect my baggage?'),
+      options: ['Where can I collect my baggage?', 'Where is the nearest bus stop / metro station?', 'Where do I pay for this?', 'Where can I find…?']
+    },
+    {
+      scene: '☕ Кафе',
+      lines: [
+        { speaker: 'Host', text: 'Good afternoon! Table for how many?' },
+        { speaker: 'You', text: 'Two, please. ___' },
+        { speaker: 'Host', text: 'Of course — this way, by the window.' }
+      ],
+      blankIndex: 1,
+      phraseIndex: findIdx(p => p.en === 'Could we get a table by the window?'),
+      options: ['Could we get a table by the window?', 'A table for two, please.', 'Is this seat taken?', 'Could I leave my bag here after check-out?']
+    },
+    {
+      scene: '☕ Кафе',
+      lines: [
+        { speaker: 'You', text: 'I need to send an email. ___' },
+        { speaker: 'Waiter', text: 'Yes — password is "guest123", on the blackboard.' }
+      ],
+      blankIndex: 0,
+      phraseIndex: findIdx(p => p.en === 'Is there free Wi-Fi here?'),
+      options: ['Is there free Wi-Fi here?', "What's the Wi-Fi password?", 'Where is the check-in desk?', 'Is there a pharmacy nearby?']
+    },
+    {
+      scene: '☕ Кафе',
+      lines: [
+        { speaker: 'Waiter', text: 'Here\'s your bill — together or separate?' },
+        { speaker: 'You', text: '___' },
+        { speaker: 'Waiter', text: 'Sure, I\'ll split it for you.' }
+      ],
+      blankIndex: 1,
+      phraseIndex: findIdx(p => p.en === 'Could we split the bill?'),
+      options: ['Could we split the bill?', 'Could I have the bill, please?', 'Keep the change.', "I'll get this one."]
+    },
+    {
+      scene: '☕ Кафе',
+      lines: [
+        { speaker: 'Waiter', text: 'Would you like anything else?' },
+        { speaker: 'You', text: '___' },
+        { speaker: 'Waiter', text: 'Of course — more coffee coming up.' }
+      ],
+      blankIndex: 1,
+      phraseIndex: findIdx(p => p.en === 'Could I have a refill, please?'),
+      options: ['Could I have a refill, please?', 'Could I get this to go?', 'I\'ll have the…, please.', 'Could I also get a croissant, please?']
     }
   ].map(d => {
     const phrase = PHRASES[d.phraseIndex];
@@ -179,7 +296,11 @@ function buildDialoguesAndSituations(PHRASES) {
     { situation: 'Хтось вибачається, і ти хочеш сказати, що все гаразд.', phraseIndex: findIdx(p => p.en === 'No worries!'), distractors: ['My bad', 'Sorry about that', "I'm afraid I have to disagree"] },
     { situation: 'У ресторані страва не та, що ти замовляв.', phraseIndex: findIdx(p => p.en.includes("isn't what I ordered")), distractors: ['Is this dish spicy', 'Could I get this to go', 'What do you recommend'] },
     { situation: 'Друг питає, як справи — відповідаєш, що все добре.', phraseIndex: findIdx(p => p.en === "I'm doing well, thanks."), distractors: ['Not much.', 'Something came up.', 'I overslept.'] },
-    { situation: 'Хочеш ввічливо сказати, що йдеш — прощаєшся.', phraseIndex: findIdx(p => p.en === 'I should get going.'), distractors: ['Come on in.', 'Have a seat.', 'Help yourself.'] }
+    { situation: 'Хочеш ввічливо сказати, що йдеш — прощаєшся.', phraseIndex: findIdx(p => p.en === 'I should get going.'), distractors: ['Come on in.', 'Have a seat.', 'Help yourself.'] },
+    { situation: 'На рецепції хостелу питаєш про ліжко в dorm.', phraseIndex: findIdx(p => p.en === 'Do you have a bed in a dorm room?'), distractors: ['I have a reservation', 'Is breakfast included', 'Could I have a late check-out'] },
+    { situation: 'В аеропорту шукаєш стійку реєстрації.', phraseIndex: findIdx(p => p.en === 'Where is the check-in desk?'), distractors: ['Where is the nearest bus stop', 'Which gate is my flight', 'Where can I get a taxi'] },
+    { situation: 'У кафе хочеш сісти біля вікна.', phraseIndex: findIdx(p => p.en === 'Could we get a table by the window?'), distractors: ['A table for two', 'Is this seat taken', 'Could I see the menu'] },
+    { situation: 'У кафе просиш розділити рахунок.', phraseIndex: findIdx(p => p.en === 'Could we split the bill?'), distractors: ['Could I have the bill', 'Can I pay by card', 'Is a tip expected here'] }
   ].map(s => {
     const correct = PHRASES[s.phraseIndex].en;
     const wrongs = s.distractors.map(d => {

@@ -1,4 +1,4 @@
-// ☕ Кафе — 11 phrases
+// ☕ Кафе — 16 phrases
 const PHRASES_CAFE = [
   {
     "en": "A table for two, please.",
@@ -179,6 +179,86 @@ const PHRASES_CAFE = [
     "examples": [
       "— Is a tip expected here? — It's customary to leave about 10–15%.",
       "— Is a tip expected here? — Right away. Would you like anything else?"
+    ]
+  },
+  {
+    "en": "Could we get a table by the window?",
+    "ua": "Чи можна столик біля вікна?",
+    "ex": "— Could we get a table by the window? — Sure, follow me.",
+    "tip": "By the window = біля вікна.",
+    "cat": "cafe",
+    "tag": "☕ Кафе",
+    "anchors": [
+      "table by the window"
+    ],
+    "situation": "У кафе",
+    "examples": [
+      "— Could we get a table by the window? — Sure, follow me.",
+      "— Could we get a table by the window? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Is there free Wi-Fi here?",
+    "ua": "Тут є безкоштовний Wi-Fi?",
+    "ex": "— Is there free Wi-Fi here? — Yes, the password is on the menu.",
+    "tip": "Free Wi-Fi — майже в кожному кафе.",
+    "cat": "cafe",
+    "tag": "☕ Кафе",
+    "anchors": [
+      "free Wi-Fi"
+    ],
+    "situation": "У кафе",
+    "examples": [
+      "— Is there free Wi-Fi here? — Yes, the password is on the menu.",
+      "— Is there free Wi-Fi here? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Could we split the bill?",
+    "ua": "Можемо розділити рахунок?",
+    "ex": "— Could we split the bill? — Of course, together or separately?",
+    "tip": "Split the bill = розділити оплату.",
+    "cat": "cafe",
+    "tag": "☕ Кафе",
+    "anchors": [
+      "split the bill"
+    ],
+    "situation": "У кафе після їжі",
+    "examples": [
+      "— Could we split the bill? — Of course, together or separately?",
+      "— Could we split the bill? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Could I have a refill, please?",
+    "ua": "Чи можна долити ще?",
+    "ex": "— Could I have a refill, please? — Sure, coffee or tea?",
+    "tip": "Refill = повторне наповнення (кава/чай).",
+    "cat": "cafe",
+    "tag": "☕ Кафе",
+    "anchors": [
+      "refill"
+    ],
+    "situation": "У кафе",
+    "examples": [
+      "— Could I have a refill, please? — Sure, coffee or tea?",
+      "— Could I have a refill, please? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Is this table reserved?",
+    "ua": "Цей столик зарезервований?",
+    "ex": "— Is this table reserved? — No, please sit wherever you like.",
+    "tip": "Reserved = зарезервований.",
+    "cat": "cafe",
+    "tag": "☕ Кафе",
+    "anchors": [
+      "table reserved"
+    ],
+    "situation": "У кафе",
+    "examples": [
+      "— Is this table reserved? — No, please sit wherever you like.",
+      "— Is this table reserved? — Sure, no problem."
     ]
   }
 ];

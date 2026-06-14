@@ -1,4 +1,4 @@
-// 🏨 Готель — 11 phrases
+// 🏨 Готель — 16 phrases
 const PHRASES_HOTEL = [
   {
     "en": "Could you tell me where the nearest hotel is?",
@@ -192,6 +192,86 @@ const PHRASES_HOTEL = [
     "examples": [
       "Could you recommend a good pharmacy / museum / supermarket nearby?",
       "— Could you recommend a good restaurant nearby? — Certainly — one moment, please."
+    ]
+  },
+  {
+    "en": "Do you have a bed in a dorm room?",
+    "ua": "Чи є ліжко в загальному номері?",
+    "ex": "— Do you have a bed in a dorm room? — Yes, we have one left in the 6-bed dorm.",
+    "tip": "Dorm room = кімната з кількома ліжками в хостелі.",
+    "cat": "hotel",
+    "tag": "🏨 Готель",
+    "anchors": [
+      "dorm room"
+    ],
+    "situation": "В хостелі на рецепції",
+    "examples": [
+      "— Do you have a bed in a dorm room? — Yes, we have one left in the 6-bed dorm.",
+      "— Do you have a bed in a dorm room? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Is there a kitchen I can use?",
+    "ua": "Чи є кухня, якою я можу користуватися?",
+    "ex": "— Is there a kitchen I can use? — Yes, it's on the second floor.",
+    "tip": "Kitchen I can use — типова фраза в хостелах.",
+    "cat": "hotel",
+    "tag": "🏨 Готель",
+    "anchors": [
+      "kitchen I can use"
+    ],
+    "situation": "В хостелі",
+    "examples": [
+      "— Is there a kitchen I can use? — Yes, it's on the second floor.",
+      "— Is there a kitchen I can use? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Could I leave my bag here after check-out?",
+    "ua": "Чи можна залишити сумку після виїзду?",
+    "ex": "— Could I leave my bag here after check-out? — Of course, we have a storage room.",
+    "tip": "Leave my bag = залишити багаж.",
+    "cat": "hotel",
+    "tag": "🏨 Готель",
+    "anchors": [
+      "leave my bag"
+    ],
+    "situation": "В хостелі після check-out",
+    "examples": [
+      "— Could I leave my bag here after check-out? — Of course, we have a storage room.",
+      "— Could I leave my bag here after check-out? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "What time are the quiet hours?",
+    "ua": "О котрій годині тиха година?",
+    "ex": "— What time are the quiet hours? — From 11 PM to 8 AM, please.",
+    "tip": "Quiet hours = коли не можна шуміти.",
+    "cat": "hotel",
+    "tag": "🏨 Готель",
+    "anchors": [
+      "quiet hours"
+    ],
+    "situation": "В хостелі",
+    "examples": [
+      "— What time are the quiet hours? — From 11 PM to 8 AM, please.",
+      "— What time are the quiet hours? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Is breakfast included or do I pay extra?",
+    "ua": "Сніданок включений чи платно окремо?",
+    "ex": "— Is breakfast included? — It's five euros extra.",
+    "tip": "Included or pay extra — уточнення в хостелі.",
+    "cat": "hotel",
+    "tag": "🏨 Готель",
+    "anchors": [
+      "breakfast included"
+    ],
+    "situation": "В хостелі на рецепції",
+    "examples": [
+      "— Is breakfast included? — It's five euros extra.",
+      "— Is breakfast included or do I pay extra? — Sure, no problem."
     ]
   }
 ];

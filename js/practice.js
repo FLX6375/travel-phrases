@@ -13,7 +13,12 @@ function clearFlashTimer() {
 
 function startDialogueQuiz() {
   quizType = 'dialogue';
-  practiceQueue = buildPracticePool(DIALOGUES, 10, d => d.phraseIndex);
+  let pool = DIALOGUES;
+  if (quizErrorsOnly) {
+    pool = DIALOGUES.filter(d => Storage.hasErrors(d.phraseIndex));
+    if (!pool.length) { showErrorsOnlyEmpty(); return; }
+  }
+  practiceQueue = buildPracticePool(pool, Math.min(10, pool.length), d => d.phraseIndex);
   practiceCurrent = 0;
   practiceScore = 0;
   practiceAnswered = false;
@@ -31,7 +36,8 @@ function renderDialogueQuestion() {
   practiceAnswered = false;
 
   document.getElementById('quiz-prog').textContent = `Діалог ${practiceCurrent + 1} / ${practiceQueue.length}`;
-  document.getElementById('quiz-q').textContent = '💬 Обери репліку, що підходить до діалогу:';
+  const sceneLabel = d.scene ? `<div class="dialogue-scene">${escapeHtml(d.scene)}</div>` : '';
+  document.getElementById('quiz-q').innerHTML = `${sceneLabel}<span>💬 Обери репліку, що підходить до діалогу:</span>`;
   document.getElementById('quiz-hint').textContent = p.situation || '';
   document.getElementById('quiz-fb').textContent = '';
   document.getElementById('quiz-fb').className = 'quiz-feedback';
@@ -56,7 +62,12 @@ function renderDialogueQuestion() {
 
 function startSituationQuiz() {
   quizType = 'situation';
-  practiceQueue = buildPracticePool(SITUATIONS, 12, s => s.phraseIndex);
+  let pool = SITUATIONS;
+  if (quizErrorsOnly) {
+    pool = SITUATIONS.filter(s => Storage.hasErrors(s.phraseIndex));
+    if (!pool.length) { showErrorsOnlyEmpty(); return; }
+  }
+  practiceQueue = buildPracticePool(pool, Math.min(12, pool.length), s => s.phraseIndex);
   practiceCurrent = 0;
   practiceScore = 0;
   practiceAnswered = false;
@@ -89,6 +100,7 @@ function startFlashQuiz() {
   clearFlashTimer();
   quizType = 'flash';
   practiceQueue = buildQuizPool(12);
+  if (!practiceQueue.length && quizErrorsOnly) { showErrorsOnlyEmpty(); return; }
   practiceCurrent = 0;
   practiceScore = 0;
   practiceAnswered = false;
@@ -231,10 +243,7 @@ function checkPracticeAnswer(el, chosen, correct, idx) {
   practiceAnswered = true;
   document.querySelectorAll('.quiz-opt').forEach(o => o.classList.add('disabled'));
   const isCorrect = chosen === correct;
-  if (isCorrect) practiceScore++;
-  Storage.updateWeight(idx, isCorrect);
-  Storage.recordAnswer(isCorrect);
-  updateProgress();
+  handleScoreUpdate(idx, isCorrect);
 
   el.classList.add(isCorrect ? 'correct' : 'wrong');
   if (!isCorrect) {
@@ -242,7 +251,7 @@ function checkPracticeAnswer(el, chosen, correct, idx) {
       if (o.textContent.trim() === correct) o.classList.add('correct');
     });
   }
-  triggerFeedback(isCorrect, PHRASES[idx].en, PHRASES[idx].rule, PHRASES[idx].anchors);
+  triggerFeedback(isCorrect, PHRASES[idx].en, PHRASES[idx].rule, PHRASES[idx].anchors, idx);
 }
 
 function showPracticeResult(label) {

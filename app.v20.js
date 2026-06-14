@@ -11,7 +11,7 @@ const CATEGORIES = {
 };
 
 
-// 🏨 Готель — 11 phrases
+// 🏨 Готель — 16 phrases
 const PHRASES_HOTEL = [
   {
     "en": "Could you tell me where the nearest hotel is?",
@@ -205,6 +205,86 @@ const PHRASES_HOTEL = [
     "examples": [
       "Could you recommend a good pharmacy / museum / supermarket nearby?",
       "— Could you recommend a good restaurant nearby? — Certainly — one moment, please."
+    ]
+  },
+  {
+    "en": "Do you have a bed in a dorm room?",
+    "ua": "Чи є ліжко в загальному номері?",
+    "ex": "— Do you have a bed in a dorm room? — Yes, we have one left in the 6-bed dorm.",
+    "tip": "Dorm room = кімната з кількома ліжками в хостелі.",
+    "cat": "hotel",
+    "tag": "🏨 Готель",
+    "anchors": [
+      "dorm room"
+    ],
+    "situation": "В хостелі на рецепції",
+    "examples": [
+      "— Do you have a bed in a dorm room? — Yes, we have one left in the 6-bed dorm.",
+      "— Do you have a bed in a dorm room? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Is there a kitchen I can use?",
+    "ua": "Чи є кухня, якою я можу користуватися?",
+    "ex": "— Is there a kitchen I can use? — Yes, it's on the second floor.",
+    "tip": "Kitchen I can use — типова фраза в хостелах.",
+    "cat": "hotel",
+    "tag": "🏨 Готель",
+    "anchors": [
+      "kitchen I can use"
+    ],
+    "situation": "В хостелі",
+    "examples": [
+      "— Is there a kitchen I can use? — Yes, it's on the second floor.",
+      "— Is there a kitchen I can use? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Could I leave my bag here after check-out?",
+    "ua": "Чи можна залишити сумку після виїзду?",
+    "ex": "— Could I leave my bag here after check-out? — Of course, we have a storage room.",
+    "tip": "Leave my bag = залишити багаж.",
+    "cat": "hotel",
+    "tag": "🏨 Готель",
+    "anchors": [
+      "leave my bag"
+    ],
+    "situation": "В хостелі після check-out",
+    "examples": [
+      "— Could I leave my bag here after check-out? — Of course, we have a storage room.",
+      "— Could I leave my bag here after check-out? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "What time are the quiet hours?",
+    "ua": "О котрій годині тиха година?",
+    "ex": "— What time are the quiet hours? — From 11 PM to 8 AM, please.",
+    "tip": "Quiet hours = коли не можна шуміти.",
+    "cat": "hotel",
+    "tag": "🏨 Готель",
+    "anchors": [
+      "quiet hours"
+    ],
+    "situation": "В хостелі",
+    "examples": [
+      "— What time are the quiet hours? — From 11 PM to 8 AM, please.",
+      "— What time are the quiet hours? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Is breakfast included or do I pay extra?",
+    "ua": "Сніданок включений чи платно окремо?",
+    "ex": "— Is breakfast included? — It's five euros extra.",
+    "tip": "Included or pay extra — уточнення в хостелі.",
+    "cat": "hotel",
+    "tag": "🏨 Готель",
+    "anchors": [
+      "breakfast included"
+    ],
+    "situation": "В хостелі на рецепції",
+    "examples": [
+      "— Is breakfast included? — It's five euros extra.",
+      "— Is breakfast included or do I pay extra? — Sure, no problem."
     ]
   }
 ];
@@ -467,7 +547,7 @@ const PHRASES_STREET = [
 ];
 
 
-// 🚌 Транспорт — 14 phrases
+// 🚌 Транспорт — 19 phrases
 const PHRASES_TRANSPORT = [
   {
     "en": "Which bus goes to…?",
@@ -711,11 +791,91 @@ const PHRASES_TRANSPORT = [
       "Could you drop me off here? I'll walk the rest of the way.",
       "— Could you drop me off here, please? — Yes, it stops there. You need a single ticket."
     ]
+  },
+  {
+    "en": "Where is the check-in desk?",
+    "ua": "Де стійка реєстрації?",
+    "ex": "— Where is the check-in desk? — Terminal 2, departures level.",
+    "tip": "Check-in desk = реєстрація на рейс.",
+    "cat": "transport",
+    "tag": "🚌 Транспорт",
+    "anchors": [
+      "check-in desk"
+    ],
+    "situation": "В аеропорту",
+    "examples": [
+      "— Where is the check-in desk? — Terminal 2, departures level.",
+      "— Where is the check-in desk? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Which gate is my flight?",
+    "ua": "Який гейт мого рейсу?",
+    "ex": "— Which gate is my flight? — Gate B12, boarding starts at 6:30.",
+    "tip": "Gate = вихід на посадку.",
+    "cat": "transport",
+    "tag": "🚌 Транспорт",
+    "anchors": [
+      "Which gate"
+    ],
+    "situation": "В аеропорту",
+    "examples": [
+      "— Which gate is my flight? — Gate B12, boarding starts at 6:30.",
+      "— Which gate is my flight? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Is my flight on time?",
+    "ua": "Мій рейс вчасно?",
+    "ex": "— Is my flight on time? — There's a 40-minute delay, sorry.",
+    "tip": "On time = без затримки. Delay = затримка.",
+    "cat": "transport",
+    "tag": "🚌 Транспорт",
+    "anchors": [
+      "on time"
+    ],
+    "situation": "В аеропорту біля табло",
+    "examples": [
+      "— Is my flight on time? — There's a 40-minute delay, sorry.",
+      "— Is my flight on time? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Where can I collect my baggage?",
+    "ua": "Де забрати багаж?",
+    "ex": "— Where can I collect my baggage? — Carousel 3, just follow the signs.",
+    "tip": "Baggage / luggage carousel = стрічка видачі багажу.",
+    "cat": "transport",
+    "tag": "🚌 Транспорт",
+    "anchors": [
+      "collect my baggage"
+    ],
+    "situation": "В аеропорту після прильоту",
+    "examples": [
+      "— Where can I collect my baggage? — Carousel 3, just follow the signs.",
+      "— Where can I collect my baggage? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Do I need to take my laptop out at security?",
+    "ua": "Чи треба діставати ноутбук на перевірці?",
+    "ex": "— Do I need to take my laptop out? — Yes, and liquids go in a clear bag.",
+    "tip": "Security = перевірка безпеки.",
+    "cat": "transport",
+    "tag": "🚌 Транспорт",
+    "anchors": [
+      "take my laptop out"
+    ],
+    "situation": "В аеропорту на security",
+    "examples": [
+      "— Do I need to take my laptop out? — Yes, and liquids go in a clear bag.",
+      "— Do I need to take my laptop out at security? — Sure, no problem."
+    ]
   }
 ];
 
 
-// ☕ Кафе — 11 phrases
+// ☕ Кафе — 16 phrases
 const PHRASES_CAFE = [
   {
     "en": "A table for two, please.",
@@ -896,6 +1056,86 @@ const PHRASES_CAFE = [
     "examples": [
       "— Is a tip expected here? — It's customary to leave about 10–15%.",
       "— Is a tip expected here? — Right away. Would you like anything else?"
+    ]
+  },
+  {
+    "en": "Could we get a table by the window?",
+    "ua": "Чи можна столик біля вікна?",
+    "ex": "— Could we get a table by the window? — Sure, follow me.",
+    "tip": "By the window = біля вікна.",
+    "cat": "cafe",
+    "tag": "☕ Кафе",
+    "anchors": [
+      "table by the window"
+    ],
+    "situation": "У кафе",
+    "examples": [
+      "— Could we get a table by the window? — Sure, follow me.",
+      "— Could we get a table by the window? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Is there free Wi-Fi here?",
+    "ua": "Тут є безкоштовний Wi-Fi?",
+    "ex": "— Is there free Wi-Fi here? — Yes, the password is on the menu.",
+    "tip": "Free Wi-Fi — майже в кожному кафе.",
+    "cat": "cafe",
+    "tag": "☕ Кафе",
+    "anchors": [
+      "free Wi-Fi"
+    ],
+    "situation": "У кафе",
+    "examples": [
+      "— Is there free Wi-Fi here? — Yes, the password is on the menu.",
+      "— Is there free Wi-Fi here? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Could we split the bill?",
+    "ua": "Можемо розділити рахунок?",
+    "ex": "— Could we split the bill? — Of course, together or separately?",
+    "tip": "Split the bill = розділити оплату.",
+    "cat": "cafe",
+    "tag": "☕ Кафе",
+    "anchors": [
+      "split the bill"
+    ],
+    "situation": "У кафе після їжі",
+    "examples": [
+      "— Could we split the bill? — Of course, together or separately?",
+      "— Could we split the bill? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Could I have a refill, please?",
+    "ua": "Чи можна долити ще?",
+    "ex": "— Could I have a refill, please? — Sure, coffee or tea?",
+    "tip": "Refill = повторне наповнення (кава/чай).",
+    "cat": "cafe",
+    "tag": "☕ Кафе",
+    "anchors": [
+      "refill"
+    ],
+    "situation": "У кафе",
+    "examples": [
+      "— Could I have a refill, please? — Sure, coffee or tea?",
+      "— Could I have a refill, please? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Is this table reserved?",
+    "ua": "Цей столик зарезервований?",
+    "ex": "— Is this table reserved? — No, please sit wherever you like.",
+    "tip": "Reserved = зарезервований.",
+    "cat": "cafe",
+    "tag": "☕ Кафе",
+    "anchors": [
+      "table reserved"
+    ],
+    "situation": "У кафе",
+    "examples": [
+      "— Is this table reserved? — No, please sit wherever you like.",
+      "— Is this table reserved? — Sure, no problem."
     ]
   }
 ];
@@ -4198,7 +4438,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 2,
-    "phraseIndex": 228,
+    "phraseIndex": 243,
     "options": [
       "Nice to meet you!",
       "Something came up.",
@@ -4224,7 +4464,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 1,
-    "phraseIndex": 43,
+    "phraseIndex": 53,
     "options": [
       "I'll have the grilled salmon, please.",
       "Is this on sale?",
@@ -4250,7 +4490,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 1,
-    "phraseIndex": 76,
+    "phraseIndex": 91,
     "options": [
       "That sounds great!",
       "I'm afraid I have to disagree.",
@@ -4276,7 +4516,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 1,
-    "phraseIndex": 14,
+    "phraseIndex": 19,
     "options": [
       "I think I'm lost. Could you help me?",
       "No worries!",
@@ -4328,7 +4568,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 2,
-    "phraseIndex": 23,
+    "phraseIndex": 28,
     "options": [
       "I'm sorry, I didn't catch that.",
       "That makes sense.",
@@ -4354,7 +4594,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 1,
-    "phraseIndex": 124,
+    "phraseIndex": 139,
     "options": [
       "Sounds good to me.",
       "I'd rather not.",
@@ -4380,7 +4620,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 2,
-    "phraseIndex": 235,
+    "phraseIndex": 250,
     "options": [
       "Thanks for your help — I really appreciate it.",
       "This isn't what I ordered.",
@@ -4432,7 +4672,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 2,
-    "phraseIndex": 90,
+    "phraseIndex": 105,
     "options": [
       "That works for me.",
       "I totally agree with you.",
@@ -4454,7 +4694,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 0,
-    "phraseIndex": 84,
+    "phraseIndex": 99,
     "options": [
       "I'm running a bit late.",
       "How's it going?",
@@ -4480,7 +4720,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 1,
-    "phraseIndex": 100,
+    "phraseIndex": 115,
     "options": [
       "That's a shame.",
       "Absolutely!",
@@ -4489,6 +4729,287 @@ const DIALOGUES = [
     ],
     "answer": "That's a shame.",
     "correctIndex": 0
+  },
+  {
+    "scene": "🛏️ Хостел",
+    "lines": [
+      {
+        "speaker": "Reception",
+        "text": "Hi! Welcome to the hostel. How can I help?"
+      },
+      {
+        "speaker": "You",
+        "text": "___"
+      },
+      {
+        "speaker": "Reception",
+        "text": "Yes, we have one bed left in the 6-bed dorm — 18 euros."
+      }
+    ],
+    "blankIndex": 1,
+    "phraseIndex": 11,
+    "options": [
+      "Do you have a bed in a dorm room?",
+      "Which gate is my flight?",
+      "Could we split the bill?",
+      "Where is the check-in desk?"
+    ],
+    "answer": "Do you have a bed in a dorm room?",
+    "correctIndex": 0
+  },
+  {
+    "scene": "🛏️ Хостел",
+    "lines": [
+      {
+        "speaker": "You",
+        "text": "___"
+      },
+      {
+        "speaker": "Staff",
+        "text": "Sure, the kitchen is on the second floor — help yourself."
+      }
+    ],
+    "blankIndex": 0,
+    "phraseIndex": 12,
+    "options": [
+      "Is there a kitchen I can use?",
+      "Is my flight on time?",
+      "Could I have a refill, please?",
+      "Is this table reserved?"
+    ],
+    "answer": "Is there a kitchen I can use?",
+    "correctIndex": 0
+  },
+  {
+    "scene": "🛏️ Хостел",
+    "lines": [
+      {
+        "speaker": "You",
+        "text": "I'm checking out now, but my train is at night."
+      },
+      {
+        "speaker": "You",
+        "text": "___"
+      },
+      {
+        "speaker": "Reception",
+        "text": "No problem — we have a storage room behind the desk."
+      }
+    ],
+    "blankIndex": 1,
+    "phraseIndex": 13,
+    "options": [
+      "Could I leave my bag here after check-out?",
+      "Where can I collect my baggage?",
+      "Could we get a table by the window?",
+      "Do I need to take my laptop out at security?"
+    ],
+    "answer": "Could I leave my bag here after check-out?",
+    "correctIndex": 0
+  },
+  {
+    "scene": "✈️ Аеропорт",
+    "lines": [
+      {
+        "speaker": "You",
+        "text": "Excuse me, I'm flying to Berlin."
+      },
+      {
+        "speaker": "You",
+        "text": "___"
+      },
+      {
+        "speaker": "Staff",
+        "text": "Terminal 2, departures — just follow the blue signs."
+      }
+    ],
+    "blankIndex": 1,
+    "phraseIndex": 45,
+    "options": [
+      "Where is the check-in desk?",
+      "Is there a kitchen I can use?",
+      "Could I have the bill, please?",
+      "What time are the quiet hours?"
+    ],
+    "answer": "Where is the check-in desk?",
+    "correctIndex": 0
+  },
+  {
+    "scene": "✈️ Аеропорт",
+    "lines": [
+      {
+        "speaker": "You",
+        "text": "My boarding pass says flight LH456."
+      },
+      {
+        "speaker": "You",
+        "text": "___"
+      },
+      {
+        "speaker": "Agent",
+        "text": "Gate B12 — boarding starts in twenty minutes."
+      }
+    ],
+    "blankIndex": 1,
+    "phraseIndex": 46,
+    "options": [
+      "Which gate is my flight?",
+      "Which bus goes to…?",
+      "Is this the right way to…?",
+      "Could we split the bill?"
+    ],
+    "answer": "Which gate is my flight?",
+    "correctIndex": 0
+  },
+  {
+    "scene": "✈️ Аеропорт",
+    "lines": [
+      {
+        "speaker": "You",
+        "text": "Excuse me — ___"
+      },
+      {
+        "speaker": "Agent",
+        "text": "Flight LH456? I'm afraid there's a 45-minute delay."
+      }
+    ],
+    "blankIndex": 0,
+    "phraseIndex": 47,
+    "options": [
+      "Is my flight on time?",
+      "Is the train / bus running on time?",
+      "What time is check-in / check-out?",
+      "Is breakfast included or do I pay extra?"
+    ],
+    "answer": "Is my flight on time?",
+    "correctIndex": 0
+  },
+  {
+    "scene": "✈️ Аеропорт",
+    "lines": [
+      {
+        "speaker": "You",
+        "text": "I just landed. ___"
+      },
+      {
+        "speaker": "Staff",
+        "text": "Baggage claim is carousel 3 — just follow the signs."
+      }
+    ],
+    "blankIndex": 0,
+    "phraseIndex": 48,
+    "options": [
+      "Where can I collect my baggage?",
+      "Where is the nearest bus stop / metro station?",
+      "Where do I pay for this?",
+      "Where can I find…?"
+    ],
+    "answer": "Where can I collect my baggage?",
+    "correctIndex": 0
+  },
+  {
+    "scene": "☕ Кафе",
+    "lines": [
+      {
+        "speaker": "Host",
+        "text": "Good afternoon! Table for how many?"
+      },
+      {
+        "speaker": "You",
+        "text": "Two, please. ___"
+      },
+      {
+        "speaker": "Host",
+        "text": "Of course — this way, by the window."
+      }
+    ],
+    "blankIndex": 1,
+    "phraseIndex": 61,
+    "options": [
+      "Could we get a table by the window?",
+      "A table for two, please.",
+      "Is this seat taken?",
+      "Could I leave my bag here after check-out?"
+    ],
+    "answer": "Could we get a table by the window?",
+    "correctIndex": 0
+  },
+  {
+    "scene": "☕ Кафе",
+    "lines": [
+      {
+        "speaker": "You",
+        "text": "I need to send an email. ___"
+      },
+      {
+        "speaker": "Waiter",
+        "text": "Yes — password is \"guest123\", on the blackboard."
+      }
+    ],
+    "blankIndex": 0,
+    "phraseIndex": 62,
+    "options": [
+      "Is there free Wi-Fi here?",
+      "What's the Wi-Fi password?",
+      "Where is the check-in desk?",
+      "Is there a pharmacy nearby?"
+    ],
+    "answer": "Is there free Wi-Fi here?",
+    "correctIndex": 0
+  },
+  {
+    "scene": "☕ Кафе",
+    "lines": [
+      {
+        "speaker": "Waiter",
+        "text": "Here's your bill — together or separate?"
+      },
+      {
+        "speaker": "You",
+        "text": "___"
+      },
+      {
+        "speaker": "Waiter",
+        "text": "Sure, I'll split it for you."
+      }
+    ],
+    "blankIndex": 1,
+    "phraseIndex": 63,
+    "options": [
+      "Could we split the bill?",
+      "Could I have the bill, please?",
+      "Keep the change.",
+      "I'll get this one."
+    ],
+    "answer": "Could we split the bill?",
+    "correctIndex": 0
+  },
+  {
+    "scene": "☕ Кафе",
+    "lines": [
+      {
+        "speaker": "Waiter",
+        "text": "Would you like anything else?"
+      },
+      {
+        "speaker": "You",
+        "text": "___"
+      },
+      {
+        "speaker": "Waiter",
+        "text": "Of course — more coffee coming up."
+      }
+    ],
+    "blankIndex": 1,
+    "phraseIndex": 64,
+    "options": [
+      "Could I have a refill, please?",
+      "Could I get this to go?",
+      "I'll have the…, please.",
+      "Could I also get a croissant, please?"
+    ],
+    "answer": "Could I have a refill, please?",
+    "correctIndex": 0
   }
 ];
 
@@ -4496,51 +5017,51 @@ const DIALOGUES = [
 const SITUATIONS = [
   {
     "situation": "Ти в кафе і хочеш попросити рахунок.",
-    "phraseIndex": 45,
+    "phraseIndex": 55,
     "options": [
-      "Could I see the menu, please?",
       "What do you recommend?",
+      "Could I have the bill, please?",
       "Is this dish spicy?",
-      "Could I have the bill, please?"
+      "Could I see the menu, please?"
     ],
-    "correctIndex": 3
+    "correctIndex": 1
   },
   {
     "situation": "Ти загубився на вулиці.",
-    "phraseIndex": 14,
+    "phraseIndex": 19,
     "options": [
-      "Nice to meet you!",
       "A table for two, please.",
-      "Is this on sale?",
-      "I think I'm lost. Could you help me?"
+      "Nice to meet you!",
+      "I think I'm lost. Could you help me?",
+      "Is this on sale?"
     ],
-    "correctIndex": 3
+    "correctIndex": 2
   },
   {
     "situation": "Хочеш ввічливо попросити людину говорити повільніше.",
-    "phraseIndex": 22,
+    "phraseIndex": 27,
     "options": [
-      "Same here!",
-      "Go ahead.",
       "What do you mean by that?",
-      "Could you speak more slowly, please?"
+      "Same here!",
+      "Could you speak more slowly, please?",
+      "Go ahead."
     ],
-    "correctIndex": 3
+    "correctIndex": 2
   },
   {
     "situation": "У поїзді хочеш дізнатися, чи зупиняється він на твоїй станції.",
-    "phraseIndex": 29,
+    "phraseIndex": 34,
     "options": [
-      "Long time no see!",
+      "Does this train stop at…?",
       "How much does this cost?",
-      "Is breakfast included in the price?",
-      "Does this train stop at…?"
+      "Long time no see!",
+      "Is breakfast included in the price?"
     ],
-    "correctIndex": 3
+    "correctIndex": 0
   },
   {
     "situation": "Хтось запропонував піти на каву, і тобі подобається ідея.",
-    "phraseIndex": 76,
+    "phraseIndex": 91,
     "options": [
       "I'm afraid I have to disagree.",
       "I'd rather not.",
@@ -4551,22 +5072,22 @@ const SITUATIONS = [
   },
   {
     "situation": "Ти запізнюєшся на зустріч і хочеш попередити.",
-    "phraseIndex": 84,
+    "phraseIndex": 99,
     "options": [
       "Take your time.",
       "Never mind.",
-      "I'll be right back.",
-      "I'm running a bit late."
+      "I'm running a bit late.",
+      "I'll be right back."
     ],
-    "correctIndex": 3
+    "correctIndex": 2
   },
   {
     "situation": "У магазині ти не хочеш, щоб продавець тебе турбував.",
-    "phraseIndex": 54,
+    "phraseIndex": 69,
     "options": [
+      "How much does this cost?",
       "I'd like to return this",
       "Do you accept credit cards?",
-      "How much does this cost?",
       "I'm just looking, thank you."
     ],
     "correctIndex": 3
@@ -4575,86 +5096,86 @@ const SITUATIONS = [
     "situation": "Ти хочеш дізнатися, чи включений сніданок у ціну номера.",
     "phraseIndex": 3,
     "options": [
-      "What's the Wi-Fi password?",
-      "What time does breakfast start?",
       "Is breakfast included in the price?",
-      "Is there a safe"
+      "What time does breakfast start?",
+      "Is there a safe",
+      "What's the Wi-Fi password?"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "situation": "У таксі хочеш, щоб водій висадив тебе зараз.",
+    "phraseIndex": 44,
+    "options": [
+      "Where can I get a taxi?",
+      "Please take me to this address.",
+      "Could you drop me off here, please?",
+      "I need to get off at the next stop."
     ],
     "correctIndex": 2
   },
   {
-    "situation": "У таксі хочеш, щоб водій висадив тебе зараз.",
-    "phraseIndex": 39,
+    "situation": "Ти не зрозумів, що сказали — просиш повторити.",
+    "phraseIndex": 102,
     "options": [
-      "Please take me to this address.",
-      "Could you drop me off here, please?",
-      "Where can I get a taxi?",
-      "I need to get off at the next stop."
+      "I totally agree with you.",
+      "Could you say that again?",
+      "Absolutely!",
+      "That makes sense."
     ],
     "correctIndex": 1
   },
   {
-    "situation": "Ти не зрозумів, що сказали — просиш повторити.",
-    "phraseIndex": 87,
-    "options": [
-      "That makes sense.",
-      "I totally agree with you.",
-      "Could you say that again?",
-      "Absolutely!"
-    ],
-    "correctIndex": 2
-  },
-  {
     "situation": "Домовляєшся про час зустрічі — питаєш, коли зручно.",
-    "phraseIndex": 247,
+    "phraseIndex": 262,
     "options": [
-      "Which way is the town centre?",
+      "What are the opening hours?",
       "How far is it from here?",
       "What time works for you?",
-      "What are the opening hours?"
+      "Which way is the town centre?"
     ],
     "correctIndex": 2
   },
   {
     "situation": "Ти вперше зустрічаєш людину після представлення.",
-    "phraseIndex": 228,
+    "phraseIndex": 243,
     "options": [
+      "Nice to meet you!",
       "Long time no see!",
-      "How's it going?",
       "What brings you here?",
-      "Nice to meet you!"
+      "How's it going?"
     ],
-    "correctIndex": 3
+    "correctIndex": 0
   },
   {
     "situation": "Хтось вибачається, і ти хочеш сказати, що все гаразд.",
-    "phraseIndex": 236,
+    "phraseIndex": 251,
     "options": [
-      "I'm afraid I have to disagree.",
-      "Sorry about that.",
       "No worries!",
+      "Sorry about that.",
+      "I'm afraid I have to disagree.",
       "My bad."
+    ],
+    "correctIndex": 0
+  },
+  {
+    "situation": "У ресторані страва не та, що ти замовляв.",
+    "phraseIndex": 59,
+    "options": [
+      "Could I get this to go?",
+      "Is this dish spicy?",
+      "This isn't what I ordered.",
+      "What do you recommend?"
     ],
     "correctIndex": 2
   },
   {
-    "situation": "У ресторані страва не та, що ти замовляв.",
-    "phraseIndex": 49,
-    "options": [
-      "What do you recommend?",
-      "This isn't what I ordered.",
-      "Is this dish spicy?",
-      "Could I get this to go?"
-    ],
-    "correctIndex": 1
-  },
-  {
     "situation": "Друг питає, як справи — відповідаєш, що все добре.",
-    "phraseIndex": 129,
+    "phraseIndex": 144,
     "options": [
       "I overslept.",
-      "Something came up.",
       "Not much.",
+      "Something came up.",
       "I'm doing well, thanks."
     ],
     "correctIndex": 3
@@ -4663,12 +5184,56 @@ const SITUATIONS = [
     "situation": "Хочеш ввічливо сказати, що йдеш — прощаєшся.",
     "phraseIndex": 0,
     "options": [
-      "Come on in.",
-      "Help yourself.",
       "Have a seat.",
+      "Help yourself.",
+      "Come on in.",
       "Could you tell me where the nearest hotel is?"
     ],
     "correctIndex": 3
+  },
+  {
+    "situation": "На рецепції хостелу питаєш про ліжко в dorm.",
+    "phraseIndex": 11,
+    "options": [
+      "Is breakfast included in the price?",
+      "Could I have a late check-out",
+      "Do you have a bed in a dorm room?",
+      "I have a reservation under the name…"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "situation": "В аеропорту шукаєш стійку реєстрації.",
+    "phraseIndex": 45,
+    "options": [
+      "Which gate is my flight?",
+      "Where is the nearest bus stop / metro station?",
+      "Where can I get a taxi?",
+      "Where is the check-in desk?"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "situation": "У кафе хочеш сісти біля вікна.",
+    "phraseIndex": 61,
+    "options": [
+      "Could I see the menu, please?",
+      "A table for two, please.",
+      "Could we get a table by the window?",
+      "Is this seat taken?"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "situation": "У кафе просиш розділити рахунок.",
+    "phraseIndex": 63,
+    "options": [
+      "Is a tip expected here?",
+      "Could I have the bill, please?",
+      "Could we split the bill?",
+      "Can I pay by card?"
+    ],
+    "correctIndex": 2
   }
 ];
 
@@ -5232,6 +5797,23 @@ function stopSpeech() {
 }
 
 
+/**
+ * Хмарна синхронізація прогресу (Supabase).
+ *
+ * 1. Створи проєкт на https://supabase.com (безкоштовно)
+ * 2. SQL Editor → встав вміст supabase/schema.sql → Run
+ * 3. Settings → API → скопіюй Project URL і anon public key сюди
+ * 4. enabled: true
+ */
+const SYNC_CONFIG = {
+  enabled: false,
+  supabaseUrl: 'https://dxdlffcwsbwqmwgeciew.supabase.co',
+  supabaseAnonKey: 'sb_publishable_t_TanndVU5NZKAWmMoicKg_H02oWLuX'
+};
+
+
+const STREAK_TO_LEARN = 3;
+
 function safeJsonParse(key, fallback) {
   try {
     const raw = localStorage.getItem(key);
@@ -5244,15 +5826,53 @@ function safeJsonParse(key, fallback) {
   }
 }
 
+function defaultProgress() {
+  return { streak: 0, clean: 0, hinted: 0, errors: 0, lastType: 0 };
+}
+
 const Storage = {
   learned: new Set(safeJsonParse('tpLearned3', [])),
   phraseWeights: safeJsonParse('tpWeights3', {}),
-  quizStats: safeJsonParse('tpQuizStats', { total: 0, correct: 0 }),
+  phraseProgress: safeJsonParse('tpProgress4', {}),
+  quizStats: safeJsonParse('tpQuizStats', { total: 0, correct: 0, clean: 0, hinted: 0, wrong: 0 }),
 
-  save() {
+  saveLocalOnly() {
     localStorage.setItem('tpLearned3', JSON.stringify([...this.learned]));
     localStorage.setItem('tpWeights3', JSON.stringify(this.phraseWeights));
+    localStorage.setItem('tpProgress4', JSON.stringify(this.phraseProgress));
     localStorage.setItem('tpQuizStats', JSON.stringify(this.quizStats));
+  },
+
+  save() {
+    this.saveLocalOnly();
+    if (typeof Sync !== 'undefined' && Sync.isConfigured() && Sync.hasSyncCode()) {
+      localStorage.setItem('tpRevision', String(Date.now()));
+      Sync.schedulePush();
+    }
+  },
+
+  getProgress(idx) {
+    if (!this.phraseProgress[idx]) this.phraseProgress[idx] = defaultProgress();
+    return this.phraseProgress[idx];
+  },
+
+  /** 1 = без помилок і підказок, 2 = без помилок але з підказкою, 3 = з помилкою */
+  getMasteryType(idx) {
+    const p = this.getProgress(idx);
+    if (this.learned.has(idx) && p.streak >= STREAK_TO_LEARN) return 1;
+    if (p.lastType === 3 || p.errors > 0 && !this.learned.has(idx)) return 3;
+    if (p.lastType === 2 || p.hinted > 0) return 2;
+    if (p.clean > 0 || p.lastType === 1) return 1;
+    return 0;
+  },
+
+  hasErrors(idx) {
+    const p = this.getProgress(idx);
+    return p.errors > 0 && !this.learned.has(idx);
+  },
+
+  getErrorPhraseIndices() {
+    return PHRASES.map((_, i) => i).filter(i => this.hasErrors(i));
   },
 
   recordAnswer(correct) {
@@ -5261,48 +5881,473 @@ const Storage = {
     this.save();
   },
 
+  recordPhraseAnswer(idx, correct, usedHint) {
+    const p = this.getProgress(idx);
+    let answerType;
+
+    if (!correct) {
+      answerType = 3;
+      p.errors++;
+      p.streak = 0;
+      p.lastType = 3;
+      this.learned.delete(idx);
+      this.phraseWeights[idx] = 3;
+      this.quizStats.wrong = (this.quizStats.wrong || 0) + 1;
+    } else if (usedHint) {
+      answerType = 2;
+      p.hinted++;
+      p.streak = 0;
+      p.lastType = 2;
+      this.learned.delete(idx);
+      if (!this.phraseWeights[idx] || this.phraseWeights[idx] < 2) {
+        this.phraseWeights[idx] = 2;
+      }
+      this.quizStats.hinted = (this.quizStats.hinted || 0) + 1;
+    } else {
+      answerType = 1;
+      p.clean++;
+      p.streak++;
+      p.lastType = 1;
+      this.quizStats.clean = (this.quizStats.clean || 0) + 1;
+
+      if (p.streak >= STREAK_TO_LEARN) {
+        this.learned.add(idx);
+        this.phraseWeights[idx] = 0;
+      } else if (!this.phraseWeights[idx] || this.phraseWeights[idx] > 1) {
+        this.phraseWeights[idx] = 1;
+      } else {
+        this.phraseWeights[idx] = Math.max(0.5, (this.phraseWeights[idx] || 1) - 0.5);
+      }
+    }
+
+    this.phraseProgress[idx] = p;
+    this.save();
+    return answerType;
+  },
+
   getPhrasePriority(idx) {
-    const w = this.phraseWeights[idx];
-    if (w > 1) return 120 + (w - 1) * 30;
+    const p = this.getProgress(idx);
+    if (p.errors > 0 && !this.learned.has(idx)) return 150 + p.errors * 20;
+    if (this.phraseWeights[idx] > 1) return 120 + (this.phraseWeights[idx] - 1) * 30;
     if (!Object.prototype.hasOwnProperty.call(this.phraseWeights, idx) && !this.learned.has(idx)) return 80;
-    if (this.learned.has(idx) || w === 0) return 2;
-    if (w <= 0.5) return 10;
+    if (p.streak > 0 && p.streak < STREAK_TO_LEARN) return 40;
+    if (this.learned.has(idx)) return 2;
+    if (p.hinted > 0 && !this.learned.has(idx)) return 60;
     return 30;
   },
 
-  updateWeight(idx, isCorrect) {
-    if (isCorrect) {
-      if (!this.phraseWeights[idx]) this.phraseWeights[idx] = 1;
-      this.phraseWeights[idx] -= 0.5;
-      if (this.phraseWeights[idx] <= 0.5) {
-        this.phraseWeights[idx] = 0;
-        this.learned.add(idx);
+  countByMasteryType() {
+    let type1 = 0, type2 = 0, type3 = 0;
+    PHRASES.forEach((_, i) => {
+      if (Storage.learned.has(i)) {
+        type1++;
+      } else if (this.getProgress(i).errors > 0) {
+        type3++;
+      } else if (this.getProgress(i).hinted > 0 || this.getProgress(i).lastType === 2) {
+        type2++;
       }
-    } else {
-      this.learned.delete(idx);
-      this.phraseWeights[idx] = 3;
-    }
-    this.save();
+    });
+    return { type1, type2, type3 };
+  },
+
+  /** @deprecated — use recordPhraseAnswer */
+  updateWeight(idx, isCorrect) {
+    this.recordPhraseAnswer(idx, isCorrect, false);
   },
 
   toggleLearned(idx) {
+    const p = this.getProgress(idx);
     if (this.learned.has(idx)) {
       this.learned.delete(idx);
       this.phraseWeights[idx] = 2;
+      p.streak = 0;
+      p.lastType = 2;
     } else {
       this.learned.add(idx);
       this.phraseWeights[idx] = 0;
+      p.streak = STREAK_TO_LEARN;
+      p.lastType = 1;
     }
+    this.phraseProgress[idx] = p;
     this.save();
   },
 
   reset() {
     this.learned.clear();
     this.phraseWeights = {};
-    this.quizStats = { total: 0, correct: 0 };
+    this.phraseProgress = {};
+    this.quizStats = { total: 0, correct: 0, clean: 0, hinted: 0, wrong: 0 };
     this.save();
   }
 };
+
+(function migrateLegacyStorage() {
+  let changed = false;
+  Object.entries(Storage.phraseWeights).forEach(([idx, w]) => {
+    const i = Number(idx);
+    if (Storage.phraseProgress[i]) return;
+    const p = defaultProgress();
+    if (w > 1) {
+      p.errors = Math.max(1, Math.round(w));
+      p.lastType = 3;
+    } else if (w === 0 && Storage.learned.has(i)) {
+      p.streak = STREAK_TO_LEARN;
+      p.clean = STREAK_TO_LEARN;
+      p.lastType = 1;
+    } else if (w > 0 && w <= 1) {
+      p.streak = w <= 0.5 ? STREAK_TO_LEARN - 1 : 1;
+      p.clean = 1;
+      p.lastType = 1;
+    }
+    Storage.phraseProgress[i] = p;
+    changed = true;
+  });
+  Storage.learned.forEach(i => {
+    if (!Storage.phraseProgress[i]) {
+      Storage.phraseProgress[i] = { ...defaultProgress(), streak: STREAK_TO_LEARN, clean: STREAK_TO_LEARN, lastType: 1 };
+      changed = true;
+    }
+  });
+  if (changed) Storage.save();
+})();
+
+
+const Sync = {
+  status: 'idle',
+  lastError: '',
+  lastSyncAt: 0,
+  pushTimer: null,
+
+  isConfigured() {
+    return SYNC_CONFIG.enabled &&
+      SYNC_CONFIG.supabaseUrl &&
+      !SYNC_CONFIG.supabaseUrl.includes('YOUR_PROJECT') &&
+      SYNC_CONFIG.supabaseAnonKey &&
+      !SYNC_CONFIG.supabaseAnonKey.includes('YOUR_ANON');
+  },
+
+  getSyncCode() {
+    return localStorage.getItem('tpSyncCode') || '';
+  },
+
+  hasSyncCode() {
+    return !!this.getSyncCode();
+  },
+
+  async hashCode(code) {
+    const normalized = String(code).trim().toLowerCase();
+    const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(normalized));
+    return [...new Uint8Array(buf)].map(b => b.toString(16).padStart(2, '0')).join('');
+  },
+
+  exportPayload() {
+    return {
+      v: 1,
+      revision: Number(localStorage.getItem('tpRevision') || 0),
+      learned: [...Storage.learned],
+      phraseWeights: Storage.phraseWeights,
+      phraseProgress: Storage.phraseProgress,
+      quizStats: Storage.quizStats
+    };
+  },
+
+  mergePhraseProgress(local, remote) {
+    const keys = new Set([
+      ...Object.keys(local || {}),
+      ...Object.keys(remote || {})
+    ]);
+    const out = {};
+    keys.forEach(k => {
+      const l = local[k] || { streak: 0, clean: 0, hinted: 0, errors: 0, lastType: 0 };
+      const r = remote[k] || { streak: 0, clean: 0, hinted: 0, errors: 0, lastType: 0 };
+      const streak = Math.max(l.streak || 0, r.streak || 0);
+      out[k] = {
+        streak,
+        clean: Math.max(l.clean || 0, r.clean || 0),
+        hinted: Math.max(l.hinted || 0, r.hinted || 0),
+        errors: Math.max(l.errors || 0, r.errors || 0),
+        lastType: streak >= (l.streak || 0) ? (l.lastType || 0) : (r.lastType || 0)
+      };
+      if (out[k].streak >= STREAK_TO_LEARN) out[k].lastType = 1;
+    });
+    return out;
+  },
+
+  mergeWeights(local, remote) {
+    const out = { ...local };
+    Object.entries(remote || {}).forEach(([k, w]) => {
+      const lw = out[k];
+      if (lw === undefined) out[k] = w;
+      else if (w === 0 || lw === 0) out[k] = 0;
+      else out[k] = Math.max(Number(lw) || 0, Number(w) || 0);
+    });
+    return out;
+  },
+
+  mergeStats(local, remote) {
+    const l = local || {};
+    const r = remote || {};
+    return {
+      total: (l.total || 0) + (r.total || 0),
+      correct: (l.correct || 0) + (r.correct || 0),
+      clean: (l.clean || 0) + (r.clean || 0),
+      hinted: (l.hinted || 0) + (r.hinted || 0),
+      wrong: (l.wrong || 0) + (r.wrong || 0)
+    };
+  },
+
+  applyPayload(payload) {
+    if (!payload) return;
+    Storage.learned = new Set(payload.learned || []);
+    Storage.phraseWeights = payload.phraseWeights || {};
+    Storage.phraseProgress = payload.phraseProgress || {};
+    Storage.quizStats = payload.quizStats || { total: 0, correct: 0, clean: 0, hinted: 0, wrong: 0 };
+
+    PHRASES.forEach((_, i) => {
+      const p = Storage.getProgress(i);
+      if (p.streak >= STREAK_TO_LEARN) {
+        Storage.learned.add(i);
+        Storage.phraseWeights[i] = 0;
+      }
+    });
+    Storage.saveLocalOnly();
+    localStorage.setItem('tpRevision', String(payload.revision || Date.now()));
+  },
+
+  mergePayload(local, remote) {
+    if (!remote) return local;
+    if (!local) return remote;
+    const learned = [...new Set([...(local.learned || []), ...(remote.learned || [])])];
+    const phraseProgress = this.mergePhraseProgress(local.phraseProgress, remote.phraseProgress);
+    const phraseWeights = this.mergeWeights(local.phraseWeights, remote.phraseWeights);
+    const quizStats = this.mergeStats(local.quizStats, remote.quizStats);
+    const revision = Math.max(local.revision || 0, remote.revision || 0) + 1;
+    return { v: 1, revision, learned, phraseProgress, phraseWeights, quizStats };
+  },
+
+  apiHeaders() {
+    return {
+      apikey: SYNC_CONFIG.supabaseAnonKey,
+      Authorization: 'Bearer ' + SYNC_CONFIG.supabaseAnonKey,
+      'Content-Type': 'application/json'
+    };
+  },
+
+  async fetchRemote(syncId) {
+    const url = SYNC_CONFIG.supabaseUrl.replace(/\/$/, '') +
+      '/rest/v1/progress?sync_id=eq.' + encodeURIComponent(syncId) +
+      '&select=payload,updated_at';
+    const res = await fetch(url, { headers: this.apiHeaders() });
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const rows = await res.json();
+    if (!rows.length) return null;
+    return { payload: rows[0].payload, updatedAt: rows[0].updated_at };
+  },
+
+  async pushRemote(syncId, payload) {
+    const url = SYNC_CONFIG.supabaseUrl.replace(/\/$/, '') + '/rest/v1/progress';
+    const body = {
+      sync_id: syncId,
+      payload,
+      updated_at: new Date().toISOString()
+    };
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: {
+        ...this.apiHeaders(),
+        Prefer: 'resolution=merge-duplicates'
+      },
+      body: JSON.stringify(body)
+    });
+    if (!res.ok) {
+      const errText = await res.text();
+      throw new Error('HTTP ' + res.status + ': ' + errText.slice(0, 120));
+    }
+  },
+
+  setStatus(status, error) {
+    this.status = status;
+    this.lastError = error || '';
+    if (status === 'ok') this.lastSyncAt = Date.now();
+    this.updateSyncUI();
+  },
+
+  schedulePush() {
+    if (!this.isConfigured() || !this.hasSyncCode()) return;
+    clearTimeout(this.pushTimer);
+    this.pushTimer = setTimeout(() => this.push(), 2000);
+  },
+
+  bumpRevision() {
+    const rev = Number(localStorage.getItem('tpRevision') || 0) + 1;
+    localStorage.setItem('tpRevision', rev);
+    return rev;
+  },
+
+  async push() {
+    if (!this.isConfigured() || !this.hasSyncCode()) return;
+    try {
+      this.setStatus('syncing');
+      const syncId = await this.hashCode(this.getSyncCode());
+      const payload = this.exportPayload();
+      payload.revision = Number(localStorage.getItem('tpRevision') || payload.revision || 0);
+      await this.pushRemote(syncId, payload);
+      this.setStatus('ok');
+    } catch (e) {
+      console.warn('Sync push failed', e);
+      this.setStatus('error', e.message);
+    }
+  },
+
+  async pull() {
+    if (!this.isConfigured() || !this.hasSyncCode()) return false;
+    try {
+      this.setStatus('syncing');
+      const syncId = await this.hashCode(this.getSyncCode());
+      const remote = await this.fetchRemote(syncId);
+      const local = this.exportPayload();
+
+      if (!remote) {
+        await this.pushRemote(syncId, local);
+        this.setStatus('ok');
+        return true;
+      }
+
+      const merged = this.mergePayload(local, remote.payload);
+      merged.revision = Math.max(local.revision || 0, remote.payload?.revision || 0) + 1;
+      this.applyPayload(merged);
+      await this.pushRemote(syncId, merged);
+      this.setStatus('ok');
+      return true;
+    } catch (e) {
+      console.warn('Sync pull failed', e);
+      this.setStatus('error', e.message);
+      return false;
+    }
+  },
+
+  async enableSyncCode(code) {
+    if (!code || code.trim().length < 4) {
+      alert('Код синхронізації — мінімум 4 символи');
+      return false;
+    }
+    if (!this.isConfigured()) {
+      alert('Спочатку увімкни Supabase у js/sync-config.js (див. supabase/schema.sql)');
+      return false;
+    }
+    localStorage.setItem('tpSyncCode', code.trim());
+    const ok = await this.pull();
+    if (ok) {
+      updateProgress();
+      renderCards();
+      if (currentTab === 'stats') renderStats();
+    }
+    return ok;
+  },
+
+  disableSync() {
+    localStorage.removeItem('tpSyncCode');
+    this.setStatus('idle');
+    if (currentTab === 'stats') renderStats();
+  },
+
+  async initOnBoot() {
+    if (!this.isConfigured() || !this.hasSyncCode()) {
+      this.updateSyncUI();
+      return;
+    }
+    await this.pull();
+    updateProgress();
+    renderCards();
+  },
+
+  updateSyncUI() {
+    const el = document.getElementById('sync-status');
+    if (!el) return;
+    const configured = this.isConfigured();
+    const active = this.hasSyncCode();
+    const labels = {
+      idle: configured ? (active ? '☁️ Код збережено, очікує синхронізації' : '☁️ Введи код синхронізації') : '☁️ Supabase не налаштовано',
+      syncing: '⏳ Синхронізація…',
+      ok: '✅ Синхронізовано' + (this.lastSyncAt ? ' · ' + new Date(this.lastSyncAt).toLocaleTimeString() : ''),
+      error: '❌ Помилка: ' + (this.lastError || 'невідома')
+    };
+    el.textContent = labels[this.status] || labels.idle;
+    el.className = 'sync-status sync-' + this.status;
+  }
+};
+
+async function saveSyncCode() {
+  const input = document.getElementById('sync-code-input');
+  if (!input) return;
+  await Sync.enableSyncCode(input.value);
+  input.value = '';
+}
+
+async function syncNow() {
+  if (!Sync.hasSyncCode()) {
+    alert('Спочатку збережи код синхронізації');
+    return;
+  }
+  Storage.save();
+  await Sync.push();
+  updateProgress();
+  renderCards();
+}
+
+function disableCloudSync() {
+  if (!confirm('Вимкнути хмарну синхронізацію на цьому пристрої? Локальний прогрес залишиться.')) return;
+  Sync.disableSync();
+}
+
+
+let quizErrorsOnly = (function () {
+  try {
+    const v = localStorage.getItem('tpErrorsOnly');
+    return v ? JSON.parse(v) : false;
+  } catch {
+    return false;
+  }
+})();
+
+function toggleQuizErrorsOnly() {
+  quizErrorsOnly = !quizErrorsOnly;
+  localStorage.setItem('tpErrorsOnly', JSON.stringify(quizErrorsOnly));
+  syncErrorsOnlyToggle();
+  startQuiz();
+}
+
+function syncErrorsOnlyToggle() {
+  const el = document.getElementById('quiz-errors-toggle');
+  if (!el) return;
+  el.classList.toggle('active', quizErrorsOnly);
+  const count = Storage.getErrorPhraseIndices().length;
+  const label = document.getElementById('quiz-errors-label');
+  if (label) {
+    label.textContent = quizErrorsOnly
+      ? `⚠️ Тільки помилки (${count})`
+      : `⚠️ Тільки помилки (${count})`;
+  }
+}
+
+function filterIndicesForQuiz(indices) {
+  if (!quizErrorsOnly) return indices;
+  const errorSet = new Set(Storage.getErrorPhraseIndices());
+  const filtered = indices.filter(i => errorSet.has(i));
+  return filtered.length ? filtered : indices;
+}
+
+function showErrorsOnlyEmpty() {
+  document.getElementById('quiz-q').innerHTML = '🎉';
+  document.getElementById('quiz-hint').textContent = 'Немає фраз з помилками — молодець!';
+  document.getElementById('quiz-opts-area').innerHTML = '';
+  document.getElementById('quiz-fb').innerHTML =
+    '<div class="quiz-score">Увімкни режим «Тільки помилки» коли знову помилишся.<br>' +
+    '<button class="btn btn-primary" style="margin-top:12px" onclick="toggleQuizErrorsOnly();startQuiz()">Вимкнути фільтр</button></div>';
+  document.getElementById('quiz-prog').textContent = 'Порожньо';
+  document.getElementById('quiz-next').style.display = 'none';
+  document.getElementById('quiz-restart').style.display = 'inline-block';
+}
 
 
 let currentFilter = 'all';
@@ -5337,14 +6382,17 @@ function renderCards() {
   }
 
   grid.innerHTML = filtered.map(({ p, i }) => {
-    const isHard = Storage.phraseWeights[i] && Storage.phraseWeights[i] > 1;
+    const isHard = Storage.hasErrors(i);
+    const prog = Storage.getProgress(i);
+    const streakBadge = !Storage.learned.has(i) && prog.streak > 0
+      ? `<span class="card-streak">${prog.streak}/${STREAK_TO_LEARN}</span>` : '';
     const txtHTML = highlightAnchors(p.en, p.anchors);
     const situation = p.situation ? `<div class="card-situation">📍 ${escapeHtml(p.situation)}</div>` : '';
     const examples = getPhraseExamples(p);
     const exPreview = examples[0] || '';
     const exExtra = examples.length > 1 ? `<div class="card-example-more">+${examples.length - 1} ще</div>` : '';
     return `<div class="phrase-card${Storage.learned.has(i) ? ' learned' : ''}${isHard ? ' hard-mode' : ''}" onclick="openModal(${i})">
-      <div class="card-num">#${String(i + 1).padStart(3, '0')} ${isHard ? '⚠️ СКЛАДНА' : ''}</div>
+      <div class="card-num">#${String(i + 1).padStart(3, '0')} ${isHard ? '⚠️' : ''}${streakBadge}</div>
       <div class="card-en-row">
         <div class="card-en">${txtHTML}</div>
         <button type="button" class="btn-speak" onclick="speakPhrase(${i}, 'en', event)" title="Озвучити">🔊</button>
@@ -5517,6 +6565,7 @@ let quizCurrent = 0;
 let quizScore = 0;
 let quizAnswered = false;
 let hintRevealed = 0;
+let questionUsedHint = false;
 let scrambleUserWords = [];
 
 function setQuizType(t) {
@@ -5529,8 +6578,9 @@ function setQuizType(t) {
 }
 
 function buildQuizPool(size) {
-  const indices = PHRASES.map((_, i) => i);
-  return pickWeighted(indices, size, i => Storage.getPhrasePriority(i));
+  const indices = filterIndicesForQuiz(PHRASES.map((_, i) => i));
+  if (!indices.length) return [];
+  return pickWeighted(indices, Math.min(size, indices.length), i => Storage.getPhrasePriority(i));
 }
 
 function buildPracticePool(items, size, getPhraseIdx) {
@@ -5540,13 +6590,18 @@ function buildPracticePool(items, size, getPhraseIdx) {
 function startQuiz() {
   if (typeof clearFlashTimer === 'function') clearFlashTimer();
   Speech.stop();
-  if (quizType === 'dialogue') { quizType = 'dialogue'; startDialogueQuiz(); return; }
-  if (quizType === 'situation') { quizType = 'situation'; startSituationQuiz(); return; }
-  if (quizType === 'flash') { quizType = 'flash'; startFlashQuiz(); return; }
-  if (quizType === 'pattern') { quizType = 'pattern'; startPatternQuiz(); return; }
-  if (quizType === 'marathon') { quizType = 'marathon'; startMarathonQuiz(); return; }
+  syncErrorsOnlyToggle();
+  if (quizType === 'dialogue') { startDialogueQuiz(); return; }
+  if (quizType === 'situation') { startSituationQuiz(); return; }
+  if (quizType === 'flash') { startFlashQuiz(); return; }
+  if (quizType === 'pattern') { startPatternQuiz(); return; }
+  if (quizType === 'marathon') { startMarathonQuiz(); return; }
 
   quizQueue = buildQuizPool(15);
+  if (!quizQueue.length && quizErrorsOnly) {
+    showErrorsOnlyEmpty();
+    return;
+  }
   quizCurrent = 0;
   quizScore = 0;
   document.getElementById('quiz-next').style.display = 'none';
@@ -5561,9 +6616,15 @@ function renderQuestion() {
   const p = PHRASES[idx];
   quizAnswered = false;
   hintRevealed = 0;
+  questionUsedHint = false;
   scrambleUserWords = [];
 
-  const statusText = (Storage.phraseWeights[idx] > 1) ? ' ⚠️ ПОВТОРЕННЯ' : '';
+  const prog = Storage.getProgress(idx);
+  const streakLeft = Math.max(0, STREAK_TO_LEARN - prog.streak);
+  const statusParts = [];
+  if (Storage.hasErrors(idx)) statusParts.push('⚠️ ПОМИЛКА');
+  else if (prog.streak > 0 && !Storage.learned.has(idx)) statusParts.push(`🔥 ${prog.streak}/${STREAK_TO_LEARN}`);
+  const statusText = statusParts.length ? ' · ' + statusParts.join(' ') : '';
   document.getElementById('quiz-prog').textContent = `Запитання ${quizCurrent + 1} / ${quizQueue.length}${statusText}`;
   document.getElementById('quiz-fb').textContent = '';
   document.getElementById('quiz-fb').className = 'quiz-feedback';
@@ -5668,7 +6729,7 @@ function checkScramble(idx) {
   const userStr = scrambleUserWords.map(w => w.txt).join(' ');
   const isCorrect = normalizePhrase(userStr) === normalizePhrase(PHRASES[idx].en);
   handleScoreUpdate(idx, isCorrect);
-  triggerFeedback(isCorrect, PHRASES[idx].en, PHRASES[idx].rule, PHRASES[idx].anchors);
+  triggerFeedback(isCorrect, PHRASES[idx].en, PHRASES[idx].rule, PHRASES[idx].anchors, idx);
 }
 
 function liveCheck(idx) {
@@ -5681,6 +6742,7 @@ function liveCheck(idx) {
 }
 
 function revealHint(idx) {
+  questionUsedHint = true;
   const words = PHRASES[idx].en.split(' ');
   hintRevealed = Math.min(hintRevealed + 1, Math.ceil(words.length / 2));
   const shown = words.slice(0, hintRevealed).join(' ');
@@ -5696,7 +6758,7 @@ function checkTyped(idx) {
   input.disabled = true;
   const isCorrect = normalizePhrase(input.value) === normalizePhrase(PHRASES[idx].en);
   handleScoreUpdate(idx, isCorrect);
-  triggerFeedback(isCorrect, PHRASES[idx].en, PHRASES[idx].rule, PHRASES[idx].anchors);
+  triggerFeedback(isCorrect, PHRASES[idx].en, PHRASES[idx].rule, PHRASES[idx].anchors, idx);
 }
 
 function checkAnswer(el, chosen, correct, idx) {
@@ -5711,28 +6773,40 @@ function checkAnswer(el, chosen, correct, idx) {
       if (o.textContent.trim() === correct) o.classList.add('correct');
     });
   }
-  triggerFeedback(isCorrect, PHRASES[idx].en, PHRASES[idx].rule, PHRASES[idx].anchors);
+  triggerFeedback(isCorrect, PHRASES[idx].en, PHRASES[idx].rule, PHRASES[idx].anchors, idx);
 }
 
 function handleScoreUpdate(idx, isCorrect) {
+  const usedHint = questionUsedHint || hintRevealed > 0;
+  const answerType = Storage.recordPhraseAnswer(idx, isCorrect, usedHint);
   const practiceModes = ['dialogue', 'situation', 'flash', 'pattern', 'marathon'];
   if (practiceModes.includes(quizType)) {
-    if (isCorrect) practiceScore++;
-  } else if (isCorrect) {
+    if (isCorrect && !usedHint) practiceScore++;
+  } else if (isCorrect && !usedHint) {
     quizScore++;
   }
-  Storage.updateWeight(idx, isCorrect);
   Storage.recordAnswer(isCorrect);
   updateProgress();
+  return answerType;
 }
 
-function triggerFeedback(isCorrect, correctPhrase, rule, anchors) {
+function triggerFeedback(isCorrect, correctPhrase, rule, anchors, idx) {
   const fb = document.getElementById('quiz-fb');
   const nextBtn = document.getElementById('quiz-next');
+  const usedHint = questionUsedHint || hintRevealed > 0;
 
-  if (isCorrect) {
-    fb.innerHTML = `<strong>✅ Чудово!</strong> Порядок слів правильний.`;
+  if (isCorrect && !usedHint) {
+    const p = Storage.getProgress(idx);
+    const learnedNote = Storage.learned.has(idx) && p.streak >= STREAK_TO_LEARN
+      ? ' <strong>🎉 Фраза вивчена!</strong>' : '';
+    fb.innerHTML = `<strong>✅ Рівень 1:</strong> Без помилок і без підказок!${learnedNote}`;
     fb.className = 'quiz-feedback ok';
+    nextBtn.style.display = 'inline-block';
+    nextBtn.disabled = false;
+    nextBtn.textContent = 'Далі →';
+  } else if (isCorrect && usedHint) {
+    fb.innerHTML = `<strong>💡 Рівень 2:</strong> Правильно, але з підказкою — серія до «вивчено» обнулилась.`;
+    fb.className = 'quiz-feedback hint-ok';
     nextBtn.style.display = 'inline-block';
     nextBtn.disabled = false;
     nextBtn.textContent = 'Далі →';
@@ -5745,8 +6819,7 @@ function triggerFeedback(isCorrect, correctPhrase, rule, anchors) {
     const updateTimerText = () => {
       nextBtn.textContent = `Почекай (${secLeft}с), вчимо фразу...`;
       fb.innerHTML =
-        '❌ <strong>Помилка! Ехо-память.</strong><br>' +
-        'Прочитай речення вголос 3 рази:<br>' +
+        '❌ <strong>Рівень 3 — помилка.</strong> Прочитай речення вголос 3 рази:<br>' +
         '<span style="font-size:1.2rem;display:block;margin:8px 0;font-weight:700;color:var(--text);">' + highlighted + '</span>' +
         '<small style="color:var(--muted);font-style:italic;">' + (rule ? escapeHtml(rule) : '') + '</small>';
     };
@@ -5804,7 +6877,12 @@ function clearFlashTimer() {
 
 function startDialogueQuiz() {
   quizType = 'dialogue';
-  practiceQueue = buildPracticePool(DIALOGUES, 10, d => d.phraseIndex);
+  let pool = DIALOGUES;
+  if (quizErrorsOnly) {
+    pool = DIALOGUES.filter(d => Storage.hasErrors(d.phraseIndex));
+    if (!pool.length) { showErrorsOnlyEmpty(); return; }
+  }
+  practiceQueue = buildPracticePool(pool, Math.min(10, pool.length), d => d.phraseIndex);
   practiceCurrent = 0;
   practiceScore = 0;
   practiceAnswered = false;
@@ -5822,7 +6900,8 @@ function renderDialogueQuestion() {
   practiceAnswered = false;
 
   document.getElementById('quiz-prog').textContent = `Діалог ${practiceCurrent + 1} / ${practiceQueue.length}`;
-  document.getElementById('quiz-q').textContent = '💬 Обери репліку, що підходить до діалогу:';
+  const sceneLabel = d.scene ? `<div class="dialogue-scene">${escapeHtml(d.scene)}</div>` : '';
+  document.getElementById('quiz-q').innerHTML = `${sceneLabel}<span>💬 Обери репліку, що підходить до діалогу:</span>`;
   document.getElementById('quiz-hint').textContent = p.situation || '';
   document.getElementById('quiz-fb').textContent = '';
   document.getElementById('quiz-fb').className = 'quiz-feedback';
@@ -5847,7 +6926,12 @@ function renderDialogueQuestion() {
 
 function startSituationQuiz() {
   quizType = 'situation';
-  practiceQueue = buildPracticePool(SITUATIONS, 12, s => s.phraseIndex);
+  let pool = SITUATIONS;
+  if (quizErrorsOnly) {
+    pool = SITUATIONS.filter(s => Storage.hasErrors(s.phraseIndex));
+    if (!pool.length) { showErrorsOnlyEmpty(); return; }
+  }
+  practiceQueue = buildPracticePool(pool, Math.min(12, pool.length), s => s.phraseIndex);
   practiceCurrent = 0;
   practiceScore = 0;
   practiceAnswered = false;
@@ -5880,6 +6964,7 @@ function startFlashQuiz() {
   clearFlashTimer();
   quizType = 'flash';
   practiceQueue = buildQuizPool(12);
+  if (!practiceQueue.length && quizErrorsOnly) { showErrorsOnlyEmpty(); return; }
   practiceCurrent = 0;
   practiceScore = 0;
   practiceAnswered = false;
@@ -6022,10 +7107,7 @@ function checkPracticeAnswer(el, chosen, correct, idx) {
   practiceAnswered = true;
   document.querySelectorAll('.quiz-opt').forEach(o => o.classList.add('disabled'));
   const isCorrect = chosen === correct;
-  if (isCorrect) practiceScore++;
-  Storage.updateWeight(idx, isCorrect);
-  Storage.recordAnswer(isCorrect);
-  updateProgress();
+  handleScoreUpdate(idx, isCorrect);
 
   el.classList.add(isCorrect ? 'correct' : 'wrong');
   if (!isCorrect) {
@@ -6033,7 +7115,7 @@ function checkPracticeAnswer(el, chosen, correct, idx) {
       if (o.textContent.trim() === correct) o.classList.add('correct');
     });
   }
-  triggerFeedback(isCorrect, PHRASES[idx].en, PHRASES[idx].rule, PHRASES[idx].anchors);
+  triggerFeedback(isCorrect, PHRASES[idx].en, PHRASES[idx].rule, PHRASES[idx].anchors, idx);
 }
 
 function showPracticeResult(label) {
@@ -6051,19 +7133,32 @@ function showPracticeResult(label) {
 
 
 function renderStats() {
-  const hardCount = Object.values(Storage.phraseWeights).filter(w => w > 1).length;
+  const counts = Storage.countByMasteryType();
+  const errorCount = Storage.getErrorPhraseIndices().length;
   const accuracy = Storage.quizStats.total
     ? Math.round(Storage.quizStats.correct / Storage.quizStats.total * 100)
     : 0;
 
   document.getElementById('stats-grid').innerHTML = `
     <div class="stat-card"><div class="stat-num">${TOTAL}</div><div class="stat-label">Всього фраз</div></div>
-    <div class="stat-card"><div class="stat-num" style="color:var(--green)">${Storage.learned.size}</div><div class="stat-label">Вивчено</div></div>
-    <div class="stat-card"><div class="stat-num" style="color:var(--red)">${hardCount}</div><div class="stat-label">У зоні ризику</div></div>
+    <div class="stat-card"><div class="stat-num" style="color:var(--green)">${Storage.learned.size}</div><div class="stat-label">✅ Вивчено (3× без підказок)</div></div>
+    <div class="stat-card"><div class="stat-num" style="color:var(--yellow)">${counts.type2}</div><div class="stat-label">💡 З підказкою</div></div>
+    <div class="stat-card"><div class="stat-num" style="color:var(--red)">${counts.type3}</div><div class="stat-label">❌ З помилками</div></div>
     <div class="stat-card"><div class="stat-num">${Math.round(Storage.learned.size / TOTAL * 100)}%</div><div class="stat-label">Прогрес</div></div>
     <div class="stat-card"><div class="stat-num" style="color:var(--yellow)">${accuracy}%</div><div class="stat-label">Точність відповідей</div></div>
-    <div class="stat-card"><div class="stat-num">${Storage.quizStats.total}</div><div class="stat-label">Всього вправ</div></div>
   `;
+
+  const masteryLegend = document.getElementById('mastery-legend');
+  if (masteryLegend) {
+    masteryLegend.innerHTML = `
+      <p style="font-size:.82rem;color:var(--muted);line-height:1.6;margin-bottom:12px;">
+        <strong style="color:var(--green)">Рівень 1</strong> — правильно без підказок.
+        3 рази підряд → «вивчено».<br>
+        <strong style="color:var(--yellow)">Рівень 2</strong> — правильно, але була підказка (серія скидається).<br>
+        <strong style="color:var(--red)">Рівень 3</strong> — помилка (фраза потрапляє в повторення).
+        Зараз з помилками: <strong>${errorCount}</strong>.
+      </p>`;
+  }
 
   document.getElementById('cat-stats').innerHTML = Object.entries(CATEGORIES).map(([key, label]) => {
     const tc = PHRASES.filter(p => p.cat === key).length;
@@ -6075,14 +7170,32 @@ function renderStats() {
       <span style="font-size:.8rem;color:var(--muted);min-width:60px;text-align:right">${lc}/${tc}</span>
     </div>`;
   }).join('');
+
+  renderSyncPanel();
 }
 
-function resetProgress() {
-  if (!confirm('Скинути весь прогрес?')) return;
-  Storage.reset();
-  updateProgress();
-  renderCards();
-  if (currentTab === 'stats') renderStats();
+function renderSyncPanel() {
+  const panel = document.getElementById('sync-panel');
+  if (!panel) return;
+  const configured = typeof Sync !== 'undefined' && Sync.isConfigured();
+  const hasCode = typeof Sync !== 'undefined' && Sync.hasSyncCode();
+  panel.innerHTML = `
+    <h3 style="font-size:.9rem;color:var(--muted);margin-bottom:10px;font-weight:500;">☁️ Синхронізація між пристроями</h3>
+    <div class="sync-panel-inner">
+      <p class="sync-help">Один <strong>код синхронізації</strong> на телефоні та комп'ютері — прогрес спільний.
+        ${configured ? '' : ' Потрібно один раз налаштувати Supabase (файл <code>supabase/schema.sql</code>).'}</p>
+      <div class="sync-row">
+        <input type="password" id="sync-code-input" class="sync-input" placeholder="Твій код (напр. my-travel-2026)" autocomplete="off" ${hasCode ? 'disabled' : ''}>
+        <button class="btn btn-primary" onclick="saveSyncCode()" ${hasCode ? 'disabled' : ''}>Зберегти код</button>
+      </div>
+      <div class="sync-actions">
+        <button class="btn btn-ghost" onclick="Sync.pull().then(() => { updateProgress(); renderCards(); renderStats(); })" ${!hasCode ? 'disabled' : ''}>⬇️ Завантажити</button>
+        <button class="btn btn-ghost" onclick="syncNow()" ${!hasCode ? 'disabled' : ''}>⬆️ Відправити</button>
+        ${hasCode ? '<button class="btn btn-ghost" onclick="disableCloudSync()" style="color:var(--red)">Вимкнути</button>' : ''}
+      </div>
+      <div id="sync-status" class="sync-status sync-idle"></div>
+    </div>`;
+  if (typeof Sync !== 'undefined') Sync.updateSyncUI();
 }
 
 
@@ -6094,15 +7207,15 @@ function updateProgress() {
   document.getElementById('total-count').textContent = TOTAL;
   document.getElementById('prog-bar').style.width = (n / TOTAL * 100) + '%';
 
-  const hardCount = Object.keys(Storage.phraseWeights).filter(k => Storage.phraseWeights[k] > 1).length;
+  const errorCount = Storage.getErrorPhraseIndices().length;
   const unseen = PHRASES.filter((_, i) =>
-    !Object.prototype.hasOwnProperty.call(Storage.phraseWeights, i) && !Storage.learned.has(i)
+    !Object.prototype.hasOwnProperty.call(Storage.phraseProgress, i) && !Storage.learned.has(i)
   ).length;
-  document.getElementById('prog-label').textContent = hardCount > 0
-    ? `⚠️ ${hardCount} складних фраз — тест фокусується на них!`
+  document.getElementById('prog-label').textContent = errorCount > 0
+    ? `⚠️ ${errorCount} фраз з помилками · 3 правильні підряд без підказок = вивчено`
     : unseen > 0
-      ? `Вивчено: ${n} з ${TOTAL}. У тестах пріоритет: помилки → нові (${unseen}) → вивчені.`
-      : `Вивчено: ${n} з ${TOTAL}. Повторюються фрази з помилками.`;
+      ? `Вивчено: ${n} з ${TOTAL}. Нових: ${unseen}. Серія: 3× без підказок.`
+      : `Вивчено: ${n} з ${TOTAL}. Продовжуй повторювати!`;
 }
 
 function setTab(tab) {
@@ -6123,8 +7236,10 @@ function setTab(tab) {
   if (tab === 'rules') renderRules();
 }
 
-function bootApp() {
+async function bootApp() {
   Speech.init();
+  syncErrorsOnlyToggle();
+  if (typeof Sync !== 'undefined') await Sync.initOnBoot();
   renderCards();
   updateProgress();
 
@@ -6147,5 +7262,5 @@ if (document.readyState === 'loading') {
 if (typeof PHRASES !== 'undefined' && typeof TOTAL !== 'undefined') {
   const ok = document.getElementById('bundle-ok');
   if (ok) ok.style.display = 'block';
-  console.log('Travel Phrases v18 loaded OK, phrases:', TOTAL);
+  console.log('Travel Phrases v20 loaded OK, phrases:', TOTAL);
 }
