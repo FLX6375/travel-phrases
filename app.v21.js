@@ -5797,21 +5797,6 @@ function stopSpeech() {
 }
 
 
-/**
- * Хмарна синхронізація прогресу (Supabase).
- *
- * 1. Створи проєкт на https://supabase.com (безкоштовно)
- * 2. SQL Editor → встав вміст supabase/schema.sql → Run
- * 3. Settings → API → скопіюй Project URL і anon public key сюди
- * 4. enabled: true
- */
-const SYNC_CONFIG = {
-  enabled: true,
-  supabaseUrl: 'https://dxdlffcwsbwqmwgeciew.supabase.co',
-  supabaseAnonKey: 'sb_publishable_t_TanndVU5NZKAWmMoicKg_H02oWLuX'
-};
-
-
 const STREAK_TO_LEARN = 3;
 
 function safeJsonParse(key, fallback) {
@@ -6018,12 +6003,28 @@ const Sync = {
   lastSyncAt: 0,
   pushTimer: null,
 
+  getConfig() {
+    return window.SYNC_CONFIG || (typeof SYNC_CONFIG !== 'undefined' ? SYNC_CONFIG : null);
+  },
+
   isConfigured() {
-    return SYNC_CONFIG.enabled &&
-      SYNC_CONFIG.supabaseUrl &&
-      !SYNC_CONFIG.supabaseUrl.includes('YOUR_PROJECT') &&
-      SYNC_CONFIG.supabaseAnonKey &&
-      !SYNC_CONFIG.supabaseAnonKey.includes('YOUR_ANON');
+    const c = this.getConfig();
+    if (!c) return false;
+    return !!c.enabled &&
+      !!c.supabaseUrl &&
+      !String(c.supabaseUrl).includes('YOUR_PROJECT') &&
+      !!c.supabaseAnonKey &&
+      !String(c.supabaseAnonKey).includes('YOUR_ANON') &&
+      String(c.supabaseAnonKey).length > 20;
+  },
+
+  configHint() {
+    const c = this.getConfig();
+    if (!c) return 'файл js/sync-config.js не завантажено';
+    if (!c.enabled) return 'enabled: false у sync-config.js';
+    if (!c.supabaseUrl || String(c.supabaseUrl).includes('YOUR_PROJECT')) return 'не вказано supabaseUrl';
+    if (!c.supabaseAnonKey || String(c.supabaseAnonKey).includes('YOUR_ANON')) return 'не вказано supabaseAnonKey';
+    return '';
   },
 
   getSyncCode() {
@@ -6126,15 +6127,17 @@ const Sync = {
   },
 
   apiHeaders() {
+    const c = this.getConfig();
     return {
-      apikey: SYNC_CONFIG.supabaseAnonKey,
-      Authorization: 'Bearer ' + SYNC_CONFIG.supabaseAnonKey,
+      apikey: c.supabaseAnonKey,
+      Authorization: 'Bearer ' + c.supabaseAnonKey,
       'Content-Type': 'application/json'
     };
   },
 
   async fetchRemote(syncId) {
-    const url = SYNC_CONFIG.supabaseUrl.replace(/\/$/, '') +
+    const c = this.getConfig();
+    const url = c.supabaseUrl.replace(/\/$/, '') +
       '/rest/v1/progress?sync_id=eq.' + encodeURIComponent(syncId) +
       '&select=payload,updated_at';
     const res = await fetch(url, { headers: this.apiHeaders() });
@@ -6145,7 +6148,8 @@ const Sync = {
   },
 
   async pushRemote(syncId, payload) {
-    const url = SYNC_CONFIG.supabaseUrl.replace(/\/$/, '') + '/rest/v1/progress';
+    const c = this.getConfig();
+    const url = c.supabaseUrl.replace(/\/$/, '') + '/rest/v1/progress';
     const body = {
       sync_id: syncId,
       payload,
@@ -6267,7 +6271,7 @@ const Sync = {
     const configured = this.isConfigured();
     const active = this.hasSyncCode();
     const labels = {
-      idle: configured ? (active ? '☁️ Код збережено, очікує синхронізації' : '☁️ Введи код синхронізації') : '☁️ Supabase не налаштовано',
+      idle: configured ? (active ? '☁️ Код збережено — натисни «Завантажити» або пройди тест' : '☁️ Введи код синхронізації') : '☁️ Supabase не налаштовано' + (this.configHint() ? ' (' + this.configHint() + ')' : ''),
       syncing: '⏳ Синхронізація…',
       ok: '✅ Синхронізовано' + (this.lastSyncAt ? ' · ' + new Date(this.lastSyncAt).toLocaleTimeString() : ''),
       error: '❌ Помилка: ' + (this.lastError || 'невідома')
@@ -7262,5 +7266,5 @@ if (document.readyState === 'loading') {
 if (typeof PHRASES !== 'undefined' && typeof TOTAL !== 'undefined') {
   const ok = document.getElementById('bundle-ok');
   if (ok) ok.style.display = 'block';
-  console.log('Travel Phrases v20 loaded OK, phrases:', TOTAL);
+  console.log('Travel Phrases v21 loaded OK, phrases:', TOTAL);
 }

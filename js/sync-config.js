@@ -1,12 +1,8 @@
 /**
- * Хмарна синхронізація прогресу (Supabase).
- *
- * 1. Створи проєкт на https://supabase.com (безкоштовно)
- * 2. SQL Editor → встав вміст supabase/schema.sql → Run
- * 3. Settings → API → скопіюй Project URL і anon public key сюди
- * 4. enabled: true
+ * Хмарна синхронізація — цей файл завантажується ОКРЕМО від bundle.
+ * Після змін просто git push (перезбірка не обов'язкова).
  */
-const SYNC_CONFIG = {
+window.SYNC_CONFIG = {
   enabled: true,
   supabaseUrl: 'https://dxdlffcwsbwqmwgeciew.supabase.co',
   supabaseAnonKey: 'sb_publishable_t_TanndVU5NZKAWmMoicKg_H02oWLuX'

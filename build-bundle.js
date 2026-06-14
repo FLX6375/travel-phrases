@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const root = __dirname;
-const BUNDLE_VERSION = 20;
+const BUNDLE_VERSION = 21;
 const BUNDLE_FILE = `app.v${BUNDLE_VERSION}.js`;
 const MIN_BUNDLE_SIZE = 50000;
 
@@ -32,7 +32,6 @@ const scripts = [
   'js/data/grammar-rules.js',
   'js/utils.js',
   'js/speech.js',
-  'js/sync-config.js',
   'js/storage.js',
   'js/sync.js',
   'js/quiz-errors.js',
@@ -174,6 +173,7 @@ ${css}
 </head>
 <body>
 ${bodyHtml}
+<script src="./js/sync-config.js?v=${BUNDLE_VERSION}"></script>
 <script src="./${BUNDLE_FILE}?v=${BUNDLE_VERSION}"></script>
 <script src="./js/load-check.js" data-bundle="${BUNDLE_FILE}"></script>
 </body>

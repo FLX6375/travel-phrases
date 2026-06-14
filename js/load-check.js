@@ -2,7 +2,7 @@
   var current = document.currentScript;
   var bundleFile = current && current.getAttribute('data-bundle')
     ? current.getAttribute('data-bundle')
-    : 'app.v20.js';
+    : 'app.v21.js';
 
   setTimeout(function () {
     if (typeof PHRASES !== 'undefined') return;
