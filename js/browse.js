@@ -40,6 +40,7 @@ function renderCards() {
     const exPreview = examples[0] || '';
     const exExtra = examples.length > 1 ? `<div class="card-example-more">+${examples.length - 1} ще</div>` : '';
     return `<div class="phrase-card${Storage.learned.has(i) ? ' learned' : ''}${isHard ? ' hard-mode' : ''}" onclick="openModal(${i})">
+      ${phraseVisualHTML(p, 'card')}
       <div class="card-num">#${String(i + 1).padStart(3, '0')} ${isHard ? '⚠️' : ''}${streakBadge}</div>
       <div class="card-en-row">
         <div class="card-en">${txtHTML}</div>
@@ -63,13 +64,23 @@ function openModal(idx) {
 
 function renderModal() {
   const p = PHRASES[modalIdx];
-  document.getElementById('m-num').textContent = `Фраза #${modalIdx + 1} / ${TOTAL}`;
+  const avgMs = Storage.getPhraseAvgMs(modalIdx);
+  const timeNote = avgMs != null
+    ? ` · ⏱️ ${Storage.formatAvgTime(avgMs)} (${(Storage.getProgress(modalIdx).timeCount || 0)} відпов.)`
+    : '';
+  document.getElementById('m-num').textContent = `Фраза #${modalIdx + 1} / ${TOTAL}${timeNote}`;
   document.getElementById('m-en').innerHTML = `
     <div class="modal-en-row">
       <div>${highlightAnchors(p.en, p.anchors)}</div>
       <button type="button" class="btn-speak" onclick="speakPhrase(${modalIdx}, 'en', event)" title="Озвучити фразу">🔊</button>
     </div>`;
   document.getElementById('m-ua').textContent = p.ua;
+
+  const imgEl = document.getElementById('m-img');
+  if (imgEl) {
+    imgEl.innerHTML = phraseVisualHTML(p, 'modal');
+    imgEl.style.display = 'block';
+  }
   document.getElementById('m-ex').innerHTML = renderExamplesHTML(p);
   document.getElementById('m-tip').innerHTML = `💡 ${escapeHtml(p.tip)}`;
 

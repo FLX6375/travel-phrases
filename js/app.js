@@ -7,13 +7,11 @@ function updateProgress() {
   document.getElementById('prog-bar').style.width = (n / TOTAL * 100) + '%';
 
   const errorCount = Storage.getErrorPhraseIndices().length;
-  const unseen = PHRASES.filter((_, i) =>
-    !Object.prototype.hasOwnProperty.call(Storage.phraseProgress, i) && !Storage.learned.has(i)
-  ).length;
+  const newCount = Storage.getNewPhraseIndices().length;
   document.getElementById('prog-label').textContent = errorCount > 0
     ? `⚠️ ${errorCount} фраз з помилками · 3 правильні підряд без підказок = вивчено`
-    : unseen > 0
-      ? `Вивчено: ${n} з ${TOTAL}. Нових: ${unseen}. Серія: 3× без підказок.`
+    : newCount > 0
+      ? `Вивчено: ${n} з ${TOTAL}. Нових: ${newCount}. Серія: 3× без підказок.`
       : `Вивчено: ${n} з ${TOTAL}. Продовжуй повторювати!`;
 }
 
@@ -37,7 +35,7 @@ function setTab(tab) {
 
 async function bootApp() {
   Speech.init();
-  syncErrorsOnlyToggle();
+  syncQuizOptionsUI();
   if (typeof Sync !== 'undefined') await Sync.initOnBoot();
   renderCards();
   updateProgress();

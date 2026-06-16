@@ -1,4 +1,4 @@
-// ☕ Кафе — 16 phrases
+// ☕ Kафе — 27 phrases
 const PHRASES_CAFE = [
   {
     "en": "A table for two, please.",
@@ -259,6 +259,182 @@ const PHRASES_CAFE = [
     "examples": [
       "— Is this table reserved? — No, please sit wherever you like.",
       "— Is this table reserved? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Could I see the dessert menu?",
+    "ua": "Чи можна меню десертів?",
+    "ex": "— Could I see the dessert menu? — Here you are.",
+    "tip": "Dessert menu = меню солодкого.",
+    "cat": "cafe",
+    "tag": "☕ Кафе",
+    "anchors": [
+      "dessert menu"
+    ],
+    "situation": "У кафе або ресторані",
+    "examples": [
+      "— Could I see the dessert menu? — Here you are.",
+      "— Could I see the dessert menu? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "I'm allergic to nuts.",
+    "ua": "У мене алергія на горіхи.",
+    "ex": "— I'm allergic to nuts — is this safe?",
+    "tip": "Allergic to = алергія на.",
+    "cat": "cafe",
+    "tag": "☕ Кафе",
+    "anchors": [
+      "allergic to nuts"
+    ],
+    "situation": "У кафе або ресторані",
+    "examples": [
+      "— I'm allergic to nuts — is this safe?",
+      "— I'm allergic to nuts. — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Could we have the bill, please?",
+    "ua": "Рахунок, будь ласка.",
+    "ex": "— Could we have the bill, please? — Of course, I'll bring it now.",
+    "tip": "Bill / check = рахунок (US/UK).",
+    "cat": "cafe",
+    "tag": "☕ Кафе",
+    "anchors": [
+      "the bill"
+    ],
+    "situation": "У кафе або ресторані",
+    "examples": [
+      "— Could we have the bill, please? — Of course, I'll bring it now.",
+      "— Could we have the bill, please? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Is tap water free?",
+    "ua": "Вода з-під крана безкоштовна?",
+    "ex": "— Is tap water free? — Yes, I'll bring a jug.",
+    "tip": "Tap water = вода з крану.",
+    "cat": "cafe",
+    "tag": "☕ Кафе",
+    "anchors": [
+      "tap water"
+    ],
+    "situation": "У кафе або ресторані",
+    "examples": [
+      "— Is tap water free? — Yes, I'll bring a jug.",
+      "— Is tap water free? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Could I order takeaway?",
+    "ua": "Чи можна на винос?",
+    "ex": "— Could I order takeaway? — Sure — here's the menu.",
+    "tip": "Takeaway / to go = на винос.",
+    "cat": "cafe",
+    "tag": "☕ Кафе",
+    "anchors": [
+      "order takeaway"
+    ],
+    "situation": "У кафе або ресторані",
+    "examples": [
+      "— Could I order takeaway? — Sure — here's the menu.",
+      "— Could I order takeaway? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Could I have it without onions?",
+    "ua": "Без цибулі, будь ласка.",
+    "ex": "— Could I have it without onions, please? — No problem.",
+    "tip": "Without = без (інгредієнта).",
+    "cat": "cafe",
+    "tag": "☕ Кафе",
+    "anchors": [
+      "without onions"
+    ],
+    "situation": "У кафе або ресторані",
+    "examples": [
+      "— Could I have it without onions, please? — No problem.",
+      "— Could I have it without onions? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Is there a vegetarian option?",
+    "ua": "Чи є вегетаріанська страва?",
+    "ex": "— Is there a vegetarian option? — Yes, the pasta primavera.",
+    "tip": "Vegetarian option = без м'яса.",
+    "cat": "cafe",
+    "tag": "☕ Кафе",
+    "anchors": [
+      "vegetarian option"
+    ],
+    "situation": "У кафе або ресторані",
+    "examples": [
+      "— Is there a vegetarian option? — Yes, the pasta primavera.",
+      "— Is there a vegetarian option? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Could we sit outside?",
+    "ua": "Чи можна сісти на вулиці?",
+    "ex": "— Could we sit outside? — Sure, pick any table on the terrace.",
+    "tip": "Sit outside = на терасі.",
+    "cat": "cafe",
+    "tag": "☕ Кафе",
+    "anchors": [
+      "sit outside"
+    ],
+    "situation": "У кафе або ресторані",
+    "examples": [
+      "— Could we sit outside? — Sure, pick any table on the terrace.",
+      "— Could we sit outside? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "How long is the wait?",
+    "ua": "Скільки чекати?",
+    "ex": "— How long is the wait for a table? — About twenty minutes.",
+    "tip": "Wait = очікування.",
+    "cat": "cafe",
+    "tag": "☕ Кафе",
+    "anchors": [
+      "How long is the wait"
+    ],
+    "situation": "У кафе або ресторані",
+    "examples": [
+      "— How long is the wait for a table? — About twenty minutes.",
+      "— How long is the wait? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Could I have a doggy bag?",
+    "ua": "Чи можна упакувати залишки?",
+    "ex": "— Could I have a doggy bag? — Of course, I'll pack it up.",
+    "tip": "Doggy bag = контейнер для залишків їжі.",
+    "cat": "cafe",
+    "tag": "☕ Kафе",
+    "anchors": [
+      "doggy bag"
+    ],
+    "situation": "У кафе",
+    "examples": [
+      "— Could I have a doggy bag? — Of course, I'll pack it up.",
+      "— Could I have a doggy bag? — Of course. Anything to drink?"
+    ]
+  },
+  {
+    "en": "Is service included?",
+    "ua": "Чи включено обслуговування?",
+    "ex": "— Is service included in the bill? — Yes, but tips are welcome.",
+    "tip": "Service charge = плата за обслуговування.",
+    "cat": "cafe",
+    "tag": "☕ Kафе",
+    "anchors": [
+      "service included"
+    ],
+    "situation": "У кафе",
+    "examples": [
+      "— Is service included in the bill? — Yes, but tips are welcome.",
+      "— Is service included? — Sure — I'll bring that over in a moment."
     ]
   }
 ];

@@ -1,17 +1,21 @@
 function renderStats() {
   const counts = Storage.countByMasteryType();
   const errorCount = Storage.getErrorPhraseIndices().length;
+  const newCount = Storage.getNewPhraseIndices().length;
   const accuracy = Storage.quizStats.total
     ? Math.round(Storage.quizStats.correct / Storage.quizStats.total * 100)
     : 0;
+  const avgTime = Storage.formatAvgTime(Storage.getGlobalAvgMs());
 
   document.getElementById('stats-grid').innerHTML = `
     <div class="stat-card"><div class="stat-num">${TOTAL}</div><div class="stat-label">Всього фраз</div></div>
     <div class="stat-card"><div class="stat-num" style="color:var(--green)">${Storage.learned.size}</div><div class="stat-label">✅ Вивчено (3× без підказок)</div></div>
+    <div class="stat-card"><div class="stat-num" style="color:var(--cyan,#5bc0eb)">${newCount}</div><div class="stat-label">✨ Нові (ще не в тесті)</div></div>
     <div class="stat-card"><div class="stat-num" style="color:var(--yellow)">${counts.type2}</div><div class="stat-label">💡 З підказкою</div></div>
     <div class="stat-card"><div class="stat-num" style="color:var(--red)">${counts.type3}</div><div class="stat-label">❌ З помилками</div></div>
     <div class="stat-card"><div class="stat-num">${Math.round(Storage.learned.size / TOTAL * 100)}%</div><div class="stat-label">Прогрес</div></div>
     <div class="stat-card"><div class="stat-num" style="color:var(--yellow)">${accuracy}%</div><div class="stat-label">Точність відповідей</div></div>
+    <div class="stat-card"><div class="stat-num" style="color:var(--accent)">${avgTime}</div><div class="stat-label">⏱️ Середній час відповіді</div></div>
   `;
 
   const masteryLegend = document.getElementById('mastery-legend');
@@ -24,6 +28,21 @@ function renderStats() {
         <strong style="color:var(--red)">Рівень 3</strong> — помилка (фраза потрапляє в повторення).
         Зараз з помилками: <strong>${errorCount}</strong>.
       </p>`;
+  }
+
+  const timingEl = document.getElementById('phrase-timing-stats');
+  if (timingEl) {
+    const timed = Storage.getPhrasesWithTiming(25);
+    if (!timed.length) {
+      timingEl.innerHTML = '<p style="font-size:.82rem;color:var(--muted)">Пройди тест — тут з\'явиться середній час по фразах.</p>';
+    } else {
+      timingEl.innerHTML = timed.map(({ p, i, avg, count }) => `
+        <div class="timing-row" onclick="openModal(${i})" title="Відкрити фразу">
+          <span class="timing-phrase">${escapeHtml(p.en.length > 42 ? p.en.slice(0, 42) + '…' : p.en)}</span>
+          <span class="timing-val">${Storage.formatAvgTime(avg)}</span>
+          <span class="timing-count">${count}×</span>
+        </div>`).join('');
+    }
   }
 
   document.getElementById('cat-stats').innerHTML = Object.entries(CATEGORIES).map(([key, label]) => {

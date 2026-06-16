@@ -1,4 +1,4 @@
-// 🚌 Транспорт — 19 phrases
+// 🚌 Транспорт — 30 phrases
 const PHRASES_TRANSPORT = [
   {
     "en": "Which bus goes to…?",
@@ -321,6 +321,182 @@ const PHRASES_TRANSPORT = [
     "examples": [
       "— Do I need to take my laptop out? — Yes, and liquids go in a clear bag.",
       "— Do I need to take my laptop out at security? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "How much is a day pass?",
+    "ua": "Скільки коштує проїзний на день?",
+    "ex": "— How much is a day pass? — Twelve euros for unlimited travel.",
+    "tip": "Day pass = квиток на день.",
+    "cat": "transport",
+    "tag": "🚌 Транспорт",
+    "anchors": [
+      "day pass"
+    ],
+    "situation": "В транспорті або на зупинці",
+    "examples": [
+      "— How much is a day pass? — Twelve euros for unlimited travel.",
+      "— How much is a day pass? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Does this bus go to the city centre?",
+    "ua": "Цей автобус їде в центр?",
+    "ex": "— Does this bus go to the city centre? — Yes, get off at the fifth stop.",
+    "tip": "City centre = центр міста.",
+    "cat": "transport",
+    "tag": "🚌 Транспорт",
+    "anchors": [
+      "city centre"
+    ],
+    "situation": "В транспорті або на зупинці",
+    "examples": [
+      "— Does this bus go to the city centre? — Yes, get off at the fifth stop.",
+      "— Does this bus go to the city centre? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Which ticket do I need?",
+    "ua": "Який квиток мені потрібен?",
+    "ex": "— Which ticket do I need for zone two? — A single or a day pass.",
+    "tip": "Zone = зона (тарифна).",
+    "cat": "transport",
+    "tag": "🚌 Транспорт",
+    "anchors": [
+      "Which ticket"
+    ],
+    "situation": "В транспорті або на зупинці",
+    "examples": [
+      "— Which ticket do I need for zone two? — A single or a day pass.",
+      "— Which ticket do I need? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Is this seat free?",
+    "ua": "Це місце вільне?",
+    "ex": "— Is this seat free? — Yes, go ahead.",
+    "tip": "Seat free = вільне місце.",
+    "cat": "transport",
+    "tag": "🚌 Транспорт",
+    "anchors": [
+      "seat free"
+    ],
+    "situation": "В транспорті або на зупинці",
+    "examples": [
+      "— Is this seat free? — Yes, go ahead.",
+      "— Is this seat free? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "When is the next train?",
+    "ua": "Коли наступний потяг?",
+    "ex": "— When is the next train to Brighton? — In about eight minutes.",
+    "tip": "Next train = наступний рейс.",
+    "cat": "transport",
+    "tag": "🚌 Транспорт",
+    "anchors": [
+      "next train"
+    ],
+    "situation": "В транспорті або на зупинці",
+    "examples": [
+      "— When is the next train to Brighton? — In about eight minutes.",
+      "— When is the next train? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Could you tell me when we arrive?",
+    "ua": "Скажете, коли приїдемо?",
+    "ex": "— Could you tell me when we arrive? — Of course, I'll let you know.",
+    "tip": "Let you know = повідомлю.",
+    "cat": "transport",
+    "tag": "🚌 Транспорт",
+    "anchors": [
+      "when we arrive"
+    ],
+    "situation": "В транспорті або на зупинці",
+    "examples": [
+      "— Could you tell me when we arrive? — Of course, I'll let you know.",
+      "— Could you tell me when we arrive? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Is there a discount for students?",
+    "ua": "Чи є знижка для студентів?",
+    "ex": "— Is there a discount for students? — Yes, with a valid ID.",
+    "tip": "Valid ID = дійсний документ.",
+    "cat": "transport",
+    "tag": "🚌 Транспорт",
+    "anchors": [
+      "discount for students"
+    ],
+    "situation": "В транспорті або на зупинці",
+    "examples": [
+      "— Is there a discount for students? — Yes, with a valid ID.",
+      "— Is there a discount for students? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "The train is delayed.",
+    "ua": "Потяг запізнюється.",
+    "ex": "— The train is delayed by twenty minutes, sorry.",
+    "tip": "Delayed = запізнюється.",
+    "cat": "transport",
+    "tag": "🚌 Транспорт",
+    "anchors": [
+      "delayed"
+    ],
+    "situation": "В транспорті або на зупинці",
+    "examples": [
+      "— The train is delayed by twenty minutes, sorry.",
+      "— The train is delayed. — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Where can I buy a ticket?",
+    "ua": "Де купити квиток?",
+    "ex": "— Where can I buy a ticket? — At the machine over there.",
+    "tip": "Ticket machine = автомат з квитками.",
+    "cat": "transport",
+    "tag": "🚌 Транспорт",
+    "anchors": [
+      "buy a ticket"
+    ],
+    "situation": "В транспорті або на зупинці",
+    "examples": [
+      "— Where can I buy a ticket? — At the machine over there.",
+      "— Where can I buy a ticket? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Is this the right line for the airport?",
+    "ua": "Це правильна лінія до аеропорту?",
+    "ex": "— Is this the right line for the airport? — Yes, stay on until the end.",
+    "tip": "Line = лінія метро/трамвая.",
+    "cat": "transport",
+    "tag": "🚌 Транспорт",
+    "anchors": [
+      "right line"
+    ],
+    "situation": "В транспорті або на зупинці",
+    "examples": [
+      "— Is this the right line for the airport? — Yes, stay on until the end.",
+      "— Is this the right line for the airport? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "One ticket to the city centre, please.",
+    "ua": "Один квиток до центру, будь ласка.",
+    "ex": "— One ticket to the city centre, please. — That's three fifty.",
+    "tip": "Classic ticket purchase phrase.",
+    "cat": "transport",
+    "tag": "🚌 Транспорт",
+    "anchors": [
+      "One ticket to"
+    ],
+    "situation": "В транспорті",
+    "examples": [
+      "— One ticket to the city centre, please. — That's three fifty.",
+      "— One ticket to the city centre, please. — Sure, I'll let you know when we arrive."
     ]
   }
 ];

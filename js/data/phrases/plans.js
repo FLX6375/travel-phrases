@@ -1,4 +1,4 @@
-// 📅 Плани — 6 phrases
+// 📅 Плани — 16 phrases
 const PHRASES_PLANS = [
   {
     "en": "Are you free tomorrow evening?",
@@ -95,6 +95,166 @@ const PHRASES_PLANS = [
     "examples": [
       "Sorry, I'm running behind schedule — I'll be about 15 minutes late.",
       "— I'm running behind schedule. — Sure, let's do that."
+    ]
+  },
+  {
+    "en": "Let's meet halfway.",
+    "ua": "Зустрінемось посередині.",
+    "ex": "— It's far for both of us — let's meet halfway.",
+    "tip": "Meet halfway = компроміс / місце.",
+    "cat": "plans",
+    "tag": "📅 Плани",
+    "anchors": [
+      "meet halfway"
+    ],
+    "situation": "Коли домовляєшся про зустріч або плани",
+    "examples": [
+      "— It's far for both of us — let's meet halfway.",
+      "— Let's meet halfway. — Sure, no problem."
+    ]
+  },
+  {
+    "en": "I'm free all afternoon.",
+    "ua": "Я вільний увесь день.",
+    "ex": "— When can you meet? — I'm free all afternoon.",
+    "tip": "Free = вільний у часі.",
+    "cat": "plans",
+    "tag": "📅 Плани",
+    "anchors": [
+      "free all afternoon"
+    ],
+    "situation": "Коли домовляєшся про зустріч або плани",
+    "examples": [
+      "— When can you meet? — I'm free all afternoon.",
+      "— I'm free all afternoon. — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Can we reschedule?",
+    "ua": "Чи можемо перенести?",
+    "ex": "— Something came up — can we reschedule?",
+    "tip": "Reschedule = перенести на інший час.",
+    "cat": "plans",
+    "tag": "📅 Плани",
+    "anchors": [
+      "Can we reschedule"
+    ],
+    "situation": "Коли домовляєшся про зустріч або плани",
+    "examples": [
+      "— Something came up — can we reschedule?",
+      "— Can we reschedule? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "I'll be there in ten minutes.",
+    "ua": "Буду через десять хвилин.",
+    "ex": "— Where are you? — I'll be there in ten minutes.",
+    "tip": "Be there in = буду через.",
+    "cat": "plans",
+    "tag": "📅 Плани",
+    "anchors": [
+      "be there in"
+    ],
+    "situation": "Коли домовляєшся про зустріч або плани",
+    "examples": [
+      "— Where are you? — I'll be there in ten minutes.",
+      "— I'll be there in ten minutes. — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Shall we say seven?",
+    "ua": "Домовимось на сьому?",
+    "ex": "— Shall we say seven at the usual place?",
+    "tip": "Shall we say = пропозиція часу.",
+    "cat": "plans",
+    "tag": "📅 Плани",
+    "anchors": [
+      "Shall we say"
+    ],
+    "situation": "Коли домовляєшся про зустріч або плани",
+    "examples": [
+      "— Shall we say seven at the usual place?",
+      "— Shall we say seven? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "I'm running about fifteen minutes late.",
+    "ua": "Запізнююсь приблизно на 15 хв.",
+    "ex": "— I'm running about fifteen minutes late — save me a seat.",
+    "tip": "Running late + time = на скільки.",
+    "cat": "plans",
+    "tag": "📅 Плани",
+    "anchors": [
+      "fifteen minutes late"
+    ],
+    "situation": "Коли домовляєшся про зустріч або плани",
+    "examples": [
+      "— I'm running about fifteen minutes late — save me a seat.",
+      "— I'm running about fifteen minutes late. — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Are you still up for it?",
+    "ua": "Ти все ще в справі?",
+    "ex": "— Are you still up for hiking on Sunday?",
+    "tip": "Up for it = готовий / хочеш.",
+    "cat": "plans",
+    "tag": "📅 Плани",
+    "anchors": [
+      "still up for"
+    ],
+    "situation": "Коли домовляєшся про зустріч або плани",
+    "examples": [
+      "— Are you still up for hiking on Sunday?",
+      "— Are you still up for it? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "I'll send you the details.",
+    "ua": "Надішлю деталі.",
+    "ex": "— I'll send you the details by text tonight.",
+    "tip": "Details = деталі / адреса / час.",
+    "cat": "plans",
+    "tag": "📅 Плани",
+    "anchors": [
+      "send you the details"
+    ],
+    "situation": "Коли домовляєшся про зустріч або плани",
+    "examples": [
+      "— I'll send you the details by text tonight.",
+      "— I'll send you the details. — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Does Saturday work?",
+    "ua": "Субота підходить?",
+    "ex": "— Does Saturday work for you? — Perfect!",
+    "tip": "Does [day] work? — типове питання.",
+    "cat": "plans",
+    "tag": "📅 Плани",
+    "anchors": [
+      "Does Saturday work"
+    ],
+    "situation": "Коли домовляєшся про зустріч або плани",
+    "examples": [
+      "— Does Saturday work for you? — Perfect!",
+      "— Does Saturday work? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Are we still on for tonight?",
+    "ua": "Ми все ще домовлені на вечір?",
+    "ex": "— Are we still on for tonight? — Yes, see you at eight!",
+    "tip": "Still on for = план у силі.",
+    "cat": "plans",
+    "tag": "📅 Плани",
+    "anchors": [
+      "still on for"
+    ],
+    "situation": "Коли домовляєшся про плани",
+    "examples": [
+      "— Are we still on for tonight? — Yes, see you at eight!",
+      "— Are we still on for tonight? — Perfect — see you then!"
     ]
   }
 ];

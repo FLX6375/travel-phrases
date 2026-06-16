@@ -1,4 +1,4 @@
-// 💬 Повсякдень — 154 phrases
+// 💬 Повсякдень — 161 phrases
 const PHRASES_EVERYDAY = [
   {
     "en": "I really like this.",
@@ -2479,6 +2479,118 @@ const PHRASES_EVERYDAY = [
     "examples": [
       "I've never had it, but it's worth a try.",
       "— It's worth a try. — Yeah, totally."
+    ]
+  },
+  {
+    "en": "I totally agree.",
+    "ua": "Повністю згоден.",
+    "ex": "— The weather is perfect. — I totally agree.",
+    "tip": "Totally agree = повністю згоден.",
+    "cat": "everyday",
+    "tag": "💬 Повсякдень",
+    "anchors": [
+      "totally agree"
+    ],
+    "situation": "У повсякденній розмові з людьми",
+    "examples": [
+      "— The weather is perfect. — I totally agree.",
+      "— I totally agree. — Sure, no problem."
+    ]
+  },
+  {
+    "en": "It depends on the weather.",
+    "ua": "Залежить від погоди.",
+    "ex": "— Are we going out? — It depends on the weather.",
+    "tip": "It depends = залежить.",
+    "cat": "everyday",
+    "tag": "💬 Повсякдень",
+    "anchors": [
+      "It depends"
+    ],
+    "situation": "У повсякденній розмові з людьми",
+    "examples": [
+      "— Are we going out? — It depends on the weather.",
+      "— It depends on the weather. — Sure, no problem."
+    ]
+  },
+  {
+    "en": "I'll keep you posted.",
+    "ua": "Триматиму в курсі.",
+    "ex": "— Any news on the tickets? — I'll keep you posted.",
+    "tip": "Keep posted = інформувати.",
+    "cat": "everyday",
+    "tag": "💬 Повсякдень",
+    "anchors": [
+      "keep you posted"
+    ],
+    "situation": "У повсякденній розмові з людьми",
+    "examples": [
+      "— Any news on the tickets? — I'll keep you posted.",
+      "— I'll keep you posted. — Sure, no problem."
+    ]
+  },
+  {
+    "en": "No rush.",
+    "ua": "Не поспішай. / Без поспіху.",
+    "ex": "— When can you send it? — No rush — whenever works.",
+    "tip": "No rush = не терміново.",
+    "cat": "everyday",
+    "tag": "💬 Повсякдень",
+    "anchors": [
+      "No rush"
+    ],
+    "situation": "У повсякденній розмові з людьми",
+    "examples": [
+      "— When can you send it? — No rush — whenever works.",
+      "— No rush. — Sure, no problem."
+    ]
+  },
+  {
+    "en": "I'm running late.",
+    "ua": "Я запізнююсь.",
+    "ex": "— I'm running late — start without me.",
+    "tip": "Running late = запізнююсь.",
+    "cat": "everyday",
+    "tag": "💬 Повсякдень",
+    "anchors": [
+      "running late"
+    ],
+    "situation": "У повсякденній розмові з людьми",
+    "examples": [
+      "— I'm running late — start without me.",
+      "— I'm running late. — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Long time no see!",
+    "ua": "Давно не бачились!",
+    "ex": "— Hey! Long time no see! — I know — how have you been?",
+    "tip": "Classic informal greeting.",
+    "cat": "everyday",
+    "tag": "💬 Повсякдень",
+    "anchors": [
+      "Long time no see"
+    ],
+    "situation": "У повсякденній розмові з людьми",
+    "examples": [
+      "— Hey! Long time no see! — I know — how have you been?",
+      "— Long time no see! — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Sounds like a plan.",
+    "ua": "Звучить як план.",
+    "ex": "— Let's meet at six. — Sounds like a plan!",
+    "tip": "Sounds like a plan = домовились.",
+    "cat": "everyday",
+    "tag": "💬 Повсякдень",
+    "anchors": [
+      "Sounds like a plan"
+    ],
+    "situation": "У повсякденній розмові",
+    "examples": [
+      "— Let's meet at six. — Sounds like a plan!",
+      "— Sounds like a plan. — Yeah, totally."
     ]
   }
 ];

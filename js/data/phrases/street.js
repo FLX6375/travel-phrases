@@ -1,4 +1,4 @@
-// 🗺️ Вулиця — 15 phrases
+// 🗺️ Вулиця — 26 phrases
 const PHRASES_STREET = [
   {
     "en": "Excuse me, how do I get to…?",
@@ -250,6 +250,182 @@ const PHRASES_STREET = [
     "examples": [
       "Is there an ATM around here? I need to withdraw some cash.",
       "— Is there an ATM around here? — No problem. You can't miss it."
+    ]
+  },
+  {
+    "en": "Is it far from here?",
+    "ua": "Це далеко звідси?",
+    "ex": "— Is it far from here? — About ten minutes on foot.",
+    "tip": "On foot = пішки.",
+    "cat": "street",
+    "tag": "🗺️ Вулиця",
+    "anchors": [
+      "far from here"
+    ],
+    "situation": "На вулиці, коли спілкуєшся з місцевими",
+    "examples": [
+      "— Is it far from here? — About ten minutes on foot.",
+      "— Is it far from here? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Could you show me on the map?",
+    "ua": "Покажете на карті?",
+    "ex": "— Could you show me on the map? — Sure, you're here — go straight.",
+    "tip": "Show on the map — коли не розумієш напрямки.",
+    "cat": "street",
+    "tag": "🗺️ Вулиця",
+    "anchors": [
+      "show me on the map"
+    ],
+    "situation": "На вулиці, коли спілкуєшся з місцевими",
+    "examples": [
+      "— Could you show me on the map? — Sure, you're here — go straight.",
+      "— Could you show me on the map? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Am I going the right way?",
+    "ua": "Я йду правильно?",
+    "ex": "— Am I going the right way to the station? — Yes, keep going straight.",
+    "tip": "Right way = правильний напрямок.",
+    "cat": "street",
+    "tag": "🗺️ Вулиця",
+    "anchors": [
+      "right way"
+    ],
+    "situation": "На вулиці, коли спілкуєшся з місцевими",
+    "examples": [
+      "— Am I going the right way to the station? — Yes, keep going straight.",
+      "— Am I going the right way? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Is there a cash machine nearby?",
+    "ua": "Чи є банкомат поруч?",
+    "ex": "— Is there a cash machine nearby? — Yes, at the corner shop.",
+    "tip": "Cash machine / ATM = банкомат.",
+    "cat": "street",
+    "tag": "🗺️ Вулиця",
+    "anchors": [
+      "cash machine"
+    ],
+    "situation": "На вулиці, коли спілкуєшся з місцевими",
+    "examples": [
+      "— Is there a cash machine nearby? — Yes, at the corner shop.",
+      "— Is there a cash machine nearby? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "What's the best way to get there?",
+    "ua": "Як найкраще туди дістатися?",
+    "ex": "— What's the best way to get there? — Take the metro — it's faster.",
+    "tip": "Best way = найкращий спосіб.",
+    "cat": "street",
+    "tag": "🗺️ Вулиця",
+    "anchors": [
+      "best way to get"
+    ],
+    "situation": "На вулиці, коли спілкуєшся з місцевими",
+    "examples": [
+      "— What's the best way to get there? — Take the metro — it's faster.",
+      "— What's the best way to get there? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Is this area safe at night?",
+    "ua": "Чи безпечний цей район вночі?",
+    "ex": "— Is this area safe at night? — Generally yes, but stay on main streets.",
+    "tip": "Safe at night = безпечно вночі.",
+    "cat": "street",
+    "tag": "🗺️ Вулиця",
+    "anchors": [
+      "safe at night"
+    ],
+    "situation": "На вулиці, коли спілкуєшся з місцевими",
+    "examples": [
+      "— Is this area safe at night? — Generally yes, but stay on main streets.",
+      "— Is this area safe at night? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Could you write that down for me?",
+    "ua": "Чи можете записати?",
+    "ex": "— Could you write that down for me? — Of course — here you go.",
+    "tip": "Write down = записати на папері.",
+    "cat": "street",
+    "tag": "🗺️ Вулиця",
+    "anchors": [
+      "write that down"
+    ],
+    "situation": "На вулиці, коли спілкуєшся з місцевими",
+    "examples": [
+      "— Could you write that down for me? — Of course — here you go.",
+      "— Could you write that down for me? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "I think I'm lost.",
+    "ua": "Здається, я загубився.",
+    "ex": "— Excuse me, I think I'm lost. — Where are you trying to go?",
+    "tip": "Lost = загубився.",
+    "cat": "street",
+    "tag": "🗺️ Вулиця",
+    "anchors": [
+      "I'm lost"
+    ],
+    "situation": "На вулиці, коли спілкуєшся з місцевими",
+    "examples": [
+      "— Excuse me, I think I'm lost. — Where are you trying to go?",
+      "— I think I'm lost. — Sure, no problem."
+    ]
+  },
+  {
+    "en": "How long does it take to walk?",
+    "ua": "Скільки йти пішки?",
+    "ex": "— How long does it take to walk? — Maybe fifteen minutes.",
+    "tip": "How long does it take = скільки часу займе.",
+    "cat": "street",
+    "tag": "🗺️ Вулиця",
+    "anchors": [
+      "How long does it take"
+    ],
+    "situation": "На вулиці, коли спілкуєшся з місцевими",
+    "examples": [
+      "— How long does it take to walk? — Maybe fifteen minutes.",
+      "— How long does it take to walk? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Can I cross here?",
+    "ua": "Чи можна тут переходити?",
+    "ex": "— Can I cross here? — Yes, the light is green.",
+    "tip": "Cross = переходити вулицю.",
+    "cat": "street",
+    "tag": "🗺️ Вулиця",
+    "anchors": [
+      "Can I cross"
+    ],
+    "situation": "На вулиці, коли спілкуєшся з місцевими",
+    "examples": [
+      "— Can I cross here? — Yes, the light is green.",
+      "— Can I cross here? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Is this the right bus stop?",
+    "ua": "Це правильна зупинка?",
+    "ex": "— Is this the right bus stop for the museum? — Yes, number 12 stops here.",
+    "tip": "Bus stop = зупинка автобуса.",
+    "cat": "street",
+    "tag": "🗺️ Вулиця",
+    "anchors": [
+      "right bus stop"
+    ],
+    "situation": "На вулиці",
+    "examples": [
+      "— Is this the right bus stop for the museum? — Yes, number 12 stops here.",
+      "— Is this the right bus stop? — Yes, just keep straight and turn left."
     ]
   }
 ];

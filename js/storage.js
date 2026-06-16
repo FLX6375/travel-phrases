@@ -13,14 +13,14 @@ function safeJsonParse(key, fallback) {
 }
 
 function defaultProgress() {
-  return { streak: 0, clean: 0, hinted: 0, errors: 0, lastType: 0 };
+  return { streak: 0, clean: 0, hinted: 0, errors: 0, lastType: 0, timeMs: 0, timeCount: 0 };
 }
 
 const Storage = {
   learned: new Set(safeJsonParse('tpLearned3', [])),
   phraseWeights: safeJsonParse('tpWeights3', {}),
   phraseProgress: safeJsonParse('tpProgress4', {}),
-  quizStats: safeJsonParse('tpQuizStats', { total: 0, correct: 0, clean: 0, hinted: 0, wrong: 0 }),
+  quizStats: safeJsonParse('tpQuizStats', { total: 0, correct: 0, clean: 0, hinted: 0, wrong: 0, timeMs: 0, timeCount: 0 }),
 
   saveLocalOnly() {
     localStorage.setItem('tpLearned3', JSON.stringify([...this.learned]));
@@ -59,6 +59,52 @@ const Storage = {
 
   getErrorPhraseIndices() {
     return PHRASES.map((_, i) => i).filter(i => this.hasErrors(i));
+  },
+
+  isNewPhrase(idx) {
+    if (this.learned.has(idx)) return false;
+    const p = this.phraseProgress[idx];
+    if (!p) return true;
+    return p.clean === 0 && p.hinted === 0 && p.errors === 0;
+  },
+
+  getNewPhraseIndices() {
+    return PHRASES.map((_, i) => i).filter(i => this.isNewPhrase(i));
+  },
+
+  recordResponseTime(idx, ms) {
+    if (!ms || ms < 200 || ms > 600000) return;
+    const p = this.getProgress(idx);
+    p.timeMs = (p.timeMs || 0) + ms;
+    p.timeCount = (p.timeCount || 0) + 1;
+    this.quizStats.timeMs = (this.quizStats.timeMs || 0) + ms;
+    this.quizStats.timeCount = (this.quizStats.timeCount || 0) + 1;
+    this.phraseProgress[idx] = p;
+  },
+
+  getPhraseAvgMs(idx) {
+    const p = this.phraseProgress[idx];
+    if (!p || !p.timeCount) return null;
+    return p.timeMs / p.timeCount;
+  },
+
+  getGlobalAvgMs() {
+    const q = this.quizStats;
+    if (!q.timeCount) return null;
+    return q.timeMs / q.timeCount;
+  },
+
+  formatAvgTime(ms) {
+    if (ms == null) return '—';
+    const s = ms / 1000;
+    return s < 10 ? s.toFixed(1) + ' с' : Math.round(s) + ' с';
+  },
+
+  getPhrasesWithTiming(limit) {
+    return PHRASES.map((p, i) => ({ p, i, avg: this.getPhraseAvgMs(i), count: (this.phraseProgress[i] || {}).timeCount || 0 }))
+      .filter(x => x.count > 0)
+      .sort((a, b) => b.avg - a.avg)
+      .slice(0, limit || 20);
   },
 
   recordAnswer(correct) {
@@ -162,7 +208,7 @@ const Storage = {
     this.learned.clear();
     this.phraseWeights = {};
     this.phraseProgress = {};
-    this.quizStats = { total: 0, correct: 0, clean: 0, hinted: 0, wrong: 0 };
+    this.quizStats = { total: 0, correct: 0, clean: 0, hinted: 0, wrong: 0, timeMs: 0, timeCount: 0 };
     this.save();
   }
 };

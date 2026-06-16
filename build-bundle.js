@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const root = __dirname;
-const BUNDLE_VERSION = 21;
+const BUNDLE_VERSION = 23;
 const BUNDLE_FILE = `app.v${BUNDLE_VERSION}.js`;
 const MIN_BUNDLE_SIZE = 50000;
 
@@ -32,6 +32,7 @@ const scripts = [
   'js/data/grammar-rules.js',
   'js/utils.js',
   'js/speech.js',
+  'js/phrase-visual.js',
   'js/storage.js',
   'js/sync.js',
   'js/quiz-errors.js',
@@ -104,8 +105,22 @@ const bodyHtml = `
       </div>
       <div class="quiz-options-bar">
         <button type="button" class="quiz-errors-toggle" id="quiz-errors-toggle" onclick="toggleQuizErrorsOnly()" title="Тренуватись лише на фразах з помилками">
-          <span id="quiz-errors-label">⚠️ Тільки помилки</span>
+          <span id="quiz-errors-label">⚠️ Помилки</span>
         </button>
+        <button type="button" class="quiz-new-toggle" id="quiz-new-toggle" onclick="toggleQuizNewOnly()" title="Тільки фрази, які ще не проходив у тесті">
+          <span id="quiz-new-label">✨ Нові</span>
+        </button>
+        <label class="quiz-size-wrap" title="Кількість питань у тесті">
+          <span>Питань:</span>
+          <select id="quiz-size-select" class="quiz-size-select" onchange="setQuizSize(Number(this.value))">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15" selected>15</option>
+            <option value="20">20</option>
+            <option value="25">25</option>
+            <option value="30">30</option>
+          </select>
+        </label>
       </div>
       <div class="quiz-card" id="quiz-card">
         <div class="quiz-progress" id="quiz-prog"></div>
@@ -123,6 +138,8 @@ const bodyHtml = `
   <div id="tab-stats" style="display:none">
     <div class="stats-grid" id="stats-grid"></div>
     <div id="mastery-legend"></div>
+    <h3 style="font-size:.9rem;color:var(--muted);margin:20px 0 10px;font-weight:500;">⏱️ Час відповіді по фразах (найповільніші)</h3>
+    <div id="phrase-timing-stats" style="margin-bottom:24px"></div>
     <div id="sync-panel" style="margin-bottom:24px"></div>
     <h3 style="font-size:.9rem;color:var(--muted);margin-bottom:12px;font-weight:500;">По категоріях</h3>
     <div id="cat-stats"></div>
@@ -134,6 +151,7 @@ const bodyHtml = `
   <div class="modal">
     <button class="modal-close" onclick="closeModal()">✕</button>
     <div class="modal-num" id="m-num"></div>
+    <div id="m-img"></div>
     <div class="modal-en" id="m-en"></div>
     <div class="modal-ua" id="m-ua"></div>
     <div class="modal-example" id="m-ex"></div>

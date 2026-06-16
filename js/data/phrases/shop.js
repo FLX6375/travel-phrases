@@ -1,4 +1,4 @@
-// 🛍️ Магазин — 15 phrases
+// 🛍️ Магазин — 26 phrases
 const PHRASES_SHOP = [
   {
     "en": "How much does this cost?",
@@ -251,6 +251,182 @@ const PHRASES_SHOP = [
     "examples": [
       "— Do you have anything cheaper? — We have a similar one for half the price.",
       "— Do you have anything cheaper? — Yes, we accept cards and contactless."
+    ]
+  },
+  {
+    "en": "Do you have this in a smaller size?",
+    "ua": "Чи є менший розмір?",
+    "ex": "— Do you have this in a smaller size? — Let me check in the back.",
+    "tip": "Size = розмір одягу.",
+    "cat": "shop",
+    "tag": "🛍️ Магазин",
+    "anchors": [
+      "smaller size"
+    ],
+    "situation": "У магазині під час покупок",
+    "examples": [
+      "— Do you have this in a smaller size? — Let me check in the back.",
+      "— Do you have this in a smaller size? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Do you offer tax-free shopping?",
+    "ua": "Чи є tax-free для туристів?",
+    "ex": "— Do you offer tax-free shopping? — Yes, with your passport.",
+    "tip": "Tax-free = повернення ПДВ.",
+    "cat": "shop",
+    "tag": "🛍️ Магазин",
+    "anchors": [
+      "tax-free"
+    ],
+    "situation": "У магазині під час покупок",
+    "examples": [
+      "— Do you offer tax-free shopping? — Yes, with your passport.",
+      "— Do you offer tax-free shopping? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Could I get a gift receipt?",
+    "ua": "Чи можна чек для подарунка?",
+    "ex": "— Could I get a gift receipt? — Of course — no price shown.",
+    "tip": "Gift receipt = чек без ціни.",
+    "cat": "shop",
+    "tag": "🛍️ Магазин",
+    "anchors": [
+      "gift receipt"
+    ],
+    "situation": "У магазині під час покупок",
+    "examples": [
+      "— Could I get a gift receipt? — Of course — no price shown.",
+      "— Could I get a gift receipt? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Is this available in other colours?",
+    "ua": "Чи є інші кольори?",
+    "ex": "— Is this available in other colours? — We have blue and grey.",
+    "tip": "Available in = доступний у.",
+    "cat": "shop",
+    "tag": "🛍️ Магазин",
+    "anchors": [
+      "other colours"
+    ],
+    "situation": "У магазині під час покупок",
+    "examples": [
+      "— Is this available in other colours? — We have blue and grey.",
+      "— Is this available in other colours? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Where is the checkout?",
+    "ua": "Де каса?",
+    "ex": "— Where is the checkout? — Just follow the signs.",
+    "tip": "Checkout = каса.",
+    "cat": "shop",
+    "tag": "🛍️ Магазин",
+    "anchors": [
+      "checkout"
+    ],
+    "situation": "У магазині під час покупок",
+    "examples": [
+      "— Where is the checkout? — Just follow the signs.",
+      "— Where is the checkout? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Do you ship internationally?",
+    "ua": "Чи доставляєте за кордон?",
+    "ex": "— Do you ship internationally? — Yes, through our website.",
+    "tip": "Ship = доставляти.",
+    "cat": "shop",
+    "tag": "🛍️ Магазин",
+    "anchors": [
+      "ship internationally"
+    ],
+    "situation": "У магазині під час покупок",
+    "examples": [
+      "— Do you ship internationally? — Yes, through our website.",
+      "— Do you ship internationally? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "I'd like to return this.",
+    "ua": "Хочу повернути це.",
+    "ex": "— I'd like to return this — I have the receipt.",
+    "tip": "Return = повернути товар.",
+    "cat": "shop",
+    "tag": "🛍️ Магазин",
+    "anchors": [
+      "return this"
+    ],
+    "situation": "У магазині під час покупок",
+    "examples": [
+      "— I'd like to return this — I have the receipt.",
+      "— I'd like to return this. — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Is there a student discount?",
+    "ua": "Чи є знижка для студентів?",
+    "ex": "— Is there a student discount? — Ten percent with ID.",
+    "tip": "Student discount = студентська знижка.",
+    "cat": "shop",
+    "tag": "🛍️ Магазин",
+    "anchors": [
+      "student discount"
+    ],
+    "situation": "У магазині під час покупок",
+    "examples": [
+      "— Is there a student discount? — Ten percent with ID.",
+      "— Is there a student discount? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Could you wrap it as a gift?",
+    "ua": "Чи можна упакувати як подарунок?",
+    "ex": "— Could you wrap it as a gift? — Sure, no extra charge.",
+    "tip": "Wrap as a gift = подарункове пакування.",
+    "cat": "shop",
+    "tag": "🛍️ Магазин",
+    "anchors": [
+      "wrap it as a gift"
+    ],
+    "situation": "У магазині під час покупок",
+    "examples": [
+      "— Could you wrap it as a gift? — Sure, no extra charge.",
+      "— Could you wrap it as a gift? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Do you have a loyalty card?",
+    "ua": "Чи є карта лояльності?",
+    "ex": "— Do you have a loyalty card? — Yes, you get ten percent off.",
+    "tip": "Loyalty card = карта постійного клієнта.",
+    "cat": "shop",
+    "tag": "🛍️ Магазин",
+    "anchors": [
+      "loyalty card"
+    ],
+    "situation": "У магазині",
+    "examples": [
+      "— Do you have a loyalty card? — Yes, you get ten percent off.",
+      "— Do you have a loyalty card? — Let me check in the back for you."
+    ]
+  },
+  {
+    "en": "Can I pay in instalments?",
+    "ua": "Чи можна оплатити частинами?",
+    "ex": "— Can I pay in instalments? — Only for purchases over two hundred.",
+    "tip": "Instalments = розстрочка.",
+    "cat": "shop",
+    "tag": "🛍️ Магазин",
+    "anchors": [
+      "instalments"
+    ],
+    "situation": "У магазині",
+    "examples": [
+      "— Can I pay in instalments? — Only for purchases over two hundred.",
+      "— Can I pay in instalments? — Sure — the fitting rooms are over there."
     ]
   }
 ];

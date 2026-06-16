@@ -1,32 +1,32 @@
 const SITUATIONS = [
   {
     "situation": "Ти в кафе і хочеш попросити рахунок.",
-    "phraseIndex": 55,
+    "phraseIndex": 90,
     "options": [
-      "What do you recommend?",
       "Could I have the bill, please?",
       "Is this dish spicy?",
+      "What do you recommend?",
       "Could I see the menu, please?"
     ],
-    "correctIndex": 1
+    "correctIndex": 0
   },
   {
     "situation": "Ти загубився на вулиці.",
-    "phraseIndex": 19,
+    "phraseIndex": 32,
     "options": [
       "A table for two, please.",
+      "Is this on sale?",
       "Nice to meet you!",
-      "I think I'm lost. Could you help me?",
-      "Is this on sale?"
+      "I think I'm lost. Could you help me?"
     ],
-    "correctIndex": 2
+    "correctIndex": 3
   },
   {
     "situation": "Хочеш ввічливо попросити людину говорити повільніше.",
-    "phraseIndex": 27,
+    "phraseIndex": 40,
     "options": [
-      "What do you mean by that?",
       "Same here!",
+      "What do you mean by that?",
       "Could you speak more slowly, please?",
       "Go ahead."
     ],
@@ -34,32 +34,32 @@ const SITUATIONS = [
   },
   {
     "situation": "У поїзді хочеш дізнатися, чи зупиняється він на твоїй станції.",
-    "phraseIndex": 34,
+    "phraseIndex": 58,
     "options": [
       "Does this train stop at…?",
-      "How much does this cost?",
       "Long time no see!",
-      "Is breakfast included in the price?"
+      "Is breakfast included in the price?",
+      "How much does this cost?"
     ],
     "correctIndex": 0
   },
   {
     "situation": "Хтось запропонував піти на каву, і тобі подобається ідея.",
-    "phraseIndex": 91,
+    "phraseIndex": 160,
     "options": [
       "I'm afraid I have to disagree.",
-      "I'd rather not.",
+      "That sounds great!",
       "This isn't what I ordered.",
-      "That sounds great!"
+      "I'd rather not."
     ],
-    "correctIndex": 3
+    "correctIndex": 1
   },
   {
     "situation": "Ти запізнюєшся на зустріч і хочеш попередити.",
-    "phraseIndex": 99,
+    "phraseIndex": 168,
     "options": [
-      "Take your time.",
       "Never mind.",
+      "Take your time.",
       "I'm running a bit late.",
       "I'll be right back."
     ],
@@ -67,120 +67,120 @@ const SITUATIONS = [
   },
   {
     "situation": "У магазині ти не хочеш, щоб продавець тебе турбував.",
-    "phraseIndex": 69,
+    "phraseIndex": 115,
     "options": [
-      "How much does this cost?",
-      "I'd like to return this",
+      "I'd like to return this.",
+      "I'm just looking, thank you.",
       "Do you accept credit cards?",
-      "I'm just looking, thank you."
+      "How much does this cost?"
     ],
-    "correctIndex": 3
+    "correctIndex": 1
   },
   {
     "situation": "Ти хочеш дізнатися, чи включений сніданок у ціну номера.",
     "phraseIndex": 3,
     "options": [
-      "Is breakfast included in the price?",
       "What time does breakfast start?",
-      "Is there a safe",
-      "What's the Wi-Fi password?"
+      "Is there a safe in the room?",
+      "What's the Wi-Fi password?",
+      "Is breakfast included in the price?"
     ],
-    "correctIndex": 0
+    "correctIndex": 3
   },
   {
     "situation": "У таксі хочеш, щоб водій висадив тебе зараз.",
-    "phraseIndex": 44,
+    "phraseIndex": 68,
     "options": [
-      "Where can I get a taxi?",
-      "Please take me to this address.",
+      "I need to get off at the next stop.",
       "Could you drop me off here, please?",
-      "I need to get off at the next stop."
+      "Please take me to this address.",
+      "Where can I get a taxi?"
     ],
-    "correctIndex": 2
+    "correctIndex": 1
   },
   {
     "situation": "Ти не зрозумів, що сказали — просиш повторити.",
-    "phraseIndex": 102,
+    "phraseIndex": 171,
     "options": [
-      "I totally agree with you.",
-      "Could you say that again?",
       "Absolutely!",
+      "Could you say that again?",
+      "I totally agree with you.",
       "That makes sense."
     ],
     "correctIndex": 1
   },
   {
     "situation": "Домовляєшся про час зустрічі — питаєш, коли зручно.",
-    "phraseIndex": 262,
+    "phraseIndex": 349,
     "options": [
       "What are the opening hours?",
+      "Which way is the town centre?",
       "How far is it from here?",
-      "What time works for you?",
-      "Which way is the town centre?"
+      "What time works for you?"
     ],
-    "correctIndex": 2
+    "correctIndex": 3
   },
   {
     "situation": "Ти вперше зустрічаєш людину після представлення.",
-    "phraseIndex": 243,
+    "phraseIndex": 319,
     "options": [
       "Nice to meet you!",
-      "Long time no see!",
       "What brings you here?",
-      "How's it going?"
+      "How's it going?",
+      "Long time no see!"
     ],
     "correctIndex": 0
   },
   {
     "situation": "Хтось вибачається, і ти хочеш сказати, що все гаразд.",
-    "phraseIndex": 251,
+    "phraseIndex": 327,
     "options": [
       "No worries!",
+      "My bad.",
       "Sorry about that.",
-      "I'm afraid I have to disagree.",
-      "My bad."
+      "I'm afraid I have to disagree."
     ],
     "correctIndex": 0
   },
   {
     "situation": "У ресторані страва не та, що ти замовляв.",
-    "phraseIndex": 59,
+    "phraseIndex": 94,
     "options": [
       "Could I get this to go?",
-      "Is this dish spicy?",
+      "What do you recommend?",
       "This isn't what I ordered.",
-      "What do you recommend?"
+      "Is this dish spicy?"
     ],
     "correctIndex": 2
   },
   {
     "situation": "Друг питає, як справи — відповідаєш, що все добре.",
-    "phraseIndex": 144,
+    "phraseIndex": 213,
     "options": [
-      "I overslept.",
+      "I'm doing well, thanks.",
       "Not much.",
-      "Something came up.",
-      "I'm doing well, thanks."
+      "I overslept.",
+      "Something came up."
     ],
-    "correctIndex": 3
+    "correctIndex": 0
   },
   {
     "situation": "Хочеш ввічливо сказати, що йдеш — прощаєшся.",
     "phraseIndex": 0,
     "options": [
-      "Have a seat.",
-      "Help yourself.",
       "Come on in.",
-      "Could you tell me where the nearest hotel is?"
+      "Help yourself.",
+      "Could you tell me where the nearest hotel is?",
+      "Have a seat."
     ],
-    "correctIndex": 3
+    "correctIndex": 2
   },
   {
     "situation": "На рецепції хостелу питаєш про ліжко в dorm.",
     "phraseIndex": 11,
     "options": [
-      "Is breakfast included in the price?",
       "Could I have a late check-out",
+      "Is breakfast included in the price?",
       "Do you have a bed in a dorm room?",
       "I have a reservation under the name…"
     ],
@@ -188,35 +188,35 @@ const SITUATIONS = [
   },
   {
     "situation": "В аеропорту шукаєш стійку реєстрації.",
-    "phraseIndex": 45,
+    "phraseIndex": 69,
     "options": [
-      "Which gate is my flight?",
-      "Where is the nearest bus stop / metro station?",
       "Where can I get a taxi?",
-      "Where is the check-in desk?"
+      "Where is the nearest bus stop / metro station?",
+      "Where is the check-in desk?",
+      "Which gate is my flight?"
     ],
-    "correctIndex": 3
+    "correctIndex": 2
   },
   {
     "situation": "У кафе хочеш сісти біля вікна.",
-    "phraseIndex": 61,
+    "phraseIndex": 96,
     "options": [
-      "Could I see the menu, please?",
-      "A table for two, please.",
+      "Is this seat taken?",
       "Could we get a table by the window?",
-      "Is this seat taken?"
+      "A table for two, please.",
+      "Could I see the menu, please?"
     ],
-    "correctIndex": 2
+    "correctIndex": 1
   },
   {
     "situation": "У кафе просиш розділити рахунок.",
-    "phraseIndex": 63,
+    "phraseIndex": 98,
     "options": [
       "Is a tip expected here?",
-      "Could I have the bill, please?",
       "Could we split the bill?",
-      "Can I pay by card?"
+      "Can I pay by card?",
+      "Could I have the bill, please?"
     ],
-    "correctIndex": 2
+    "correctIndex": 1
   }
 ];

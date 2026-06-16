@@ -1,4 +1,4 @@
-// 👋 Знайомство — 17 phrases
+// 👋 Знайомство — 28 phrases
 const PHRASES_SOCIAL = [
   {
     "en": "Nice to meet you!",
@@ -272,6 +272,182 @@ const PHRASES_SOCIAL = [
     "examples": [
       "It's hard to explain, but you know what I mean?",
       "— You know what I mean? — Nice to meet you too!"
+    ]
+  },
+  {
+    "en": "Where are you from originally?",
+    "ua": "Звідки ти родом?",
+    "ex": "— Where are you from originally? — Ukraine, but I live in Berlin now.",
+    "tip": "Originally = спочатку / родом.",
+    "cat": "social",
+    "tag": "👋 Знайомство",
+    "anchors": [
+      "from originally"
+    ],
+    "situation": "При знайомстві та неформальному спілкуванні",
+    "examples": [
+      "— Where are you from originally? — Ukraine, but I live in Berlin now.",
+      "— Where are you from originally? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Do you come here often?",
+    "ua": "Ти часто сюди ходиш?",
+    "ex": "— Do you come here often? — First time, actually.",
+    "tip": "Small talk at a bar or café.",
+    "cat": "social",
+    "tag": "👋 Знайомство",
+    "anchors": [
+      "come here often"
+    ],
+    "situation": "При знайомстві та неформальному спілкуванні",
+    "examples": [
+      "— Do you come here often? — First time, actually.",
+      "— Do you come here often? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "It was nice chatting with you.",
+    "ua": "Приємно було поспілкуватися.",
+    "ex": "— I should go — it was nice chatting with you.",
+    "tip": "Polite way to end conversation.",
+    "cat": "social",
+    "tag": "👋 Знайомство",
+    "anchors": [
+      "nice chatting"
+    ],
+    "situation": "При знайомстві та неформальному спілкуванні",
+    "examples": [
+      "— I should go — it was nice chatting with you.",
+      "— It was nice chatting with you. — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Let's keep in touch.",
+    "ua": "Будемо на зв'язку.",
+    "ex": "— Here's my number — let's keep in touch.",
+    "tip": "Keep in touch = підтримувати контакт.",
+    "cat": "social",
+    "tag": "👋 Знайомство",
+    "anchors": [
+      "keep in touch"
+    ],
+    "situation": "При знайомстві та неформальному спілкуванні",
+    "examples": [
+      "— Here's my number — let's keep in touch.",
+      "— Let's keep in touch. — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Would you like to join us?",
+    "ua": "Хочеш приєднатися?",
+    "ex": "— Would you like to join us for a drink?",
+    "tip": "Join us = приєднатися до компанії.",
+    "cat": "social",
+    "tag": "👋 Знайомство",
+    "anchors": [
+      "join us"
+    ],
+    "situation": "При знайомстві та неформальному спілкуванні",
+    "examples": [
+      "— Would you like to join us for a drink?",
+      "— Would you like to join us? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "I don't want to hold you up.",
+    "ua": "Не хочу затримувати.",
+    "ex": "— I don't want to hold you up — you go ahead.",
+    "tip": "Hold up = затримувати.",
+    "cat": "social",
+    "tag": "👋 Знайомство",
+    "anchors": [
+      "hold you up"
+    ],
+    "situation": "При знайомстві та неформальному спілкуванні",
+    "examples": [
+      "— I don't want to hold you up — you go ahead.",
+      "— I don't want to hold you up. — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Sorry to interrupt.",
+    "ua": "Вибач, що перебиваю.",
+    "ex": "— Sorry to interrupt — quick question?",
+    "tip": "Interrupt = перебивати.",
+    "cat": "social",
+    "tag": "👋 Знайомство",
+    "anchors": [
+      "Sorry to interrupt"
+    ],
+    "situation": "При знайомстві та неформальному спілкуванні",
+    "examples": [
+      "— Sorry to interrupt — quick question?",
+      "— Sorry to interrupt. — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Mind if I sit here?",
+    "ua": "Не заперечиш, якщо сяду?",
+    "ex": "— Mind if I sit here? — Not at all, go ahead.",
+    "tip": "Mind if = чи не заперечиш.",
+    "cat": "social",
+    "tag": "👋 Знайомство",
+    "anchors": [
+      "Mind if I sit"
+    ],
+    "situation": "При знайомстві та неформальному спілкуванні",
+    "examples": [
+      "— Mind if I sit here? — Not at all, go ahead.",
+      "— Mind if I sit here? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Cheers!",
+    "ua": "Будемо! / На здоров'я!",
+    "ex": "— To a great trip! — Cheers!",
+    "tip": "Cheers = тост (UK) або просто «на здоров'я».",
+    "cat": "social",
+    "tag": "👋 Знайомство",
+    "anchors": [
+      "Cheers"
+    ],
+    "situation": "При знайомстві та неформальному спілкуванні",
+    "examples": [
+      "— To a great trip! — Cheers!",
+      "— Cheers! — Sure, no problem."
+    ]
+  },
+  {
+    "en": "I'm here on my own.",
+    "ua": "Я тут сам / сама.",
+    "ex": "— Are you with friends? — I'm here on my own.",
+    "tip": "On my own = самостійно.",
+    "cat": "social",
+    "tag": "👋 Знайомство",
+    "anchors": [
+      "on my own"
+    ],
+    "situation": "При знайомстві та неформальному спілкуванні",
+    "examples": [
+      "— Are you with friends? — I'm here on my own.",
+      "— I'm here on my own. — Sure, no problem."
+    ]
+  },
+  {
+    "en": "What do you do for a living?",
+    "ua": "Чим ти займаєшся?",
+    "ex": "— What do you do for a living? — I work in marketing.",
+    "tip": "For a living = професійно / на життя.",
+    "cat": "social",
+    "tag": "👋 Знайомство",
+    "anchors": [
+      "for a living"
+    ],
+    "situation": "При знайомстві",
+    "examples": [
+      "— What do you do for a living? — I work in marketing.",
+      "— What do you do for a living? — Of course — go ahead."
     ]
   }
 ];

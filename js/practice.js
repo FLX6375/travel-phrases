@@ -13,11 +13,8 @@ function clearFlashTimer() {
 
 function startDialogueQuiz() {
   quizType = 'dialogue';
-  let pool = DIALOGUES;
-  if (quizErrorsOnly) {
-    pool = DIALOGUES.filter(d => Storage.hasErrors(d.phraseIndex));
-    if (!pool.length) { showErrorsOnlyEmpty(); return; }
-  }
+  let pool = DIALOGUES.filter(d => filterIndicesForQuiz([d.phraseIndex]).length);
+  if (!pool.length && (quizErrorsOnly || quizNewOnly)) { showQuizFilterEmpty(); return; }
   practiceQueue = buildPracticePool(pool, Math.min(10, pool.length), d => d.phraseIndex);
   practiceCurrent = 0;
   practiceScore = 0;
@@ -58,15 +55,13 @@ function renderDialogueQuestion() {
     <div class="quiz-options">${opts.map(o =>
       `<div class="quiz-opt" onclick="checkPracticeAnswer(this, '${escapeJsSingleQuotedString(o)}', '${escapeJsSingleQuotedString(correct)}', ${d.phraseIndex})">${escapeHtml(o)}</div>`
     ).join('')}</div>`;
+  beginQuestionTimer();
 }
 
 function startSituationQuiz() {
   quizType = 'situation';
-  let pool = SITUATIONS;
-  if (quizErrorsOnly) {
-    pool = SITUATIONS.filter(s => Storage.hasErrors(s.phraseIndex));
-    if (!pool.length) { showErrorsOnlyEmpty(); return; }
-  }
+  let pool = SITUATIONS.filter(s => filterIndicesForQuiz([s.phraseIndex]).length);
+  if (!pool.length && (quizErrorsOnly || quizNewOnly)) { showQuizFilterEmpty(); return; }
   practiceQueue = buildPracticePool(pool, Math.min(12, pool.length), s => s.phraseIndex);
   practiceCurrent = 0;
   practiceScore = 0;
@@ -94,13 +89,14 @@ function renderSituationQuestion() {
   document.getElementById('quiz-opts-area').innerHTML = `<div class="quiz-options" style="grid-template-columns:1fr;">${s.options.map(o =>
     `<div class="quiz-opt" onclick="checkPracticeAnswer(this, '${escapeJsSingleQuotedString(o)}', '${escapeJsSingleQuotedString(correct)}', ${s.phraseIndex})">${escapeHtml(o)}</div>`
   ).join('')}</div>`;
+  beginQuestionTimer();
 }
 
 function startFlashQuiz() {
   clearFlashTimer();
   quizType = 'flash';
   practiceQueue = buildQuizPool(12);
-  if (!practiceQueue.length && quizErrorsOnly) { showErrorsOnlyEmpty(); return; }
+  if (!practiceQueue.length && (quizErrorsOnly || quizNewOnly)) { showQuizFilterEmpty(); return; }
   practiceCurrent = 0;
   practiceScore = 0;
   practiceAnswered = false;
@@ -156,6 +152,7 @@ function showFlashOptions(idx, p) {
   optsEl.innerHTML = `<div class="quiz-options">${opts.map(o =>
     `<div class="quiz-opt" onclick="checkPracticeAnswer(this, '${escapeJsSingleQuotedString(o)}', '${escapeJsSingleQuotedString(p.en)}', ${idx})">${escapeHtml(o)}</div>`
   ).join('')}</div>`;
+  beginQuestionTimer();
 }
 
 function startPatternQuiz() {
@@ -192,12 +189,14 @@ function renderPatternQuestion() {
   document.getElementById('quiz-opts-area').innerHTML = `<div class="quiz-options" style="grid-template-columns:1fr;">${item.options.map(({ p, i }) =>
     `<div class="quiz-opt" onclick="checkPracticeAnswer(this, '${escapeJsSingleQuotedString(p.en)}', '${escapeJsSingleQuotedString(correctPhrase)}', ${i})">${escapeHtml(p.en)}</div>`
   ).join('')}</div>`;
+  beginQuestionTimer();
 }
 
 function startMarathonQuiz() {
   quizType = 'marathon';
   const modes = ['en-ua', 'ua-en', 'fill', 'scramble'];
   const pool = buildQuizPool(12);
+  if (!pool.length && (quizErrorsOnly || quizNewOnly)) { showQuizFilterEmpty(); return; }
   practiceQueue = pool.map((idx, i) => ({ mode: modes[i % modes.length], idx }));
   practiceCurrent = 0;
   practiceScore = 0;
@@ -227,6 +226,7 @@ function renderMarathonQuestion() {
   if (item.mode === 'scramble') renderScrambleQuestion(item.idx, p);
   else if (item.mode === 'fill') renderFillQuestion(item.idx, p);
   else renderChoiceQuestion(item.idx, p, item.mode);
+  beginQuestionTimer();
 }
 
 function advancePractice() {

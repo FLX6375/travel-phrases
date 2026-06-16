@@ -11,7 +11,7 @@ const CATEGORIES = {
 };
 
 
-// 🏨 Готель — 16 phrases
+// 🏨 Готель — 29 phrases
 const PHRASES_HOTEL = [
   {
     "en": "Could you tell me where the nearest hotel is?",
@@ -286,11 +286,219 @@ const PHRASES_HOTEL = [
       "— Is breakfast included? — It's five euros extra.",
       "— Is breakfast included or do I pay extra? — Sure, no problem."
     ]
+  },
+  {
+    "en": "Could I get a wake-up call at six?",
+    "ua": "Чи можна будильний дзвінок о шостій?",
+    "ex": "— Could I get a wake-up call at six? — Of course, we'll call your room.",
+    "tip": "Wake-up call = дзвінок з рецепції для пробудження.",
+    "cat": "hotel",
+    "tag": "🏨 Готель",
+    "anchors": [
+      "wake-up call"
+    ],
+    "situation": "На рецепції готелю або в номері",
+    "examples": [
+      "— Could I get a wake-up call at six? — Of course, we'll call your room.",
+      "— Could I get a wake-up call at six? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Is there a safe in the room?",
+    "ua": "Чи є сейф у номері?",
+    "ex": "— Is there a safe in the room? — Yes, it's in the wardrobe.",
+    "tip": "Safe = сейф для документів і грошей.",
+    "cat": "hotel",
+    "tag": "🏨 Готель",
+    "anchors": [
+      "safe in the room"
+    ],
+    "situation": "На рецепції готелю або в номері",
+    "examples": [
+      "— Is there a safe in the room? — Yes, it's in the wardrobe.",
+      "— Is there a safe in the room? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "The air conditioning isn't working.",
+    "ua": "Кондиціонер не працює.",
+    "ex": "— The air conditioning isn't working. — I'll send maintenance right away.",
+    "tip": "Maintenance = технічна служба.",
+    "cat": "hotel",
+    "tag": "🏨 Готель",
+    "anchors": [
+      "air conditioning"
+    ],
+    "situation": "На рецепції готелю або в номері",
+    "examples": [
+      "— The air conditioning isn't working. — I'll send maintenance right away.",
+      "— The air conditioning isn't working. — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Could we have an extra pillow?",
+    "ua": "Чи можна додаткову подушку?",
+    "ex": "— Could we have an extra pillow? — Certainly, I'll bring one up.",
+    "tip": "Extra pillow / blanket — типові запити.",
+    "cat": "hotel",
+    "tag": "🏨 Готель",
+    "anchors": [
+      "extra pillow"
+    ],
+    "situation": "На рецепції готелю або в номері",
+    "examples": [
+      "— Could we have an extra pillow? — Certainly, I'll bring one up.",
+      "— Could we have an extra pillow? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "What time is check-out?",
+    "ua": "О котрій виїзд?",
+    "ex": "— What time is check-out? — By eleven, but late check-out is available.",
+    "tip": "Check-out = виїзд з готелю.",
+    "cat": "hotel",
+    "tag": "🏨 Готель",
+    "anchors": [
+      "check-out"
+    ],
+    "situation": "На рецепції готелю або в номері",
+    "examples": [
+      "— What time is check-out? — By eleven, but late check-out is available.",
+      "— What time is check-out? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Is there a laundry service?",
+    "ua": "Чи є пральня?",
+    "ex": "— Is there a laundry service? — Yes, leave your bag outside by nine.",
+    "tip": "Laundry service = прання одягу.",
+    "cat": "hotel",
+    "tag": "🏨 Готель",
+    "anchors": [
+      "laundry service"
+    ],
+    "situation": "На рецепції готелю або в номері",
+    "examples": [
+      "— Is there a laundry service? — Yes, leave your bag outside by nine.",
+      "— Is there a laundry service? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Could you hold my luggage?",
+    "ua": "Чи можна залишити багаж у вас?",
+    "ex": "— Could you hold my luggage? — Of course, we'll store it until evening.",
+    "tip": "Hold luggage = тимчасово зберігати багаж.",
+    "cat": "hotel",
+    "tag": "🏨 Готель",
+    "anchors": [
+      "hold my luggage"
+    ],
+    "situation": "На рецепції готелю або в номері",
+    "examples": [
+      "— Could you hold my luggage? — Of course, we'll store it until evening.",
+      "— Could you hold my luggage? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Do you have any rooms available tonight?",
+    "ua": "Чи є вільні номери на сьогодні?",
+    "ex": "— Do you have any rooms available tonight? — Yes, a double for eighty euros.",
+    "tip": "Available tonight = вільний на сьогодні.",
+    "cat": "hotel",
+    "tag": "🏨 Готель",
+    "anchors": [
+      "available tonight"
+    ],
+    "situation": "На рецепції готелю або в номері",
+    "examples": [
+      "— Do you have any rooms available tonight? — Yes, a double for eighty euros.",
+      "— Do you have any rooms available tonight? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "I'd like a non-smoking room.",
+    "ua": "Мені потрібен номер для некурців.",
+    "ex": "— I'd like a non-smoking room, please. — No problem at all.",
+    "tip": "Non-smoking = для некурців.",
+    "cat": "hotel",
+    "tag": "🏨 Готель",
+    "anchors": [
+      "non-smoking room"
+    ],
+    "situation": "На рецепції готелю або в номері",
+    "examples": [
+      "— I'd like a non-smoking room, please. — No problem at all.",
+      "— I'd like a non-smoking room. — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Could you send someone to fix the shower?",
+    "ua": "Чи можна когось для душу?",
+    "ex": "— The shower isn't working. — Could you send someone to fix it?",
+    "tip": "Fix the shower = полагодити душ.",
+    "cat": "hotel",
+    "tag": "🏨 Готель",
+    "anchors": [
+      "fix the shower"
+    ],
+    "situation": "На рецепції готелю або в номері",
+    "examples": [
+      "— The shower isn't working. — Could you send someone to fix it?",
+      "— Could you send someone to fix the shower? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Is breakfast served in the room?",
+    "ua": "Чи можна сніданок у номер?",
+    "ex": "— Is breakfast served in the room? — Yes, room service until ten.",
+    "tip": "Room service = обслуговування в номері.",
+    "cat": "hotel",
+    "tag": "🏨 Готель",
+    "anchors": [
+      "breakfast served"
+    ],
+    "situation": "На рецепції готелю або в номері",
+    "examples": [
+      "— Is breakfast served in the room? — Yes, room service until ten.",
+      "— Is breakfast served in the room? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Could I get a late check-out?",
+    "ua": "Чи можна пізній виїзд?",
+    "ex": "— Could I get a late check-out until two? — That'll be fifteen euros extra.",
+    "tip": "Late check-out = виїзд пізніше стандартного часу.",
+    "cat": "hotel",
+    "tag": "🏨 Готель",
+    "anchors": [
+      "late check-out"
+    ],
+    "situation": "На рецепції готелю або в номері",
+    "examples": [
+      "— Could I get a late check-out until two? — That'll be fifteen euros extra.",
+      "— Could I get a late check-out? — Certainly — one moment, please."
+    ]
+  },
+  {
+    "en": "The Wi-Fi password, please?",
+    "ua": "Пароль від Wi-Fi, будь ласка?",
+    "ex": "— The Wi-Fi password, please? — It's on the card on the desk.",
+    "tip": "Typical hotel request.",
+    "cat": "hotel",
+    "tag": "🏨 Готель",
+    "anchors": [
+      "Wi-Fi password"
+    ],
+    "situation": "На рецепції готелю або в номері",
+    "examples": [
+      "— The Wi-Fi password, please? — It's on the card on the desk.",
+      "— The Wi-Fi password, please? — Yes, that's included. Is there anything else?"
+    ]
   }
 ];
 
 
-// 🗺️ Вулиця — 15 phrases
+// 🗺️ Вулиця — 26 phrases
 const PHRASES_STREET = [
   {
     "en": "Excuse me, how do I get to…?",
@@ -543,11 +751,187 @@ const PHRASES_STREET = [
       "Is there an ATM around here? I need to withdraw some cash.",
       "— Is there an ATM around here? — No problem. You can't miss it."
     ]
+  },
+  {
+    "en": "Is it far from here?",
+    "ua": "Це далеко звідси?",
+    "ex": "— Is it far from here? — About ten minutes on foot.",
+    "tip": "On foot = пішки.",
+    "cat": "street",
+    "tag": "🗺️ Вулиця",
+    "anchors": [
+      "far from here"
+    ],
+    "situation": "На вулиці, коли спілкуєшся з місцевими",
+    "examples": [
+      "— Is it far from here? — About ten minutes on foot.",
+      "— Is it far from here? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Could you show me on the map?",
+    "ua": "Покажете на карті?",
+    "ex": "— Could you show me on the map? — Sure, you're here — go straight.",
+    "tip": "Show on the map — коли не розумієш напрямки.",
+    "cat": "street",
+    "tag": "🗺️ Вулиця",
+    "anchors": [
+      "show me on the map"
+    ],
+    "situation": "На вулиці, коли спілкуєшся з місцевими",
+    "examples": [
+      "— Could you show me on the map? — Sure, you're here — go straight.",
+      "— Could you show me on the map? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Am I going the right way?",
+    "ua": "Я йду правильно?",
+    "ex": "— Am I going the right way to the station? — Yes, keep going straight.",
+    "tip": "Right way = правильний напрямок.",
+    "cat": "street",
+    "tag": "🗺️ Вулиця",
+    "anchors": [
+      "right way"
+    ],
+    "situation": "На вулиці, коли спілкуєшся з місцевими",
+    "examples": [
+      "— Am I going the right way to the station? — Yes, keep going straight.",
+      "— Am I going the right way? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Is there a cash machine nearby?",
+    "ua": "Чи є банкомат поруч?",
+    "ex": "— Is there a cash machine nearby? — Yes, at the corner shop.",
+    "tip": "Cash machine / ATM = банкомат.",
+    "cat": "street",
+    "tag": "🗺️ Вулиця",
+    "anchors": [
+      "cash machine"
+    ],
+    "situation": "На вулиці, коли спілкуєшся з місцевими",
+    "examples": [
+      "— Is there a cash machine nearby? — Yes, at the corner shop.",
+      "— Is there a cash machine nearby? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "What's the best way to get there?",
+    "ua": "Як найкраще туди дістатися?",
+    "ex": "— What's the best way to get there? — Take the metro — it's faster.",
+    "tip": "Best way = найкращий спосіб.",
+    "cat": "street",
+    "tag": "🗺️ Вулиця",
+    "anchors": [
+      "best way to get"
+    ],
+    "situation": "На вулиці, коли спілкуєшся з місцевими",
+    "examples": [
+      "— What's the best way to get there? — Take the metro — it's faster.",
+      "— What's the best way to get there? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Is this area safe at night?",
+    "ua": "Чи безпечний цей район вночі?",
+    "ex": "— Is this area safe at night? — Generally yes, but stay on main streets.",
+    "tip": "Safe at night = безпечно вночі.",
+    "cat": "street",
+    "tag": "🗺️ Вулиця",
+    "anchors": [
+      "safe at night"
+    ],
+    "situation": "На вулиці, коли спілкуєшся з місцевими",
+    "examples": [
+      "— Is this area safe at night? — Generally yes, but stay on main streets.",
+      "— Is this area safe at night? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Could you write that down for me?",
+    "ua": "Чи можете записати?",
+    "ex": "— Could you write that down for me? — Of course — here you go.",
+    "tip": "Write down = записати на папері.",
+    "cat": "street",
+    "tag": "🗺️ Вулиця",
+    "anchors": [
+      "write that down"
+    ],
+    "situation": "На вулиці, коли спілкуєшся з місцевими",
+    "examples": [
+      "— Could you write that down for me? — Of course — here you go.",
+      "— Could you write that down for me? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "I think I'm lost.",
+    "ua": "Здається, я загубився.",
+    "ex": "— Excuse me, I think I'm lost. — Where are you trying to go?",
+    "tip": "Lost = загубився.",
+    "cat": "street",
+    "tag": "🗺️ Вулиця",
+    "anchors": [
+      "I'm lost"
+    ],
+    "situation": "На вулиці, коли спілкуєшся з місцевими",
+    "examples": [
+      "— Excuse me, I think I'm lost. — Where are you trying to go?",
+      "— I think I'm lost. — Sure, no problem."
+    ]
+  },
+  {
+    "en": "How long does it take to walk?",
+    "ua": "Скільки йти пішки?",
+    "ex": "— How long does it take to walk? — Maybe fifteen minutes.",
+    "tip": "How long does it take = скільки часу займе.",
+    "cat": "street",
+    "tag": "🗺️ Вулиця",
+    "anchors": [
+      "How long does it take"
+    ],
+    "situation": "На вулиці, коли спілкуєшся з місцевими",
+    "examples": [
+      "— How long does it take to walk? — Maybe fifteen minutes.",
+      "— How long does it take to walk? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Can I cross here?",
+    "ua": "Чи можна тут переходити?",
+    "ex": "— Can I cross here? — Yes, the light is green.",
+    "tip": "Cross = переходити вулицю.",
+    "cat": "street",
+    "tag": "🗺️ Вулиця",
+    "anchors": [
+      "Can I cross"
+    ],
+    "situation": "На вулиці, коли спілкуєшся з місцевими",
+    "examples": [
+      "— Can I cross here? — Yes, the light is green.",
+      "— Can I cross here? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Is this the right bus stop?",
+    "ua": "Це правильна зупинка?",
+    "ex": "— Is this the right bus stop for the museum? — Yes, number 12 stops here.",
+    "tip": "Bus stop = зупинка автобуса.",
+    "cat": "street",
+    "tag": "🗺️ Вулиця",
+    "anchors": [
+      "right bus stop"
+    ],
+    "situation": "На вулиці",
+    "examples": [
+      "— Is this the right bus stop for the museum? — Yes, number 12 stops here.",
+      "— Is this the right bus stop? — Yes, just keep straight and turn left."
+    ]
   }
 ];
 
 
-// 🚌 Транспорт — 19 phrases
+// 🚌 Транспорт — 30 phrases
 const PHRASES_TRANSPORT = [
   {
     "en": "Which bus goes to…?",
@@ -871,11 +1255,187 @@ const PHRASES_TRANSPORT = [
       "— Do I need to take my laptop out? — Yes, and liquids go in a clear bag.",
       "— Do I need to take my laptop out at security? — Sure, no problem."
     ]
+  },
+  {
+    "en": "How much is a day pass?",
+    "ua": "Скільки коштує проїзний на день?",
+    "ex": "— How much is a day pass? — Twelve euros for unlimited travel.",
+    "tip": "Day pass = квиток на день.",
+    "cat": "transport",
+    "tag": "🚌 Транспорт",
+    "anchors": [
+      "day pass"
+    ],
+    "situation": "В транспорті або на зупинці",
+    "examples": [
+      "— How much is a day pass? — Twelve euros for unlimited travel.",
+      "— How much is a day pass? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Does this bus go to the city centre?",
+    "ua": "Цей автобус їде в центр?",
+    "ex": "— Does this bus go to the city centre? — Yes, get off at the fifth stop.",
+    "tip": "City centre = центр міста.",
+    "cat": "transport",
+    "tag": "🚌 Транспорт",
+    "anchors": [
+      "city centre"
+    ],
+    "situation": "В транспорті або на зупинці",
+    "examples": [
+      "— Does this bus go to the city centre? — Yes, get off at the fifth stop.",
+      "— Does this bus go to the city centre? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Which ticket do I need?",
+    "ua": "Який квиток мені потрібен?",
+    "ex": "— Which ticket do I need for zone two? — A single or a day pass.",
+    "tip": "Zone = зона (тарифна).",
+    "cat": "transport",
+    "tag": "🚌 Транспорт",
+    "anchors": [
+      "Which ticket"
+    ],
+    "situation": "В транспорті або на зупинці",
+    "examples": [
+      "— Which ticket do I need for zone two? — A single or a day pass.",
+      "— Which ticket do I need? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Is this seat free?",
+    "ua": "Це місце вільне?",
+    "ex": "— Is this seat free? — Yes, go ahead.",
+    "tip": "Seat free = вільне місце.",
+    "cat": "transport",
+    "tag": "🚌 Транспорт",
+    "anchors": [
+      "seat free"
+    ],
+    "situation": "В транспорті або на зупинці",
+    "examples": [
+      "— Is this seat free? — Yes, go ahead.",
+      "— Is this seat free? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "When is the next train?",
+    "ua": "Коли наступний потяг?",
+    "ex": "— When is the next train to Brighton? — In about eight minutes.",
+    "tip": "Next train = наступний рейс.",
+    "cat": "transport",
+    "tag": "🚌 Транспорт",
+    "anchors": [
+      "next train"
+    ],
+    "situation": "В транспорті або на зупинці",
+    "examples": [
+      "— When is the next train to Brighton? — In about eight minutes.",
+      "— When is the next train? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Could you tell me when we arrive?",
+    "ua": "Скажете, коли приїдемо?",
+    "ex": "— Could you tell me when we arrive? — Of course, I'll let you know.",
+    "tip": "Let you know = повідомлю.",
+    "cat": "transport",
+    "tag": "🚌 Транспорт",
+    "anchors": [
+      "when we arrive"
+    ],
+    "situation": "В транспорті або на зупинці",
+    "examples": [
+      "— Could you tell me when we arrive? — Of course, I'll let you know.",
+      "— Could you tell me when we arrive? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Is there a discount for students?",
+    "ua": "Чи є знижка для студентів?",
+    "ex": "— Is there a discount for students? — Yes, with a valid ID.",
+    "tip": "Valid ID = дійсний документ.",
+    "cat": "transport",
+    "tag": "🚌 Транспорт",
+    "anchors": [
+      "discount for students"
+    ],
+    "situation": "В транспорті або на зупинці",
+    "examples": [
+      "— Is there a discount for students? — Yes, with a valid ID.",
+      "— Is there a discount for students? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "The train is delayed.",
+    "ua": "Потяг запізнюється.",
+    "ex": "— The train is delayed by twenty minutes, sorry.",
+    "tip": "Delayed = запізнюється.",
+    "cat": "transport",
+    "tag": "🚌 Транспорт",
+    "anchors": [
+      "delayed"
+    ],
+    "situation": "В транспорті або на зупинці",
+    "examples": [
+      "— The train is delayed by twenty minutes, sorry.",
+      "— The train is delayed. — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Where can I buy a ticket?",
+    "ua": "Де купити квиток?",
+    "ex": "— Where can I buy a ticket? — At the machine over there.",
+    "tip": "Ticket machine = автомат з квитками.",
+    "cat": "transport",
+    "tag": "🚌 Транспорт",
+    "anchors": [
+      "buy a ticket"
+    ],
+    "situation": "В транспорті або на зупинці",
+    "examples": [
+      "— Where can I buy a ticket? — At the machine over there.",
+      "— Where can I buy a ticket? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Is this the right line for the airport?",
+    "ua": "Це правильна лінія до аеропорту?",
+    "ex": "— Is this the right line for the airport? — Yes, stay on until the end.",
+    "tip": "Line = лінія метро/трамвая.",
+    "cat": "transport",
+    "tag": "🚌 Транспорт",
+    "anchors": [
+      "right line"
+    ],
+    "situation": "В транспорті або на зупинці",
+    "examples": [
+      "— Is this the right line for the airport? — Yes, stay on until the end.",
+      "— Is this the right line for the airport? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "One ticket to the city centre, please.",
+    "ua": "Один квиток до центру, будь ласка.",
+    "ex": "— One ticket to the city centre, please. — That's three fifty.",
+    "tip": "Classic ticket purchase phrase.",
+    "cat": "transport",
+    "tag": "🚌 Транспорт",
+    "anchors": [
+      "One ticket to"
+    ],
+    "situation": "В транспорті",
+    "examples": [
+      "— One ticket to the city centre, please. — That's three fifty.",
+      "— One ticket to the city centre, please. — Sure, I'll let you know when we arrive."
+    ]
   }
 ];
 
 
-// ☕ Кафе — 16 phrases
+// ☕ Kафе — 27 phrases
 const PHRASES_CAFE = [
   {
     "en": "A table for two, please.",
@@ -1137,11 +1697,187 @@ const PHRASES_CAFE = [
       "— Is this table reserved? — No, please sit wherever you like.",
       "— Is this table reserved? — Sure, no problem."
     ]
+  },
+  {
+    "en": "Could I see the dessert menu?",
+    "ua": "Чи можна меню десертів?",
+    "ex": "— Could I see the dessert menu? — Here you are.",
+    "tip": "Dessert menu = меню солодкого.",
+    "cat": "cafe",
+    "tag": "☕ Кафе",
+    "anchors": [
+      "dessert menu"
+    ],
+    "situation": "У кафе або ресторані",
+    "examples": [
+      "— Could I see the dessert menu? — Here you are.",
+      "— Could I see the dessert menu? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "I'm allergic to nuts.",
+    "ua": "У мене алергія на горіхи.",
+    "ex": "— I'm allergic to nuts — is this safe?",
+    "tip": "Allergic to = алергія на.",
+    "cat": "cafe",
+    "tag": "☕ Кафе",
+    "anchors": [
+      "allergic to nuts"
+    ],
+    "situation": "У кафе або ресторані",
+    "examples": [
+      "— I'm allergic to nuts — is this safe?",
+      "— I'm allergic to nuts. — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Could we have the bill, please?",
+    "ua": "Рахунок, будь ласка.",
+    "ex": "— Could we have the bill, please? — Of course, I'll bring it now.",
+    "tip": "Bill / check = рахунок (US/UK).",
+    "cat": "cafe",
+    "tag": "☕ Кафе",
+    "anchors": [
+      "the bill"
+    ],
+    "situation": "У кафе або ресторані",
+    "examples": [
+      "— Could we have the bill, please? — Of course, I'll bring it now.",
+      "— Could we have the bill, please? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Is tap water free?",
+    "ua": "Вода з-під крана безкоштовна?",
+    "ex": "— Is tap water free? — Yes, I'll bring a jug.",
+    "tip": "Tap water = вода з крану.",
+    "cat": "cafe",
+    "tag": "☕ Кафе",
+    "anchors": [
+      "tap water"
+    ],
+    "situation": "У кафе або ресторані",
+    "examples": [
+      "— Is tap water free? — Yes, I'll bring a jug.",
+      "— Is tap water free? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Could I order takeaway?",
+    "ua": "Чи можна на винос?",
+    "ex": "— Could I order takeaway? — Sure — here's the menu.",
+    "tip": "Takeaway / to go = на винос.",
+    "cat": "cafe",
+    "tag": "☕ Кафе",
+    "anchors": [
+      "order takeaway"
+    ],
+    "situation": "У кафе або ресторані",
+    "examples": [
+      "— Could I order takeaway? — Sure — here's the menu.",
+      "— Could I order takeaway? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Could I have it without onions?",
+    "ua": "Без цибулі, будь ласка.",
+    "ex": "— Could I have it without onions, please? — No problem.",
+    "tip": "Without = без (інгредієнта).",
+    "cat": "cafe",
+    "tag": "☕ Кафе",
+    "anchors": [
+      "without onions"
+    ],
+    "situation": "У кафе або ресторані",
+    "examples": [
+      "— Could I have it without onions, please? — No problem.",
+      "— Could I have it without onions? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Is there a vegetarian option?",
+    "ua": "Чи є вегетаріанська страва?",
+    "ex": "— Is there a vegetarian option? — Yes, the pasta primavera.",
+    "tip": "Vegetarian option = без м'яса.",
+    "cat": "cafe",
+    "tag": "☕ Кафе",
+    "anchors": [
+      "vegetarian option"
+    ],
+    "situation": "У кафе або ресторані",
+    "examples": [
+      "— Is there a vegetarian option? — Yes, the pasta primavera.",
+      "— Is there a vegetarian option? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Could we sit outside?",
+    "ua": "Чи можна сісти на вулиці?",
+    "ex": "— Could we sit outside? — Sure, pick any table on the terrace.",
+    "tip": "Sit outside = на терасі.",
+    "cat": "cafe",
+    "tag": "☕ Кафе",
+    "anchors": [
+      "sit outside"
+    ],
+    "situation": "У кафе або ресторані",
+    "examples": [
+      "— Could we sit outside? — Sure, pick any table on the terrace.",
+      "— Could we sit outside? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "How long is the wait?",
+    "ua": "Скільки чекати?",
+    "ex": "— How long is the wait for a table? — About twenty minutes.",
+    "tip": "Wait = очікування.",
+    "cat": "cafe",
+    "tag": "☕ Кафе",
+    "anchors": [
+      "How long is the wait"
+    ],
+    "situation": "У кафе або ресторані",
+    "examples": [
+      "— How long is the wait for a table? — About twenty minutes.",
+      "— How long is the wait? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Could I have a doggy bag?",
+    "ua": "Чи можна упакувати залишки?",
+    "ex": "— Could I have a doggy bag? — Of course, I'll pack it up.",
+    "tip": "Doggy bag = контейнер для залишків їжі.",
+    "cat": "cafe",
+    "tag": "☕ Kафе",
+    "anchors": [
+      "doggy bag"
+    ],
+    "situation": "У кафе",
+    "examples": [
+      "— Could I have a doggy bag? — Of course, I'll pack it up.",
+      "— Could I have a doggy bag? — Of course. Anything to drink?"
+    ]
+  },
+  {
+    "en": "Is service included?",
+    "ua": "Чи включено обслуговування?",
+    "ex": "— Is service included in the bill? — Yes, but tips are welcome.",
+    "tip": "Service charge = плата за обслуговування.",
+    "cat": "cafe",
+    "tag": "☕ Kафе",
+    "anchors": [
+      "service included"
+    ],
+    "situation": "У кафе",
+    "examples": [
+      "— Is service included in the bill? — Yes, but tips are welcome.",
+      "— Is service included? — Sure — I'll bring that over in a moment."
+    ]
   }
 ];
 
 
-// 🛍️ Магазин — 15 phrases
+// 🛍️ Магазин — 26 phrases
 const PHRASES_SHOP = [
   {
     "en": "How much does this cost?",
@@ -1395,11 +2131,187 @@ const PHRASES_SHOP = [
       "— Do you have anything cheaper? — We have a similar one for half the price.",
       "— Do you have anything cheaper? — Yes, we accept cards and contactless."
     ]
+  },
+  {
+    "en": "Do you have this in a smaller size?",
+    "ua": "Чи є менший розмір?",
+    "ex": "— Do you have this in a smaller size? — Let me check in the back.",
+    "tip": "Size = розмір одягу.",
+    "cat": "shop",
+    "tag": "🛍️ Магазин",
+    "anchors": [
+      "smaller size"
+    ],
+    "situation": "У магазині під час покупок",
+    "examples": [
+      "— Do you have this in a smaller size? — Let me check in the back.",
+      "— Do you have this in a smaller size? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Do you offer tax-free shopping?",
+    "ua": "Чи є tax-free для туристів?",
+    "ex": "— Do you offer tax-free shopping? — Yes, with your passport.",
+    "tip": "Tax-free = повернення ПДВ.",
+    "cat": "shop",
+    "tag": "🛍️ Магазин",
+    "anchors": [
+      "tax-free"
+    ],
+    "situation": "У магазині під час покупок",
+    "examples": [
+      "— Do you offer tax-free shopping? — Yes, with your passport.",
+      "— Do you offer tax-free shopping? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Could I get a gift receipt?",
+    "ua": "Чи можна чек для подарунка?",
+    "ex": "— Could I get a gift receipt? — Of course — no price shown.",
+    "tip": "Gift receipt = чек без ціни.",
+    "cat": "shop",
+    "tag": "🛍️ Магазин",
+    "anchors": [
+      "gift receipt"
+    ],
+    "situation": "У магазині під час покупок",
+    "examples": [
+      "— Could I get a gift receipt? — Of course — no price shown.",
+      "— Could I get a gift receipt? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Is this available in other colours?",
+    "ua": "Чи є інші кольори?",
+    "ex": "— Is this available in other colours? — We have blue and grey.",
+    "tip": "Available in = доступний у.",
+    "cat": "shop",
+    "tag": "🛍️ Магазин",
+    "anchors": [
+      "other colours"
+    ],
+    "situation": "У магазині під час покупок",
+    "examples": [
+      "— Is this available in other colours? — We have blue and grey.",
+      "— Is this available in other colours? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Where is the checkout?",
+    "ua": "Де каса?",
+    "ex": "— Where is the checkout? — Just follow the signs.",
+    "tip": "Checkout = каса.",
+    "cat": "shop",
+    "tag": "🛍️ Магазин",
+    "anchors": [
+      "checkout"
+    ],
+    "situation": "У магазині під час покупок",
+    "examples": [
+      "— Where is the checkout? — Just follow the signs.",
+      "— Where is the checkout? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Do you ship internationally?",
+    "ua": "Чи доставляєте за кордон?",
+    "ex": "— Do you ship internationally? — Yes, through our website.",
+    "tip": "Ship = доставляти.",
+    "cat": "shop",
+    "tag": "🛍️ Магазин",
+    "anchors": [
+      "ship internationally"
+    ],
+    "situation": "У магазині під час покупок",
+    "examples": [
+      "— Do you ship internationally? — Yes, through our website.",
+      "— Do you ship internationally? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "I'd like to return this.",
+    "ua": "Хочу повернути це.",
+    "ex": "— I'd like to return this — I have the receipt.",
+    "tip": "Return = повернути товар.",
+    "cat": "shop",
+    "tag": "🛍️ Магазин",
+    "anchors": [
+      "return this"
+    ],
+    "situation": "У магазині під час покупок",
+    "examples": [
+      "— I'd like to return this — I have the receipt.",
+      "— I'd like to return this. — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Is there a student discount?",
+    "ua": "Чи є знижка для студентів?",
+    "ex": "— Is there a student discount? — Ten percent with ID.",
+    "tip": "Student discount = студентська знижка.",
+    "cat": "shop",
+    "tag": "🛍️ Магазин",
+    "anchors": [
+      "student discount"
+    ],
+    "situation": "У магазині під час покупок",
+    "examples": [
+      "— Is there a student discount? — Ten percent with ID.",
+      "— Is there a student discount? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Could you wrap it as a gift?",
+    "ua": "Чи можна упакувати як подарунок?",
+    "ex": "— Could you wrap it as a gift? — Sure, no extra charge.",
+    "tip": "Wrap as a gift = подарункове пакування.",
+    "cat": "shop",
+    "tag": "🛍️ Магазин",
+    "anchors": [
+      "wrap it as a gift"
+    ],
+    "situation": "У магазині під час покупок",
+    "examples": [
+      "— Could you wrap it as a gift? — Sure, no extra charge.",
+      "— Could you wrap it as a gift? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Do you have a loyalty card?",
+    "ua": "Чи є карта лояльності?",
+    "ex": "— Do you have a loyalty card? — Yes, you get ten percent off.",
+    "tip": "Loyalty card = карта постійного клієнта.",
+    "cat": "shop",
+    "tag": "🛍️ Магазин",
+    "anchors": [
+      "loyalty card"
+    ],
+    "situation": "У магазині",
+    "examples": [
+      "— Do you have a loyalty card? — Yes, you get ten percent off.",
+      "— Do you have a loyalty card? — Let me check in the back for you."
+    ]
+  },
+  {
+    "en": "Can I pay in instalments?",
+    "ua": "Чи можна оплатити частинами?",
+    "ex": "— Can I pay in instalments? — Only for purchases over two hundred.",
+    "tip": "Instalments = розстрочка.",
+    "cat": "shop",
+    "tag": "🛍️ Магазин",
+    "anchors": [
+      "instalments"
+    ],
+    "situation": "У магазині",
+    "examples": [
+      "— Can I pay in instalments? — Only for purchases over two hundred.",
+      "— Can I pay in instalments? — Sure — the fitting rooms are over there."
+    ]
   }
 ];
 
 
-// 🆘 Допомога — 8 phrases
+// 🆘 Допомога — 20 phrases
 const PHRASES_EMERGENCY = [
   {
     "en": "Call an ambulance, please!",
@@ -1534,11 +2446,203 @@ const PHRASES_EMERGENCY = [
       "Excuse me, could you help me? I seem to be in trouble — I can't find my hotel.",
       "— Could you help me? I'm in trouble. — I'll call for help right now."
     ]
+  },
+  {
+    "en": "I need a doctor urgently.",
+    "ua": "Мені терміново потрібен лікар.",
+    "ex": "— I need a doctor urgently. — I'll call one right away.",
+    "tip": "Urgently = терміново.",
+    "cat": "emergency",
+    "tag": "🆘 Допомога",
+    "anchors": [
+      "doctor urgently"
+    ],
+    "situation": "У складній або екстреній ситуації",
+    "examples": [
+      "— I need a doctor urgently. — I'll call one right away.",
+      "— I need a doctor urgently. — Sure, no problem."
+    ]
+  },
+  {
+    "en": "I've been robbed.",
+    "ua": "Мене пограбували.",
+    "ex": "— I've been robbed — I need the police.",
+    "tip": "Robbed = пограбований.",
+    "cat": "emergency",
+    "tag": "🆘 Допомога",
+    "anchors": [
+      "been robbed"
+    ],
+    "situation": "У складній або екстреній ситуації",
+    "examples": [
+      "— I've been robbed — I need the police.",
+      "— I've been robbed. — Sure, no problem."
+    ]
+  },
+  {
+    "en": "I feel dizzy.",
+    "ua": "Мені закрутилася голова.",
+    "ex": "— I feel dizzy — can I sit down?",
+    "tip": "Dizzy = запаморочення.",
+    "cat": "emergency",
+    "tag": "🆘 Допомога",
+    "anchors": [
+      "feel dizzy"
+    ],
+    "situation": "У складній або екстреній ситуації",
+    "examples": [
+      "— I feel dizzy — can I sit down?",
+      "— I feel dizzy. — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Where is the nearest hospital?",
+    "ua": "Де найближча лікарня?",
+    "ex": "— Where is the nearest hospital? — Two blocks east.",
+    "tip": "Nearest hospital = найближча лікарня.",
+    "cat": "emergency",
+    "tag": "🆘 Допомога",
+    "anchors": [
+      "nearest hospital"
+    ],
+    "situation": "У складній або екстреній ситуації",
+    "examples": [
+      "— Where is the nearest hospital? — Two blocks east.",
+      "— Where is the nearest hospital? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "I lost my passport.",
+    "ua": "Я загубив паспорт.",
+    "ex": "— I lost my passport — where is the embassy?",
+    "tip": "Embassy = посольство.",
+    "cat": "emergency",
+    "tag": "🆘 Допомога",
+    "anchors": [
+      "lost my passport"
+    ],
+    "situation": "У складній або екстреній ситуації",
+    "examples": [
+      "— I lost my passport — where is the embassy?",
+      "— I lost my passport. — Sure, no problem."
+    ]
+  },
+  {
+    "en": "There's been an accident.",
+    "ua": "Сталася аварія.",
+    "ex": "— There's been an accident — someone call help!",
+    "tip": "Accident = аварія / нещасний випадок.",
+    "cat": "emergency",
+    "tag": "🆘 Допомога",
+    "anchors": [
+      "been an accident"
+    ],
+    "situation": "У складній або екстреній ситуації",
+    "examples": [
+      "— There's been an accident — someone call help!",
+      "— There's been an accident. — Sure, no problem."
+    ]
+  },
+  {
+    "en": "I need help — I don't speak English well.",
+    "ua": "Допоможіть — я погано знаю англійську.",
+    "ex": "— I need help — I don't speak English well.",
+    "tip": "Use when you need an interpreter.",
+    "cat": "emergency",
+    "tag": "🆘 Допомога",
+    "anchors": [
+      "I need help"
+    ],
+    "situation": "У складній або екстреній ситуації",
+    "examples": [
+      "— I need help — I don't speak English well.",
+      "— I need help — I don't speak English well. — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Is there a pharmacy open now?",
+    "ua": "Чи є аптека зараз відкрита?",
+    "ex": "— Is there a pharmacy open now? — The one on Main Street, 24 hours.",
+    "tip": "Pharmacy = аптека.",
+    "cat": "emergency",
+    "tag": "🆘 Допомога",
+    "anchors": [
+      "pharmacy open"
+    ],
+    "situation": "У складній або екстреній ситуації",
+    "examples": [
+      "— Is there a pharmacy open now? — The one on Main Street, 24 hours.",
+      "— Is there a pharmacy open now? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "My phone was stolen.",
+    "ua": "У мене вкрали телефон.",
+    "ex": "— My phone was stolen — I need to block my SIM.",
+    "tip": "Stolen = вкрали.",
+    "cat": "emergency",
+    "tag": "🆘 Допомога",
+    "anchors": [
+      "phone was stolen"
+    ],
+    "situation": "У складній або екстреній ситуації",
+    "examples": [
+      "— My phone was stolen — I need to block my SIM.",
+      "— My phone was stolen. — Sure, no problem."
+    ]
+  },
+  {
+    "en": "I'm having trouble breathing.",
+    "ua": "Мені важко дихати.",
+    "ex": "— I'm having trouble breathing — please help!",
+    "tip": "Trouble breathing = проблеми з диханням.",
+    "cat": "emergency",
+    "tag": "🆘 Допомога",
+    "anchors": [
+      "trouble breathing"
+    ],
+    "situation": "У складній або екстреній ситуації",
+    "examples": [
+      "— I'm having trouble breathing — please help!",
+      "— I'm having trouble breathing. — Sure, no problem."
+    ]
+  },
+  {
+    "en": "I need to report a theft.",
+    "ua": "Мені треба заявити про крадіжку.",
+    "ex": "— I need to report a theft at the hotel.",
+    "tip": "Report a theft = заявити про крадіжку.",
+    "cat": "emergency",
+    "tag": "🆘 Допомога",
+    "anchors": [
+      "report a theft"
+    ],
+    "situation": "У складній ситуації",
+    "examples": [
+      "— I need to report a theft at the hotel.",
+      "— I need to report a theft. — I'll call for help right now."
+    ]
+  },
+  {
+    "en": "My wallet is missing.",
+    "ua": "Мій гаманець зник.",
+    "ex": "— My wallet is missing — I think I left it in the taxi.",
+    "tip": "Missing = зник / загубився.",
+    "cat": "emergency",
+    "tag": "🆘 Допомога",
+    "anchors": [
+      "wallet is missing"
+    ],
+    "situation": "У складній ситуації",
+    "examples": [
+      "— My wallet is missing — I think I left it in the taxi.",
+      "— My wallet is missing. — Stay calm — help is on the way."
+    ]
   }
 ];
 
 
-// 💬 Повсякдень — 154 phrases
+// 💬 Повсякдень — 161 phrases
 const PHRASES_EVERYDAY = [
   {
     "en": "I really like this.",
@@ -4020,11 +5124,123 @@ const PHRASES_EVERYDAY = [
       "I've never had it, but it's worth a try.",
       "— It's worth a try. — Yeah, totally."
     ]
+  },
+  {
+    "en": "I totally agree.",
+    "ua": "Повністю згоден.",
+    "ex": "— The weather is perfect. — I totally agree.",
+    "tip": "Totally agree = повністю згоден.",
+    "cat": "everyday",
+    "tag": "💬 Повсякдень",
+    "anchors": [
+      "totally agree"
+    ],
+    "situation": "У повсякденній розмові з людьми",
+    "examples": [
+      "— The weather is perfect. — I totally agree.",
+      "— I totally agree. — Sure, no problem."
+    ]
+  },
+  {
+    "en": "It depends on the weather.",
+    "ua": "Залежить від погоди.",
+    "ex": "— Are we going out? — It depends on the weather.",
+    "tip": "It depends = залежить.",
+    "cat": "everyday",
+    "tag": "💬 Повсякдень",
+    "anchors": [
+      "It depends"
+    ],
+    "situation": "У повсякденній розмові з людьми",
+    "examples": [
+      "— Are we going out? — It depends on the weather.",
+      "— It depends on the weather. — Sure, no problem."
+    ]
+  },
+  {
+    "en": "I'll keep you posted.",
+    "ua": "Триматиму в курсі.",
+    "ex": "— Any news on the tickets? — I'll keep you posted.",
+    "tip": "Keep posted = інформувати.",
+    "cat": "everyday",
+    "tag": "💬 Повсякдень",
+    "anchors": [
+      "keep you posted"
+    ],
+    "situation": "У повсякденній розмові з людьми",
+    "examples": [
+      "— Any news on the tickets? — I'll keep you posted.",
+      "— I'll keep you posted. — Sure, no problem."
+    ]
+  },
+  {
+    "en": "No rush.",
+    "ua": "Не поспішай. / Без поспіху.",
+    "ex": "— When can you send it? — No rush — whenever works.",
+    "tip": "No rush = не терміново.",
+    "cat": "everyday",
+    "tag": "💬 Повсякдень",
+    "anchors": [
+      "No rush"
+    ],
+    "situation": "У повсякденній розмові з людьми",
+    "examples": [
+      "— When can you send it? — No rush — whenever works.",
+      "— No rush. — Sure, no problem."
+    ]
+  },
+  {
+    "en": "I'm running late.",
+    "ua": "Я запізнююсь.",
+    "ex": "— I'm running late — start without me.",
+    "tip": "Running late = запізнююсь.",
+    "cat": "everyday",
+    "tag": "💬 Повсякдень",
+    "anchors": [
+      "running late"
+    ],
+    "situation": "У повсякденній розмові з людьми",
+    "examples": [
+      "— I'm running late — start without me.",
+      "— I'm running late. — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Long time no see!",
+    "ua": "Давно не бачились!",
+    "ex": "— Hey! Long time no see! — I know — how have you been?",
+    "tip": "Classic informal greeting.",
+    "cat": "everyday",
+    "tag": "💬 Повсякдень",
+    "anchors": [
+      "Long time no see"
+    ],
+    "situation": "У повсякденній розмові з людьми",
+    "examples": [
+      "— Hey! Long time no see! — I know — how have you been?",
+      "— Long time no see! — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Sounds like a plan.",
+    "ua": "Звучить як план.",
+    "ex": "— Let's meet at six. — Sounds like a plan!",
+    "tip": "Sounds like a plan = домовились.",
+    "cat": "everyday",
+    "tag": "💬 Повсякдень",
+    "anchors": [
+      "Sounds like a plan"
+    ],
+    "situation": "У повсякденній розмові",
+    "examples": [
+      "— Let's meet at six. — Sounds like a plan!",
+      "— Sounds like a plan. — Yeah, totally."
+    ]
   }
 ];
 
 
-// 👋 Знайомство — 17 phrases
+// 👋 Знайомство — 28 phrases
 const PHRASES_SOCIAL = [
   {
     "en": "Nice to meet you!",
@@ -4299,11 +5515,187 @@ const PHRASES_SOCIAL = [
       "It's hard to explain, but you know what I mean?",
       "— You know what I mean? — Nice to meet you too!"
     ]
+  },
+  {
+    "en": "Where are you from originally?",
+    "ua": "Звідки ти родом?",
+    "ex": "— Where are you from originally? — Ukraine, but I live in Berlin now.",
+    "tip": "Originally = спочатку / родом.",
+    "cat": "social",
+    "tag": "👋 Знайомство",
+    "anchors": [
+      "from originally"
+    ],
+    "situation": "При знайомстві та неформальному спілкуванні",
+    "examples": [
+      "— Where are you from originally? — Ukraine, but I live in Berlin now.",
+      "— Where are you from originally? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Do you come here often?",
+    "ua": "Ти часто сюди ходиш?",
+    "ex": "— Do you come here often? — First time, actually.",
+    "tip": "Small talk at a bar or café.",
+    "cat": "social",
+    "tag": "👋 Знайомство",
+    "anchors": [
+      "come here often"
+    ],
+    "situation": "При знайомстві та неформальному спілкуванні",
+    "examples": [
+      "— Do you come here often? — First time, actually.",
+      "— Do you come here often? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "It was nice chatting with you.",
+    "ua": "Приємно було поспілкуватися.",
+    "ex": "— I should go — it was nice chatting with you.",
+    "tip": "Polite way to end conversation.",
+    "cat": "social",
+    "tag": "👋 Знайомство",
+    "anchors": [
+      "nice chatting"
+    ],
+    "situation": "При знайомстві та неформальному спілкуванні",
+    "examples": [
+      "— I should go — it was nice chatting with you.",
+      "— It was nice chatting with you. — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Let's keep in touch.",
+    "ua": "Будемо на зв'язку.",
+    "ex": "— Here's my number — let's keep in touch.",
+    "tip": "Keep in touch = підтримувати контакт.",
+    "cat": "social",
+    "tag": "👋 Знайомство",
+    "anchors": [
+      "keep in touch"
+    ],
+    "situation": "При знайомстві та неформальному спілкуванні",
+    "examples": [
+      "— Here's my number — let's keep in touch.",
+      "— Let's keep in touch. — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Would you like to join us?",
+    "ua": "Хочеш приєднатися?",
+    "ex": "— Would you like to join us for a drink?",
+    "tip": "Join us = приєднатися до компанії.",
+    "cat": "social",
+    "tag": "👋 Знайомство",
+    "anchors": [
+      "join us"
+    ],
+    "situation": "При знайомстві та неформальному спілкуванні",
+    "examples": [
+      "— Would you like to join us for a drink?",
+      "— Would you like to join us? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "I don't want to hold you up.",
+    "ua": "Не хочу затримувати.",
+    "ex": "— I don't want to hold you up — you go ahead.",
+    "tip": "Hold up = затримувати.",
+    "cat": "social",
+    "tag": "👋 Знайомство",
+    "anchors": [
+      "hold you up"
+    ],
+    "situation": "При знайомстві та неформальному спілкуванні",
+    "examples": [
+      "— I don't want to hold you up — you go ahead.",
+      "— I don't want to hold you up. — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Sorry to interrupt.",
+    "ua": "Вибач, що перебиваю.",
+    "ex": "— Sorry to interrupt — quick question?",
+    "tip": "Interrupt = перебивати.",
+    "cat": "social",
+    "tag": "👋 Знайомство",
+    "anchors": [
+      "Sorry to interrupt"
+    ],
+    "situation": "При знайомстві та неформальному спілкуванні",
+    "examples": [
+      "— Sorry to interrupt — quick question?",
+      "— Sorry to interrupt. — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Mind if I sit here?",
+    "ua": "Не заперечиш, якщо сяду?",
+    "ex": "— Mind if I sit here? — Not at all, go ahead.",
+    "tip": "Mind if = чи не заперечиш.",
+    "cat": "social",
+    "tag": "👋 Знайомство",
+    "anchors": [
+      "Mind if I sit"
+    ],
+    "situation": "При знайомстві та неформальному спілкуванні",
+    "examples": [
+      "— Mind if I sit here? — Not at all, go ahead.",
+      "— Mind if I sit here? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Cheers!",
+    "ua": "Будемо! / На здоров'я!",
+    "ex": "— To a great trip! — Cheers!",
+    "tip": "Cheers = тост (UK) або просто «на здоров'я».",
+    "cat": "social",
+    "tag": "👋 Знайомство",
+    "anchors": [
+      "Cheers"
+    ],
+    "situation": "При знайомстві та неформальному спілкуванні",
+    "examples": [
+      "— To a great trip! — Cheers!",
+      "— Cheers! — Sure, no problem."
+    ]
+  },
+  {
+    "en": "I'm here on my own.",
+    "ua": "Я тут сам / сама.",
+    "ex": "— Are you with friends? — I'm here on my own.",
+    "tip": "On my own = самостійно.",
+    "cat": "social",
+    "tag": "👋 Знайомство",
+    "anchors": [
+      "on my own"
+    ],
+    "situation": "При знайомстві та неформальному спілкуванні",
+    "examples": [
+      "— Are you with friends? — I'm here on my own.",
+      "— I'm here on my own. — Sure, no problem."
+    ]
+  },
+  {
+    "en": "What do you do for a living?",
+    "ua": "Чим ти займаєшся?",
+    "ex": "— What do you do for a living? — I work in marketing.",
+    "tip": "For a living = професійно / на життя.",
+    "cat": "social",
+    "tag": "👋 Знайомство",
+    "anchors": [
+      "for a living"
+    ],
+    "situation": "При знайомстві",
+    "examples": [
+      "— What do you do for a living? — I work in marketing.",
+      "— What do you do for a living? — Of course — go ahead."
+    ]
   }
 ];
 
 
-// 📅 Плани — 6 phrases
+// 📅 Плани — 16 phrases
 const PHRASES_PLANS = [
   {
     "en": "Are you free tomorrow evening?",
@@ -4401,6 +5793,166 @@ const PHRASES_PLANS = [
       "Sorry, I'm running behind schedule — I'll be about 15 minutes late.",
       "— I'm running behind schedule. — Sure, let's do that."
     ]
+  },
+  {
+    "en": "Let's meet halfway.",
+    "ua": "Зустрінемось посередині.",
+    "ex": "— It's far for both of us — let's meet halfway.",
+    "tip": "Meet halfway = компроміс / місце.",
+    "cat": "plans",
+    "tag": "📅 Плани",
+    "anchors": [
+      "meet halfway"
+    ],
+    "situation": "Коли домовляєшся про зустріч або плани",
+    "examples": [
+      "— It's far for both of us — let's meet halfway.",
+      "— Let's meet halfway. — Sure, no problem."
+    ]
+  },
+  {
+    "en": "I'm free all afternoon.",
+    "ua": "Я вільний увесь день.",
+    "ex": "— When can you meet? — I'm free all afternoon.",
+    "tip": "Free = вільний у часі.",
+    "cat": "plans",
+    "tag": "📅 Плани",
+    "anchors": [
+      "free all afternoon"
+    ],
+    "situation": "Коли домовляєшся про зустріч або плани",
+    "examples": [
+      "— When can you meet? — I'm free all afternoon.",
+      "— I'm free all afternoon. — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Can we reschedule?",
+    "ua": "Чи можемо перенести?",
+    "ex": "— Something came up — can we reschedule?",
+    "tip": "Reschedule = перенести на інший час.",
+    "cat": "plans",
+    "tag": "📅 Плани",
+    "anchors": [
+      "Can we reschedule"
+    ],
+    "situation": "Коли домовляєшся про зустріч або плани",
+    "examples": [
+      "— Something came up — can we reschedule?",
+      "— Can we reschedule? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "I'll be there in ten minutes.",
+    "ua": "Буду через десять хвилин.",
+    "ex": "— Where are you? — I'll be there in ten minutes.",
+    "tip": "Be there in = буду через.",
+    "cat": "plans",
+    "tag": "📅 Плани",
+    "anchors": [
+      "be there in"
+    ],
+    "situation": "Коли домовляєшся про зустріч або плани",
+    "examples": [
+      "— Where are you? — I'll be there in ten minutes.",
+      "— I'll be there in ten minutes. — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Shall we say seven?",
+    "ua": "Домовимось на сьому?",
+    "ex": "— Shall we say seven at the usual place?",
+    "tip": "Shall we say = пропозиція часу.",
+    "cat": "plans",
+    "tag": "📅 Плани",
+    "anchors": [
+      "Shall we say"
+    ],
+    "situation": "Коли домовляєшся про зустріч або плани",
+    "examples": [
+      "— Shall we say seven at the usual place?",
+      "— Shall we say seven? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "I'm running about fifteen minutes late.",
+    "ua": "Запізнююсь приблизно на 15 хв.",
+    "ex": "— I'm running about fifteen minutes late — save me a seat.",
+    "tip": "Running late + time = на скільки.",
+    "cat": "plans",
+    "tag": "📅 Плани",
+    "anchors": [
+      "fifteen minutes late"
+    ],
+    "situation": "Коли домовляєшся про зустріч або плани",
+    "examples": [
+      "— I'm running about fifteen minutes late — save me a seat.",
+      "— I'm running about fifteen minutes late. — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Are you still up for it?",
+    "ua": "Ти все ще в справі?",
+    "ex": "— Are you still up for hiking on Sunday?",
+    "tip": "Up for it = готовий / хочеш.",
+    "cat": "plans",
+    "tag": "📅 Плани",
+    "anchors": [
+      "still up for"
+    ],
+    "situation": "Коли домовляєшся про зустріч або плани",
+    "examples": [
+      "— Are you still up for hiking on Sunday?",
+      "— Are you still up for it? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "I'll send you the details.",
+    "ua": "Надішлю деталі.",
+    "ex": "— I'll send you the details by text tonight.",
+    "tip": "Details = деталі / адреса / час.",
+    "cat": "plans",
+    "tag": "📅 Плани",
+    "anchors": [
+      "send you the details"
+    ],
+    "situation": "Коли домовляєшся про зустріч або плани",
+    "examples": [
+      "— I'll send you the details by text tonight.",
+      "— I'll send you the details. — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Does Saturday work?",
+    "ua": "Субота підходить?",
+    "ex": "— Does Saturday work for you? — Perfect!",
+    "tip": "Does [day] work? — типове питання.",
+    "cat": "plans",
+    "tag": "📅 Плани",
+    "anchors": [
+      "Does Saturday work"
+    ],
+    "situation": "Коли домовляєшся про зустріч або плани",
+    "examples": [
+      "— Does Saturday work for you? — Perfect!",
+      "— Does Saturday work? — Sure, no problem."
+    ]
+  },
+  {
+    "en": "Are we still on for tonight?",
+    "ua": "Ми все ще домовлені на вечір?",
+    "ex": "— Are we still on for tonight? — Yes, see you at eight!",
+    "tip": "Still on for = план у силі.",
+    "cat": "plans",
+    "tag": "📅 Плани",
+    "anchors": [
+      "still on for"
+    ],
+    "situation": "Коли домовляєшся про плани",
+    "examples": [
+      "— Are we still on for tonight? — Yes, see you at eight!",
+      "— Are we still on for tonight? — Perfect — see you then!"
+    ]
   }
 ];
 
@@ -4438,7 +5990,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 2,
-    "phraseIndex": 243,
+    "phraseIndex": 319,
     "options": [
       "Nice to meet you!",
       "Something came up.",
@@ -4464,7 +6016,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 1,
-    "phraseIndex": 53,
+    "phraseIndex": 88,
     "options": [
       "I'll have the grilled salmon, please.",
       "Is this on sale?",
@@ -4490,7 +6042,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 1,
-    "phraseIndex": 91,
+    "phraseIndex": 160,
     "options": [
       "That sounds great!",
       "I'm afraid I have to disagree.",
@@ -4516,7 +6068,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 1,
-    "phraseIndex": 19,
+    "phraseIndex": 32,
     "options": [
       "I think I'm lost. Could you help me?",
       "No worries!",
@@ -4568,7 +6120,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 2,
-    "phraseIndex": 28,
+    "phraseIndex": 41,
     "options": [
       "I'm sorry, I didn't catch that.",
       "That makes sense.",
@@ -4594,7 +6146,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 1,
-    "phraseIndex": 139,
+    "phraseIndex": 208,
     "options": [
       "Sounds good to me.",
       "I'd rather not.",
@@ -4620,7 +6172,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 2,
-    "phraseIndex": 250,
+    "phraseIndex": 326,
     "options": [
       "Thanks for your help — I really appreciate it.",
       "This isn't what I ordered.",
@@ -4672,7 +6224,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 2,
-    "phraseIndex": 105,
+    "phraseIndex": 174,
     "options": [
       "That works for me.",
       "I totally agree with you.",
@@ -4694,7 +6246,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 0,
-    "phraseIndex": 99,
+    "phraseIndex": 168,
     "options": [
       "I'm running a bit late.",
       "How's it going?",
@@ -4720,7 +6272,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 1,
-    "phraseIndex": 115,
+    "phraseIndex": 184,
     "options": [
       "That's a shame.",
       "Absolutely!",
@@ -4824,7 +6376,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 1,
-    "phraseIndex": 45,
+    "phraseIndex": 69,
     "options": [
       "Where is the check-in desk?",
       "Is there a kitchen I can use?",
@@ -4851,7 +6403,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 1,
-    "phraseIndex": 46,
+    "phraseIndex": 70,
     "options": [
       "Which gate is my flight?",
       "Which bus goes to…?",
@@ -4874,7 +6426,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 0,
-    "phraseIndex": 47,
+    "phraseIndex": 71,
     "options": [
       "Is my flight on time?",
       "Is the train / bus running on time?",
@@ -4897,7 +6449,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 0,
-    "phraseIndex": 48,
+    "phraseIndex": 72,
     "options": [
       "Where can I collect my baggage?",
       "Where is the nearest bus stop / metro station?",
@@ -4924,7 +6476,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 1,
-    "phraseIndex": 61,
+    "phraseIndex": 96,
     "options": [
       "Could we get a table by the window?",
       "A table for two, please.",
@@ -4947,7 +6499,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 0,
-    "phraseIndex": 62,
+    "phraseIndex": 97,
     "options": [
       "Is there free Wi-Fi here?",
       "What's the Wi-Fi password?",
@@ -4974,7 +6526,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 1,
-    "phraseIndex": 63,
+    "phraseIndex": 98,
     "options": [
       "Could we split the bill?",
       "Could I have the bill, please?",
@@ -5001,7 +6553,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 1,
-    "phraseIndex": 64,
+    "phraseIndex": 99,
     "options": [
       "Could I have a refill, please?",
       "Could I get this to go?",
@@ -5017,32 +6569,32 @@ const DIALOGUES = [
 const SITUATIONS = [
   {
     "situation": "Ти в кафе і хочеш попросити рахунок.",
-    "phraseIndex": 55,
+    "phraseIndex": 90,
     "options": [
-      "What do you recommend?",
       "Could I have the bill, please?",
       "Is this dish spicy?",
+      "What do you recommend?",
       "Could I see the menu, please?"
     ],
-    "correctIndex": 1
+    "correctIndex": 0
   },
   {
     "situation": "Ти загубився на вулиці.",
-    "phraseIndex": 19,
+    "phraseIndex": 32,
     "options": [
       "A table for two, please.",
+      "Is this on sale?",
       "Nice to meet you!",
-      "I think I'm lost. Could you help me?",
-      "Is this on sale?"
+      "I think I'm lost. Could you help me?"
     ],
-    "correctIndex": 2
+    "correctIndex": 3
   },
   {
     "situation": "Хочеш ввічливо попросити людину говорити повільніше.",
-    "phraseIndex": 27,
+    "phraseIndex": 40,
     "options": [
-      "What do you mean by that?",
       "Same here!",
+      "What do you mean by that?",
       "Could you speak more slowly, please?",
       "Go ahead."
     ],
@@ -5050,32 +6602,32 @@ const SITUATIONS = [
   },
   {
     "situation": "У поїзді хочеш дізнатися, чи зупиняється він на твоїй станції.",
-    "phraseIndex": 34,
+    "phraseIndex": 58,
     "options": [
       "Does this train stop at…?",
-      "How much does this cost?",
       "Long time no see!",
-      "Is breakfast included in the price?"
+      "Is breakfast included in the price?",
+      "How much does this cost?"
     ],
     "correctIndex": 0
   },
   {
     "situation": "Хтось запропонував піти на каву, і тобі подобається ідея.",
-    "phraseIndex": 91,
+    "phraseIndex": 160,
     "options": [
       "I'm afraid I have to disagree.",
-      "I'd rather not.",
+      "That sounds great!",
       "This isn't what I ordered.",
-      "That sounds great!"
+      "I'd rather not."
     ],
-    "correctIndex": 3
+    "correctIndex": 1
   },
   {
     "situation": "Ти запізнюєшся на зустріч і хочеш попередити.",
-    "phraseIndex": 99,
+    "phraseIndex": 168,
     "options": [
-      "Take your time.",
       "Never mind.",
+      "Take your time.",
       "I'm running a bit late.",
       "I'll be right back."
     ],
@@ -5083,120 +6635,120 @@ const SITUATIONS = [
   },
   {
     "situation": "У магазині ти не хочеш, щоб продавець тебе турбував.",
-    "phraseIndex": 69,
+    "phraseIndex": 115,
     "options": [
-      "How much does this cost?",
-      "I'd like to return this",
+      "I'd like to return this.",
+      "I'm just looking, thank you.",
       "Do you accept credit cards?",
-      "I'm just looking, thank you."
+      "How much does this cost?"
     ],
-    "correctIndex": 3
+    "correctIndex": 1
   },
   {
     "situation": "Ти хочеш дізнатися, чи включений сніданок у ціну номера.",
     "phraseIndex": 3,
     "options": [
-      "Is breakfast included in the price?",
       "What time does breakfast start?",
-      "Is there a safe",
-      "What's the Wi-Fi password?"
+      "Is there a safe in the room?",
+      "What's the Wi-Fi password?",
+      "Is breakfast included in the price?"
     ],
-    "correctIndex": 0
+    "correctIndex": 3
   },
   {
     "situation": "У таксі хочеш, щоб водій висадив тебе зараз.",
-    "phraseIndex": 44,
+    "phraseIndex": 68,
     "options": [
-      "Where can I get a taxi?",
-      "Please take me to this address.",
+      "I need to get off at the next stop.",
       "Could you drop me off here, please?",
-      "I need to get off at the next stop."
+      "Please take me to this address.",
+      "Where can I get a taxi?"
     ],
-    "correctIndex": 2
+    "correctIndex": 1
   },
   {
     "situation": "Ти не зрозумів, що сказали — просиш повторити.",
-    "phraseIndex": 102,
+    "phraseIndex": 171,
     "options": [
-      "I totally agree with you.",
-      "Could you say that again?",
       "Absolutely!",
+      "Could you say that again?",
+      "I totally agree with you.",
       "That makes sense."
     ],
     "correctIndex": 1
   },
   {
     "situation": "Домовляєшся про час зустрічі — питаєш, коли зручно.",
-    "phraseIndex": 262,
+    "phraseIndex": 349,
     "options": [
       "What are the opening hours?",
+      "Which way is the town centre?",
       "How far is it from here?",
-      "What time works for you?",
-      "Which way is the town centre?"
+      "What time works for you?"
     ],
-    "correctIndex": 2
+    "correctIndex": 3
   },
   {
     "situation": "Ти вперше зустрічаєш людину після представлення.",
-    "phraseIndex": 243,
+    "phraseIndex": 319,
     "options": [
       "Nice to meet you!",
-      "Long time no see!",
       "What brings you here?",
-      "How's it going?"
+      "How's it going?",
+      "Long time no see!"
     ],
     "correctIndex": 0
   },
   {
     "situation": "Хтось вибачається, і ти хочеш сказати, що все гаразд.",
-    "phraseIndex": 251,
+    "phraseIndex": 327,
     "options": [
       "No worries!",
+      "My bad.",
       "Sorry about that.",
-      "I'm afraid I have to disagree.",
-      "My bad."
+      "I'm afraid I have to disagree."
     ],
     "correctIndex": 0
   },
   {
     "situation": "У ресторані страва не та, що ти замовляв.",
-    "phraseIndex": 59,
+    "phraseIndex": 94,
     "options": [
       "Could I get this to go?",
-      "Is this dish spicy?",
+      "What do you recommend?",
       "This isn't what I ordered.",
-      "What do you recommend?"
+      "Is this dish spicy?"
     ],
     "correctIndex": 2
   },
   {
     "situation": "Друг питає, як справи — відповідаєш, що все добре.",
-    "phraseIndex": 144,
+    "phraseIndex": 213,
     "options": [
-      "I overslept.",
+      "I'm doing well, thanks.",
       "Not much.",
-      "Something came up.",
-      "I'm doing well, thanks."
+      "I overslept.",
+      "Something came up."
     ],
-    "correctIndex": 3
+    "correctIndex": 0
   },
   {
     "situation": "Хочеш ввічливо сказати, що йдеш — прощаєшся.",
     "phraseIndex": 0,
     "options": [
-      "Have a seat.",
-      "Help yourself.",
       "Come on in.",
-      "Could you tell me where the nearest hotel is?"
+      "Help yourself.",
+      "Could you tell me where the nearest hotel is?",
+      "Have a seat."
     ],
-    "correctIndex": 3
+    "correctIndex": 2
   },
   {
     "situation": "На рецепції хостелу питаєш про ліжко в dorm.",
     "phraseIndex": 11,
     "options": [
-      "Is breakfast included in the price?",
       "Could I have a late check-out",
+      "Is breakfast included in the price?",
       "Do you have a bed in a dorm room?",
       "I have a reservation under the name…"
     ],
@@ -5204,36 +6756,36 @@ const SITUATIONS = [
   },
   {
     "situation": "В аеропорту шукаєш стійку реєстрації.",
-    "phraseIndex": 45,
+    "phraseIndex": 69,
     "options": [
-      "Which gate is my flight?",
-      "Where is the nearest bus stop / metro station?",
       "Where can I get a taxi?",
-      "Where is the check-in desk?"
+      "Where is the nearest bus stop / metro station?",
+      "Where is the check-in desk?",
+      "Which gate is my flight?"
     ],
-    "correctIndex": 3
+    "correctIndex": 2
   },
   {
     "situation": "У кафе хочеш сісти біля вікна.",
-    "phraseIndex": 61,
+    "phraseIndex": 96,
     "options": [
-      "Could I see the menu, please?",
-      "A table for two, please.",
+      "Is this seat taken?",
       "Could we get a table by the window?",
-      "Is this seat taken?"
+      "A table for two, please.",
+      "Could I see the menu, please?"
     ],
-    "correctIndex": 2
+    "correctIndex": 1
   },
   {
     "situation": "У кафе просиш розділити рахунок.",
-    "phraseIndex": 63,
+    "phraseIndex": 98,
     "options": [
       "Is a tip expected here?",
-      "Could I have the bill, please?",
       "Could we split the bill?",
-      "Can I pay by card?"
+      "Can I pay by card?",
+      "Could I have the bill, please?"
     ],
-    "correctIndex": 2
+    "correctIndex": 1
   }
 ];
 
@@ -5797,6 +7349,37 @@ function stopSpeech() {
 }
 
 
+/** Легкі «зображення»: emoji + градієнт за категорією. Опційно p.img — URL фото. */
+const CATEGORY_VISUAL = {
+  hotel:     { emoji: '🏨', label: 'Готель',       c1: '#3d5a80', c2: '#1e2d3d' },
+  street:    { emoji: '🗺️', label: 'Вулиця',       c1: '#2d6a4f', c2: '#1b4332' },
+  transport: { emoji: '🚌', label: 'Транспорт',    c1: '#5c4d7d', c2: '#352849' },
+  cafe:      { emoji: '☕', label: 'Кафе',         c1: '#8b5a2b', c2: '#4a2c0f' },
+  shop:      { emoji: '🛍️', label: 'Магазин',      c1: '#9d4edd', c2: '#5a189a' },
+  emergency: { emoji: '🆘', label: 'Допомога',     c1: '#c1121f', c2: '#6a040f' },
+  everyday:  { emoji: '💬', label: 'Повсякдень',   c1: '#457b9d', c2: '#1d3557' },
+  social:    { emoji: '👋', label: 'Знайомство',   c1: '#e76f51', c2: '#9d3b2a' },
+  plans:     { emoji: '📅', label: 'Плани',        c1: '#2a9d8f', c2: '#1a535c' }
+};
+
+function getPhraseVisual(p) {
+  return CATEGORY_VISUAL[p.cat] || CATEGORY_VISUAL.everyday;
+}
+
+function phraseVisualHTML(p, variant) {
+  if (p.img) {
+    return `<img src="${escapeHtml(p.img)}" alt="" class="phrase-img phrase-img--${variant}" loading="lazy">`;
+  }
+  const v = getPhraseVisual(p);
+  const scene = variant === 'modal' && p.situation
+    ? `<span class="phrase-visual-scene">${escapeHtml(p.situation)}</span>`
+    : '';
+  return `<div class="phrase-visual phrase-visual--${variant} phrase-visual--cat-${escapeHtml(p.cat)}" ` +
+    `style="background:linear-gradient(135deg,${v.c1},${v.c2})" role="img" aria-label="${escapeHtml(v.label)}">` +
+    `<span class="phrase-visual-emoji" aria-hidden="true">${v.emoji}</span>${scene}</div>`;
+}
+
+
 const STREAK_TO_LEARN = 3;
 
 function safeJsonParse(key, fallback) {
@@ -5812,14 +7395,14 @@ function safeJsonParse(key, fallback) {
 }
 
 function defaultProgress() {
-  return { streak: 0, clean: 0, hinted: 0, errors: 0, lastType: 0 };
+  return { streak: 0, clean: 0, hinted: 0, errors: 0, lastType: 0, timeMs: 0, timeCount: 0 };
 }
 
 const Storage = {
   learned: new Set(safeJsonParse('tpLearned3', [])),
   phraseWeights: safeJsonParse('tpWeights3', {}),
   phraseProgress: safeJsonParse('tpProgress4', {}),
-  quizStats: safeJsonParse('tpQuizStats', { total: 0, correct: 0, clean: 0, hinted: 0, wrong: 0 }),
+  quizStats: safeJsonParse('tpQuizStats', { total: 0, correct: 0, clean: 0, hinted: 0, wrong: 0, timeMs: 0, timeCount: 0 }),
 
   saveLocalOnly() {
     localStorage.setItem('tpLearned3', JSON.stringify([...this.learned]));
@@ -5858,6 +7441,52 @@ const Storage = {
 
   getErrorPhraseIndices() {
     return PHRASES.map((_, i) => i).filter(i => this.hasErrors(i));
+  },
+
+  isNewPhrase(idx) {
+    if (this.learned.has(idx)) return false;
+    const p = this.phraseProgress[idx];
+    if (!p) return true;
+    return p.clean === 0 && p.hinted === 0 && p.errors === 0;
+  },
+
+  getNewPhraseIndices() {
+    return PHRASES.map((_, i) => i).filter(i => this.isNewPhrase(i));
+  },
+
+  recordResponseTime(idx, ms) {
+    if (!ms || ms < 200 || ms > 600000) return;
+    const p = this.getProgress(idx);
+    p.timeMs = (p.timeMs || 0) + ms;
+    p.timeCount = (p.timeCount || 0) + 1;
+    this.quizStats.timeMs = (this.quizStats.timeMs || 0) + ms;
+    this.quizStats.timeCount = (this.quizStats.timeCount || 0) + 1;
+    this.phraseProgress[idx] = p;
+  },
+
+  getPhraseAvgMs(idx) {
+    const p = this.phraseProgress[idx];
+    if (!p || !p.timeCount) return null;
+    return p.timeMs / p.timeCount;
+  },
+
+  getGlobalAvgMs() {
+    const q = this.quizStats;
+    if (!q.timeCount) return null;
+    return q.timeMs / q.timeCount;
+  },
+
+  formatAvgTime(ms) {
+    if (ms == null) return '—';
+    const s = ms / 1000;
+    return s < 10 ? s.toFixed(1) + ' с' : Math.round(s) + ' с';
+  },
+
+  getPhrasesWithTiming(limit) {
+    return PHRASES.map((p, i) => ({ p, i, avg: this.getPhraseAvgMs(i), count: (this.phraseProgress[i] || {}).timeCount || 0 }))
+      .filter(x => x.count > 0)
+      .sort((a, b) => b.avg - a.avg)
+      .slice(0, limit || 20);
   },
 
   recordAnswer(correct) {
@@ -5961,7 +7590,7 @@ const Storage = {
     this.learned.clear();
     this.phraseWeights = {};
     this.phraseProgress = {};
-    this.quizStats = { total: 0, correct: 0, clean: 0, hinted: 0, wrong: 0 };
+    this.quizStats = { total: 0, correct: 0, clean: 0, hinted: 0, wrong: 0, timeMs: 0, timeCount: 0 };
     this.save();
   }
 };
@@ -6305,6 +7934,8 @@ function disableCloudSync() {
 }
 
 
+const QUIZ_SIZE_OPTIONS = [5, 10, 15, 20, 25, 30];
+
 let quizErrorsOnly = (function () {
   try {
     const v = localStorage.getItem('tpErrorsOnly');
@@ -6314,11 +7945,50 @@ let quizErrorsOnly = (function () {
   }
 })();
 
+let quizNewOnly = (function () {
+  try {
+    const v = localStorage.getItem('tpNewOnly');
+    return v ? JSON.parse(v) : false;
+  } catch {
+    return false;
+  }
+})();
+
+function getQuizSize() {
+  try {
+    const n = parseInt(localStorage.getItem('tpQuizSize'), 10);
+    return QUIZ_SIZE_OPTIONS.includes(n) ? n : 15;
+  } catch {
+    return 15;
+  }
+}
+
+function setQuizSize(size) {
+  const n = Number(size);
+  if (!QUIZ_SIZE_OPTIONS.includes(n)) return;
+  localStorage.setItem('tpQuizSize', String(n));
+  syncQuizOptionsUI();
+  startQuiz();
+}
+
 function toggleQuizErrorsOnly() {
   quizErrorsOnly = !quizErrorsOnly;
   localStorage.setItem('tpErrorsOnly', JSON.stringify(quizErrorsOnly));
-  syncErrorsOnlyToggle();
+  syncQuizOptionsUI();
   startQuiz();
+}
+
+function toggleQuizNewOnly() {
+  quizNewOnly = !quizNewOnly;
+  localStorage.setItem('tpNewOnly', JSON.stringify(quizNewOnly));
+  syncQuizOptionsUI();
+  startQuiz();
+}
+
+function syncQuizOptionsUI() {
+  syncErrorsOnlyToggle();
+  syncNewOnlyToggle();
+  syncQuizSizeSelect();
 }
 
 function syncErrorsOnlyToggle() {
@@ -6327,30 +7997,61 @@ function syncErrorsOnlyToggle() {
   el.classList.toggle('active', quizErrorsOnly);
   const count = Storage.getErrorPhraseIndices().length;
   const label = document.getElementById('quiz-errors-label');
-  if (label) {
-    label.textContent = quizErrorsOnly
-      ? `⚠️ Тільки помилки (${count})`
-      : `⚠️ Тільки помилки (${count})`;
-  }
+  if (label) label.textContent = `⚠️ Помилки (${count})`;
+}
+
+function syncNewOnlyToggle() {
+  const el = document.getElementById('quiz-new-toggle');
+  if (!el) return;
+  el.classList.toggle('active', quizNewOnly);
+  const count = Storage.getNewPhraseIndices().length;
+  const label = document.getElementById('quiz-new-label');
+  if (label) label.textContent = `✨ Нові (${count})`;
+}
+
+function syncQuizSizeSelect() {
+  const sel = document.getElementById('quiz-size-select');
+  if (!sel) return;
+  sel.value = String(getQuizSize());
 }
 
 function filterIndicesForQuiz(indices) {
-  if (!quizErrorsOnly) return indices;
-  const errorSet = new Set(Storage.getErrorPhraseIndices());
-  const filtered = indices.filter(i => errorSet.has(i));
-  return filtered.length ? filtered : indices;
+  let result = indices;
+  if (quizNewOnly) {
+    const newSet = new Set(Storage.getNewPhraseIndices());
+    result = result.filter(i => newSet.has(i));
+  }
+  if (quizErrorsOnly) {
+    const errorSet = new Set(Storage.getErrorPhraseIndices());
+    result = result.filter(i => errorSet.has(i));
+  }
+  return result;
 }
 
-function showErrorsOnlyEmpty() {
-  document.getElementById('quiz-q').innerHTML = '🎉';
-  document.getElementById('quiz-hint').textContent = 'Немає фраз з помилками — молодець!';
+function showQuizFilterEmpty() {
+  const parts = [];
+  if (quizNewOnly) parts.push('нові');
+  if (quizErrorsOnly) parts.push('з помилками');
+  const hint = parts.length
+    ? 'Немає фраз: ' + parts.join(' + ') + '. Спробуй вимкнути один із фільтрів.'
+    : 'Немає фраз для тесту.';
+  document.getElementById('quiz-q').innerHTML = '📭';
+  document.getElementById('quiz-hint').textContent = hint;
   document.getElementById('quiz-opts-area').innerHTML = '';
   document.getElementById('quiz-fb').innerHTML =
-    '<div class="quiz-score">Увімкни режим «Тільки помилки» коли знову помилишся.<br>' +
-    '<button class="btn btn-primary" style="margin-top:12px" onclick="toggleQuizErrorsOnly();startQuiz()">Вимкнути фільтр</button></div>';
+    '<div class="quiz-score">' + hint + '<br>' +
+    '<button class="btn btn-primary" style="margin-top:12px" onclick="quizErrorsOnly=false;quizNewOnly=false;localStorage.setItem(\'tpErrorsOnly\',\'false\');localStorage.setItem(\'tpNewOnly\',\'false\');syncQuizOptionsUI();startQuiz()">Скинути фільтри</button></div>';
   document.getElementById('quiz-prog').textContent = 'Порожньо';
   document.getElementById('quiz-next').style.display = 'none';
   document.getElementById('quiz-restart').style.display = 'inline-block';
+}
+
+function showErrorsOnlyEmpty() {
+  showQuizFilterEmpty();
+}
+
+function beginQuestionTimer() {
+  questionStartTime = Date.now();
 }
 
 
@@ -6396,6 +8097,7 @@ function renderCards() {
     const exPreview = examples[0] || '';
     const exExtra = examples.length > 1 ? `<div class="card-example-more">+${examples.length - 1} ще</div>` : '';
     return `<div class="phrase-card${Storage.learned.has(i) ? ' learned' : ''}${isHard ? ' hard-mode' : ''}" onclick="openModal(${i})">
+      ${phraseVisualHTML(p, 'card')}
       <div class="card-num">#${String(i + 1).padStart(3, '0')} ${isHard ? '⚠️' : ''}${streakBadge}</div>
       <div class="card-en-row">
         <div class="card-en">${txtHTML}</div>
@@ -6419,13 +8121,23 @@ function openModal(idx) {
 
 function renderModal() {
   const p = PHRASES[modalIdx];
-  document.getElementById('m-num').textContent = `Фраза #${modalIdx + 1} / ${TOTAL}`;
+  const avgMs = Storage.getPhraseAvgMs(modalIdx);
+  const timeNote = avgMs != null
+    ? ` · ⏱️ ${Storage.formatAvgTime(avgMs)} (${(Storage.getProgress(modalIdx).timeCount || 0)} відпов.)`
+    : '';
+  document.getElementById('m-num').textContent = `Фраза #${modalIdx + 1} / ${TOTAL}${timeNote}`;
   document.getElementById('m-en').innerHTML = `
     <div class="modal-en-row">
       <div>${highlightAnchors(p.en, p.anchors)}</div>
       <button type="button" class="btn-speak" onclick="speakPhrase(${modalIdx}, 'en', event)" title="Озвучити фразу">🔊</button>
     </div>`;
   document.getElementById('m-ua').textContent = p.ua;
+
+  const imgEl = document.getElementById('m-img');
+  if (imgEl) {
+    imgEl.innerHTML = phraseVisualHTML(p, 'modal');
+    imgEl.style.display = 'block';
+  }
   document.getElementById('m-ex').innerHTML = renderExamplesHTML(p);
   document.getElementById('m-tip').innerHTML = `💡 ${escapeHtml(p.tip)}`;
 
@@ -6571,6 +8283,7 @@ let quizAnswered = false;
 let hintRevealed = 0;
 let questionUsedHint = false;
 let scrambleUserWords = [];
+let questionStartTime = 0;
 
 function setQuizType(t) {
   quizType = t;
@@ -6594,16 +8307,16 @@ function buildPracticePool(items, size, getPhraseIdx) {
 function startQuiz() {
   if (typeof clearFlashTimer === 'function') clearFlashTimer();
   Speech.stop();
-  syncErrorsOnlyToggle();
+  syncQuizOptionsUI();
   if (quizType === 'dialogue') { startDialogueQuiz(); return; }
   if (quizType === 'situation') { startSituationQuiz(); return; }
   if (quizType === 'flash') { startFlashQuiz(); return; }
   if (quizType === 'pattern') { startPatternQuiz(); return; }
   if (quizType === 'marathon') { startMarathonQuiz(); return; }
 
-  quizQueue = buildQuizPool(15);
-  if (!quizQueue.length && quizErrorsOnly) {
-    showErrorsOnlyEmpty();
+  quizQueue = buildQuizPool(getQuizSize());
+  if (!quizQueue.length && (quizErrorsOnly || quizNewOnly)) {
+    showQuizFilterEmpty();
     return;
   }
   quizCurrent = 0;
@@ -6638,6 +8351,7 @@ function renderQuestion() {
   else if (quizType === 'scramble') renderScrambleQuestion(idx, p);
   else if (quizType === 'fill') renderFillQuestion(idx, p);
   else renderChoiceQuestion(idx, p);
+  beginQuestionTimer();
 }
 
 function renderTypeQuestion(idx, p) {
@@ -6781,6 +8495,10 @@ function checkAnswer(el, chosen, correct, idx) {
 }
 
 function handleScoreUpdate(idx, isCorrect) {
+  if (questionStartTime) {
+    Storage.recordResponseTime(idx, Date.now() - questionStartTime);
+    questionStartTime = 0;
+  }
   const usedHint = questionUsedHint || hintRevealed > 0;
   const answerType = Storage.recordPhraseAnswer(idx, isCorrect, usedHint);
   const practiceModes = ['dialogue', 'situation', 'flash', 'pattern', 'marathon'];
@@ -6881,11 +8599,8 @@ function clearFlashTimer() {
 
 function startDialogueQuiz() {
   quizType = 'dialogue';
-  let pool = DIALOGUES;
-  if (quizErrorsOnly) {
-    pool = DIALOGUES.filter(d => Storage.hasErrors(d.phraseIndex));
-    if (!pool.length) { showErrorsOnlyEmpty(); return; }
-  }
+  let pool = DIALOGUES.filter(d => filterIndicesForQuiz([d.phraseIndex]).length);
+  if (!pool.length && (quizErrorsOnly || quizNewOnly)) { showQuizFilterEmpty(); return; }
   practiceQueue = buildPracticePool(pool, Math.min(10, pool.length), d => d.phraseIndex);
   practiceCurrent = 0;
   practiceScore = 0;
@@ -6926,15 +8641,13 @@ function renderDialogueQuestion() {
     <div class="quiz-options">${opts.map(o =>
       `<div class="quiz-opt" onclick="checkPracticeAnswer(this, '${escapeJsSingleQuotedString(o)}', '${escapeJsSingleQuotedString(correct)}', ${d.phraseIndex})">${escapeHtml(o)}</div>`
     ).join('')}</div>`;
+  beginQuestionTimer();
 }
 
 function startSituationQuiz() {
   quizType = 'situation';
-  let pool = SITUATIONS;
-  if (quizErrorsOnly) {
-    pool = SITUATIONS.filter(s => Storage.hasErrors(s.phraseIndex));
-    if (!pool.length) { showErrorsOnlyEmpty(); return; }
-  }
+  let pool = SITUATIONS.filter(s => filterIndicesForQuiz([s.phraseIndex]).length);
+  if (!pool.length && (quizErrorsOnly || quizNewOnly)) { showQuizFilterEmpty(); return; }
   practiceQueue = buildPracticePool(pool, Math.min(12, pool.length), s => s.phraseIndex);
   practiceCurrent = 0;
   practiceScore = 0;
@@ -6962,13 +8675,14 @@ function renderSituationQuestion() {
   document.getElementById('quiz-opts-area').innerHTML = `<div class="quiz-options" style="grid-template-columns:1fr;">${s.options.map(o =>
     `<div class="quiz-opt" onclick="checkPracticeAnswer(this, '${escapeJsSingleQuotedString(o)}', '${escapeJsSingleQuotedString(correct)}', ${s.phraseIndex})">${escapeHtml(o)}</div>`
   ).join('')}</div>`;
+  beginQuestionTimer();
 }
 
 function startFlashQuiz() {
   clearFlashTimer();
   quizType = 'flash';
   practiceQueue = buildQuizPool(12);
-  if (!practiceQueue.length && quizErrorsOnly) { showErrorsOnlyEmpty(); return; }
+  if (!practiceQueue.length && (quizErrorsOnly || quizNewOnly)) { showQuizFilterEmpty(); return; }
   practiceCurrent = 0;
   practiceScore = 0;
   practiceAnswered = false;
@@ -7024,6 +8738,7 @@ function showFlashOptions(idx, p) {
   optsEl.innerHTML = `<div class="quiz-options">${opts.map(o =>
     `<div class="quiz-opt" onclick="checkPracticeAnswer(this, '${escapeJsSingleQuotedString(o)}', '${escapeJsSingleQuotedString(p.en)}', ${idx})">${escapeHtml(o)}</div>`
   ).join('')}</div>`;
+  beginQuestionTimer();
 }
 
 function startPatternQuiz() {
@@ -7060,12 +8775,14 @@ function renderPatternQuestion() {
   document.getElementById('quiz-opts-area').innerHTML = `<div class="quiz-options" style="grid-template-columns:1fr;">${item.options.map(({ p, i }) =>
     `<div class="quiz-opt" onclick="checkPracticeAnswer(this, '${escapeJsSingleQuotedString(p.en)}', '${escapeJsSingleQuotedString(correctPhrase)}', ${i})">${escapeHtml(p.en)}</div>`
   ).join('')}</div>`;
+  beginQuestionTimer();
 }
 
 function startMarathonQuiz() {
   quizType = 'marathon';
   const modes = ['en-ua', 'ua-en', 'fill', 'scramble'];
   const pool = buildQuizPool(12);
+  if (!pool.length && (quizErrorsOnly || quizNewOnly)) { showQuizFilterEmpty(); return; }
   practiceQueue = pool.map((idx, i) => ({ mode: modes[i % modes.length], idx }));
   practiceCurrent = 0;
   practiceScore = 0;
@@ -7095,6 +8812,7 @@ function renderMarathonQuestion() {
   if (item.mode === 'scramble') renderScrambleQuestion(item.idx, p);
   else if (item.mode === 'fill') renderFillQuestion(item.idx, p);
   else renderChoiceQuestion(item.idx, p, item.mode);
+  beginQuestionTimer();
 }
 
 function advancePractice() {
@@ -7139,17 +8857,21 @@ function showPracticeResult(label) {
 function renderStats() {
   const counts = Storage.countByMasteryType();
   const errorCount = Storage.getErrorPhraseIndices().length;
+  const newCount = Storage.getNewPhraseIndices().length;
   const accuracy = Storage.quizStats.total
     ? Math.round(Storage.quizStats.correct / Storage.quizStats.total * 100)
     : 0;
+  const avgTime = Storage.formatAvgTime(Storage.getGlobalAvgMs());
 
   document.getElementById('stats-grid').innerHTML = `
     <div class="stat-card"><div class="stat-num">${TOTAL}</div><div class="stat-label">Всього фраз</div></div>
     <div class="stat-card"><div class="stat-num" style="color:var(--green)">${Storage.learned.size}</div><div class="stat-label">✅ Вивчено (3× без підказок)</div></div>
+    <div class="stat-card"><div class="stat-num" style="color:var(--cyan,#5bc0eb)">${newCount}</div><div class="stat-label">✨ Нові (ще не в тесті)</div></div>
     <div class="stat-card"><div class="stat-num" style="color:var(--yellow)">${counts.type2}</div><div class="stat-label">💡 З підказкою</div></div>
     <div class="stat-card"><div class="stat-num" style="color:var(--red)">${counts.type3}</div><div class="stat-label">❌ З помилками</div></div>
     <div class="stat-card"><div class="stat-num">${Math.round(Storage.learned.size / TOTAL * 100)}%</div><div class="stat-label">Прогрес</div></div>
     <div class="stat-card"><div class="stat-num" style="color:var(--yellow)">${accuracy}%</div><div class="stat-label">Точність відповідей</div></div>
+    <div class="stat-card"><div class="stat-num" style="color:var(--accent)">${avgTime}</div><div class="stat-label">⏱️ Середній час відповіді</div></div>
   `;
 
   const masteryLegend = document.getElementById('mastery-legend');
@@ -7162,6 +8884,21 @@ function renderStats() {
         <strong style="color:var(--red)">Рівень 3</strong> — помилка (фраза потрапляє в повторення).
         Зараз з помилками: <strong>${errorCount}</strong>.
       </p>`;
+  }
+
+  const timingEl = document.getElementById('phrase-timing-stats');
+  if (timingEl) {
+    const timed = Storage.getPhrasesWithTiming(25);
+    if (!timed.length) {
+      timingEl.innerHTML = '<p style="font-size:.82rem;color:var(--muted)">Пройди тест — тут з\'явиться середній час по фразах.</p>';
+    } else {
+      timingEl.innerHTML = timed.map(({ p, i, avg, count }) => `
+        <div class="timing-row" onclick="openModal(${i})" title="Відкрити фразу">
+          <span class="timing-phrase">${escapeHtml(p.en.length > 42 ? p.en.slice(0, 42) + '…' : p.en)}</span>
+          <span class="timing-val">${Storage.formatAvgTime(avg)}</span>
+          <span class="timing-count">${count}×</span>
+        </div>`).join('');
+    }
   }
 
   document.getElementById('cat-stats').innerHTML = Object.entries(CATEGORIES).map(([key, label]) => {
@@ -7212,13 +8949,11 @@ function updateProgress() {
   document.getElementById('prog-bar').style.width = (n / TOTAL * 100) + '%';
 
   const errorCount = Storage.getErrorPhraseIndices().length;
-  const unseen = PHRASES.filter((_, i) =>
-    !Object.prototype.hasOwnProperty.call(Storage.phraseProgress, i) && !Storage.learned.has(i)
-  ).length;
+  const newCount = Storage.getNewPhraseIndices().length;
   document.getElementById('prog-label').textContent = errorCount > 0
     ? `⚠️ ${errorCount} фраз з помилками · 3 правильні підряд без підказок = вивчено`
-    : unseen > 0
-      ? `Вивчено: ${n} з ${TOTAL}. Нових: ${unseen}. Серія: 3× без підказок.`
+    : newCount > 0
+      ? `Вивчено: ${n} з ${TOTAL}. Нових: ${newCount}. Серія: 3× без підказок.`
       : `Вивчено: ${n} з ${TOTAL}. Продовжуй повторювати!`;
 }
 
@@ -7242,7 +8977,7 @@ function setTab(tab) {
 
 async function bootApp() {
   Speech.init();
-  syncErrorsOnlyToggle();
+  syncQuizOptionsUI();
   if (typeof Sync !== 'undefined') await Sync.initOnBoot();
   renderCards();
   updateProgress();
@@ -7266,5 +9001,5 @@ if (document.readyState === 'loading') {
 if (typeof PHRASES !== 'undefined' && typeof TOTAL !== 'undefined') {
   const ok = document.getElementById('bundle-ok');
   if (ok) ok.style.display = 'block';
-  console.log('Travel Phrases v21 loaded OK, phrases:', TOTAL);
+  console.log('Travel Phrases v23 loaded OK, phrases:', TOTAL);
 }

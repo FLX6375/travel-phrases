@@ -15,7 +15,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 2,
-    "phraseIndex": 243,
+    "phraseIndex": 319,
     "options": [
       "Nice to meet you!",
       "Something came up.",
@@ -41,7 +41,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 1,
-    "phraseIndex": 53,
+    "phraseIndex": 88,
     "options": [
       "I'll have the grilled salmon, please.",
       "Is this on sale?",
@@ -67,7 +67,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 1,
-    "phraseIndex": 91,
+    "phraseIndex": 160,
     "options": [
       "That sounds great!",
       "I'm afraid I have to disagree.",
@@ -93,7 +93,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 1,
-    "phraseIndex": 19,
+    "phraseIndex": 32,
     "options": [
       "I think I'm lost. Could you help me?",
       "No worries!",
@@ -145,7 +145,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 2,
-    "phraseIndex": 28,
+    "phraseIndex": 41,
     "options": [
       "I'm sorry, I didn't catch that.",
       "That makes sense.",
@@ -171,7 +171,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 1,
-    "phraseIndex": 139,
+    "phraseIndex": 208,
     "options": [
       "Sounds good to me.",
       "I'd rather not.",
@@ -197,7 +197,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 2,
-    "phraseIndex": 250,
+    "phraseIndex": 326,
     "options": [
       "Thanks for your help — I really appreciate it.",
       "This isn't what I ordered.",
@@ -249,7 +249,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 2,
-    "phraseIndex": 105,
+    "phraseIndex": 174,
     "options": [
       "That works for me.",
       "I totally agree with you.",
@@ -271,7 +271,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 0,
-    "phraseIndex": 99,
+    "phraseIndex": 168,
     "options": [
       "I'm running a bit late.",
       "How's it going?",
@@ -297,7 +297,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 1,
-    "phraseIndex": 115,
+    "phraseIndex": 184,
     "options": [
       "That's a shame.",
       "Absolutely!",
@@ -401,7 +401,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 1,
-    "phraseIndex": 45,
+    "phraseIndex": 69,
     "options": [
       "Where is the check-in desk?",
       "Is there a kitchen I can use?",
@@ -428,7 +428,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 1,
-    "phraseIndex": 46,
+    "phraseIndex": 70,
     "options": [
       "Which gate is my flight?",
       "Which bus goes to…?",
@@ -451,7 +451,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 0,
-    "phraseIndex": 47,
+    "phraseIndex": 71,
     "options": [
       "Is my flight on time?",
       "Is the train / bus running on time?",
@@ -474,7 +474,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 0,
-    "phraseIndex": 48,
+    "phraseIndex": 72,
     "options": [
       "Where can I collect my baggage?",
       "Where is the nearest bus stop / metro station?",
@@ -501,7 +501,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 1,
-    "phraseIndex": 61,
+    "phraseIndex": 96,
     "options": [
       "Could we get a table by the window?",
       "A table for two, please.",
@@ -524,7 +524,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 0,
-    "phraseIndex": 62,
+    "phraseIndex": 97,
     "options": [
       "Is there free Wi-Fi here?",
       "What's the Wi-Fi password?",
@@ -551,7 +551,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 1,
-    "phraseIndex": 63,
+    "phraseIndex": 98,
     "options": [
       "Could we split the bill?",
       "Could I have the bill, please?",
@@ -578,7 +578,7 @@ const DIALOGUES = [
       }
     ],
     "blankIndex": 1,
-    "phraseIndex": 64,
+    "phraseIndex": 99,
     "options": [
       "Could I have a refill, please?",
       "Could I get this to go?",

@@ -6,6 +6,7 @@ let quizAnswered = false;
 let hintRevealed = 0;
 let questionUsedHint = false;
 let scrambleUserWords = [];
+let questionStartTime = 0;
 
 function setQuizType(t) {
   quizType = t;
@@ -29,16 +30,16 @@ function buildPracticePool(items, size, getPhraseIdx) {
 function startQuiz() {
   if (typeof clearFlashTimer === 'function') clearFlashTimer();
   Speech.stop();
-  syncErrorsOnlyToggle();
+  syncQuizOptionsUI();
   if (quizType === 'dialogue') { startDialogueQuiz(); return; }
   if (quizType === 'situation') { startSituationQuiz(); return; }
   if (quizType === 'flash') { startFlashQuiz(); return; }
   if (quizType === 'pattern') { startPatternQuiz(); return; }
   if (quizType === 'marathon') { startMarathonQuiz(); return; }
 
-  quizQueue = buildQuizPool(15);
-  if (!quizQueue.length && quizErrorsOnly) {
-    showErrorsOnlyEmpty();
+  quizQueue = buildQuizPool(getQuizSize());
+  if (!quizQueue.length && (quizErrorsOnly || quizNewOnly)) {
+    showQuizFilterEmpty();
     return;
   }
   quizCurrent = 0;
@@ -73,6 +74,7 @@ function renderQuestion() {
   else if (quizType === 'scramble') renderScrambleQuestion(idx, p);
   else if (quizType === 'fill') renderFillQuestion(idx, p);
   else renderChoiceQuestion(idx, p);
+  beginQuestionTimer();
 }
 
 function renderTypeQuestion(idx, p) {
@@ -216,6 +218,10 @@ function checkAnswer(el, chosen, correct, idx) {
 }
 
 function handleScoreUpdate(idx, isCorrect) {
+  if (questionStartTime) {
+    Storage.recordResponseTime(idx, Date.now() - questionStartTime);
+    questionStartTime = 0;
+  }
   const usedHint = questionUsedHint || hintRevealed > 0;
   const answerType = Storage.recordPhraseAnswer(idx, isCorrect, usedHint);
   const practiceModes = ['dialogue', 'situation', 'flash', 'pattern', 'marathon'];
